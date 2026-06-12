@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "rfi-btn-100bb",
+  "name": { "zh": "BTN 开局加注范围（100bb）", "en": "BTN Open-Raise Range (100bb)" },
+  "position": "btn",
+  "stack": 100,
+  "action": "raise",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22+, A2s+, K2s+, Q5s+, J7s+, T7s+, 97s+, 86s+, 75s+, 65s, 64s, 54s, A2o+, K9o+, Q9o+, J9o+, T8o+, 98o"
+}

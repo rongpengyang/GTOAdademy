@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 1,
+  "scenarios": [
+    {
+      "id": "pf-rfi-utg-ako",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "AKo",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "AKo 在任何位置都是标准开局加注：它压制所有未入池范围，加注能建立底池并拿下翻前主动权。",
+        "en": "AKo is a standard open from every seat: it dominates unopened ranges, and raising builds the pot while taking preflop initiative."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "弃掉最强的非对子起手牌是严重失误（blunder）——它在 UTG 范围里也排在最前列。",
+          "en": "Folding the strongest unpaired starting hand is a blunder — it sits at the very top of the UTG range."
+        },
+        "call": {
+          "zh": "无人入池时跟注（limp）放弃主动权，还邀请多人底池稀释 AKo 的胜率。本训练默认 raise-or-fold。",
+          "en": "Open-limping gives up initiative and invites a multiway pot that dilutes AKo's equity. This trainer assumes raise-or-fold."
+        }
+      },
+      "objective": {
+        "zh": "建立\"强牌主动加注\"的翻前基线。",
+        "en": "Set the baseline: strong hands open-raise."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "premium"
+      ]
+    },
+    {
+      "id": "pf-rfi-utg-kjo",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "KJo",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KJo 看着体面，但 UTG 后面还有五个玩家：它经常被 KQ、AJ、AK 压制（dominated），且全程没有位置。UTG 的 offsuit 开局下限大约在 AJo / KQo。",
+        "en": "KJo looks decent, but five players remain behind UTG: it is frequently dominated by KQ, AJ and AK, and you play the hand out of position. The UTG offsuit floor sits around AJo / KQo."
+      },
+      "wrongChoices": {
+        "raise": {
+          "zh": "开太松：被 3-bet 时进退两难；被跟注后翻后常处于劣势踢脚，赢小输大。",
+          "en": "Too loose: you are squeezed when 3-bet, and when called you often have the worse kicker — winning small, losing big."
+        },
+        "call": {
+          "zh": "limp 进多人底池，KJo 最容易做出\"第二好的牌\"而输大锅。",
+          "en": "Limping into a multiway pot is how KJo makes the second-best hand and loses a big one."
+        }
+      },
+      "objective": {
+        "zh": "识别前位的 dominated offsuit 陷阱牌。",
+        "en": "Spot dominated offsuit traps in early position."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "trap",
+        "dominated"
+      ]
+    },
+    {
+      "id": "pf-rfi-btn-t8o",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "T8o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "BTN 的开局范围在 40% 以上，T8o 处在边缘但仍然有利可图：只剩两个盲注位防守，而且你翻后每条街都有位置。边缘牌正是靠位置赚钱的。",
+        "en": "The button opens 40%+ of hands. T8o is near the edge but still profitable: only the blinds defend, and you act last on every street. Marginal hands are exactly where position pays."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "过紧：放弃了 BTN 的位置红利。在最好的位置弃掉可盈利的边缘牌，等于把钱留在桌上。",
+          "en": "Too tight: you are giving away the button's positional rent. Folding profitable edge hands in the best seat leaves money on the table."
+        },
+        "call": {
+          "zh": "limp 不在本训练答案体系内：要么加注施压，要么放弃。",
+          "en": "Open-limping is outside this trainer's answer set: raise to apply pressure, or let it go."
+        }
+      },
+      "objective": {
+        "zh": "体会位置如何拓宽开局范围。",
+        "en": "Feel how position widens the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "button",
+        "edge"
+      ]
+    },
+    {
+      "id": "pf-rfi-btn-72o",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "72o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "72o 是最弱的起手牌之一：不同花、无连接、踢脚差。即使在 BTN，它也在任何合理开局范围之外——40% 多的范围仍然弃掉最差的那一半牌。",
+        "en": "72o is among the weakest starting hands: unsuited, disconnected, bad kicker. Even on the button it sits outside any sensible opening range — a 40%+ range still folds the worse half of hands."
+      },
+      "wrongChoices": {
+        "raise": {
+          "zh": "\"BTN 什么都能开\"是误解：位置拓宽范围，但不会把垃圾牌变成盈利牌。",
+          "en": "\"The button opens anything\" is a myth: position widens the range, it does not turn trash into profit."
+        },
+        "call": {
+          "zh": "limp 最弱牌只会在翻后持续烧钱。",
+          "en": "Limping the weakest hands just burns money postflop."
+        }
+      },
+      "objective": {
+        "zh": "宽范围 ≠ 任意两张。",
+        "en": "A wide range is not any two cards."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "fold-discipline"
+      ]
+    },
+    {
+      "id": "pf-bbdef-aqs-vs-btn",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "AQs",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "AQs 对 BTN 约 40%+ 的宽开局范围有明显价值优势：3-bet 既向更差的 Ax/Qx/宽范围取价值，又拿回主动权并部分抵消位置劣势。跟注也可接受，但会放掉大量翻前权益。",
+        "en": "AQs holds a clear value edge over the button's 40%+ opening range: 3-betting extracts value from worse Ax/Qx and the wide field, regains initiative, and partly offsets being out of position. Calling is acceptable but leaves preflop equity behind."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 的宽开局弃掉 AQs 严重过紧——这手牌领先对手范围一大截。",
+          "en": "Folding AQs to a button open is far too tight — it is well ahead of the opening range."
+        }
+      },
+      "objective": {
+        "zh": "学会用强 suited broadway 3-bet 反击后位宽开。",
+        "en": "Use strong suited broadways to 3-bet wide late-position opens."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "3bet",
+        "value"
+      ]
+    },
+    {
+      "id": "pf-vsrfi-co-jj-vs-utg",
+      "kind": "vs_rfi",
+      "position": "co",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "JJ",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "JJ 面对 UTG 开局仍在范围前列：3-bet 取价值、把 AQo 一类牌打弃或孤立对手，并阻止盲注位便宜入池。跟注控池也可接受——代价是经常打多人底池、翻牌见高张。",
+        "en": "JJ is still near the top versus a UTG open: 3-betting takes value, folds out or isolates hands like AQo, and stops the blinds from coming along cheaply. Flatting for pot control is acceptable — at the cost of more multiway pots and overcard flops."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "JJ 远强于 UTG 开局范围的中位数，弃牌过紧。",
+          "en": "JJ is well above the median of a UTG opening range — folding is far too tight."
+        }
+      },
+      "objective": {
+        "zh": "面对前位开局用范围前列对子施压。",
+        "en": "Apply pressure with premium pairs even against early opens."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 3,
+      "tags": [
+        "vs_rfi",
+        "3bet"
+      ]
+    },
+    {
+      "id": "pf-rfi-utg-55",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "55",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "本训练基线从任何位置都开全部对子（22+）：小对子的盈利来自击中暗三条赢大锅（set mining），加注入池保持范围一致、避免 limp 泄露信息。",
+        "en": "This baseline opens every pocket pair (22+) from any seat: small pairs profit by flopping sets and winning big pots, and raising keeps your range consistent instead of leaking information with a limp."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "过紧：55 在 22+ 的基线范围内。小对子弃掉的是整棵暗三条的盈利树。",
+          "en": "Too tight: 55 sits inside the 22+ baseline. Folding throws away the whole set-mining profit tree."
+        },
+        "call": {
+          "zh": "limp 进多人底池后，没中暗三条的小对子几乎只能放弃——主动权一开始就丢了。",
+          "en": "Limp into a multiway pot and an unimproved small pair can only give up — initiative was lost from the start."
+        }
+      },
+      "objective": {
+        "zh": "理解小对子的开局逻辑：set mining + 范围一致性。",
+        "en": "Understand small-pair opens: set mining plus range consistency."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "small-pair"
+      ]
+    },
+    {
+      "id": "pf-rfi-btn-k9o",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "K9o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "BTN 的 offsuit 下限延伸到 K9o / Q9o / J9o 一带：只剩两个盲注位防守，且你翻后每条街最后行动——这类牌的全部利润都来自位置。",
+        "en": "The button's offsuit floor stretches down to K9o / Q9o / J9o: only the blinds defend, and you act last on every street — hands like this make all their profit from position."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "在 BTN 弃掉 K9o 过紧：它正好压在约 42% 基线的边界内侧。",
+          "en": "Folding K9o on the button is too tight: it sits just inside the ~42% baseline boundary."
+        },
+        "call": {
+          "zh": "limp 放弃直接拿下盲注的机会，还把位置优势打了折。",
+          "en": "Limping gives up the chance to take the blinds outright and discounts your positional edge."
+        }
+      },
+      "objective": {
+        "zh": "记住 BTN offsuit 边界牌的量级。",
+        "en": "Anchor the button's offsuit boundary hands."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "button",
+        "edge"
+      ]
+    },
+    {
+      "id": "pf-rfi-btn-a2s",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "A2s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "BTN 开所有同花 A（A2s+）：A 阻断对手的强牌、同花潜力提供兜底、轮子（A-5）顺子潜力额外加分——位置把这手边缘牌变成标准开局。",
+        "en": "The button opens every suited ace (A2s+): the ace blocks strong hands, the flush potential provides a floor, and the wheel adds extra upside — position turns this edge hand into a standard open."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "同花小 A 在 BTN 是清晰的开局：弃牌放弃了阻断 + 同花 + 位置三重价值。",
+          "en": "Small suited aces are clear button opens: folding discards blocker, flush and position value all at once."
+        },
+        "call": {
+          "zh": "limp 不在本训练答案体系内：要么加注施压，要么放弃。",
+          "en": "Open-limping is outside this trainer's answer set: raise to pressure, or let it go."
+        }
+      },
+      "objective": {
+        "zh": "掌握同花 A 在后位的开局价值构成。",
+        "en": "Know what makes suited aces standard late-position opens."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "suited-ace"
+      ]
+    },
+    {
+      "id": "pf-bbdef-95s-vs-btn",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "95s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "BB 已投入 1bb，面对 2.5bb 只需再补 1.5bb——约 23% 的盈亏平衡胜率让大盲的防守范围非常宽。95s 有同花与顺子潜力，对 BTN 的宽开局完全够格跟注防守。",
+        "en": "The big blind has 1bb invested and only needs 1.5bb more — roughly 23% break-even equity makes the defend range very wide. With flush and straight potential, 95s comfortably defends against a wide button open."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "赔率算错的弃牌：你拿到的是全桌最便宜的入场价，95s 这种有潜力的同花牌正是该用折扣价防守的牌。",
+          "en": "A fold that miscounts the odds: you are getting the cheapest price at the table, and a playable suited hand like 95s is exactly what the discount is for."
+        },
+        "3bet": {
+          "zh": "无牌力、无阻断的 3-bet：被跟注后整手牌无位置打空气，被 4-bet 只能放弃。",
+          "en": "A 3-bet with no strength and no blockers: called, you play air out of position; 4-bet, you simply surrender."
+        }
+      },
+      "objective": {
+        "zh": "用底池赔率理解 BB 的宽防守。",
+        "en": "Use pot odds to understand wide big-blind defense."
+      },
+      "lessonRef": "l1-04-pot-odds",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "pot-odds"
+      ]
+    },
+    {
+      "id": "pf-vsrfi-btn-kqs-vs-co",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "KQs",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "面对 CO 约 26% 的开局，KQs 处在范围前列：3-bet 向更差的 KQ/QJ/Kx 取价值、孤立对手、并阻止盲注便宜入池。有位置平跟控池也完全可行——但偏价值的 3-bet 是首选。",
+        "en": "Against a ~26% cutoff open, KQs sits near the top: 3-betting charges worse KQ/QJ/Kx, isolates the opener, and shuts the blinds out. Flatting in position is fine too — but the value-leaning 3-bet is the first choice."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "KQs 对 CO 范围领先一大截，弃牌严重过紧。",
+          "en": "KQs is well ahead of the cutoff's range — folding is far too tight."
+        }
+      },
+      "objective": {
+        "zh": "有位置时对后位开局用强 broadway 施压。",
+        "en": "Pressure late-position opens with strong broadways when in position."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 3,
+      "tags": [
+        "vs_rfi",
+        "3bet",
+        "value"
+      ]
+    },
+    {
+      "id": "pf-vsrfi-hj-ajo-vs-utg",
+      "kind": "vs_rfi",
+      "position": "hj",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "AJo",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "AJo 面对 UTG 紧范围是教科书级的被压制牌：对手的 AQ、AK、JJ+ 把它打成「中牌就输大锅」。不同花进一步压低可玩性。好看的牌 ≠ 能打的牌——对前位要给足尊重。",
+        "en": "AJo against a tight UTG open is the textbook dominated hand: AQ, AK and JJ+ turn your good flops into big losses. Being offsuit lowers playability further. Pretty is not playable — respect early-position ranges."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "跟注后翻牌中 A 中 J 都可能付大钱给更好的踢脚——这正是「赢小输大」的标准入口。",
+          "en": "Call, and hitting your ace or jack often pays off a better kicker — the classic entrance to win-small-lose-big."
+        },
+        "3bet": {
+          "zh": "对 UTG 范围 3-bet AJo 两头落空：更差的牌不跟你，更好的牌不弃牌，被 4-bet 毫无退路。",
+          "en": "3-betting AJo into a UTG range fails both ways: worse hands fold, better hands continue, and a 4-bet leaves you nowhere to go."
+        }
+      },
+      "objective": {
+        "zh": "识别面对前位开局的被压制陷阱牌。",
+        "en": "Spot dominated traps against early-position opens."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 3,
+      "tags": [
+        "vs_rfi",
+        "dominated",
+        "fold-discipline"
+      ]
+    }
+  ]
+}

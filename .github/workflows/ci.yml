@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:   # 允许在 GitHub 网页上手动点击 Run workflow
+
+jobs:
+  validate-content:
+    name: 内容校验（Ubuntu · 秒级 · 省 macOS 分钟）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 运行内容校验器（30 课 / 12 范围 / 禁用词）
+        run: python3 tools/validate_content.py
+
+  test:
+    name: Xcode 全量测试（macOS 云跑机 · 模拟器免签名）
+    runs-on: macos-15        # 自带 Xcode 16.x（iOS 18 SDK，项目最低要求）
+    timeout-minutes: 40
+    needs: validate-content  # 内容先过，再花 macOS 分钟
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 XcodeGen
+        run: brew install xcodegen
+
+      - name: 生成 Xcode 工程
+        run: xcodegen generate
+
+      - name: 环境信息
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available | grep -i iphone | head -8
+
+      - name: 选择可用 iPhone 模拟器
+        id: sim
+        run: |
+          DEVICE=$(xcrun simctl list devices available | grep -m1 -o 'iPhone [^(]*' | sed 's/ *$//')
+          echo "选用模拟器: $DEVICE"
+          echo "device=$DEVICE" >> "$GITHUB_OUTPUT"
+
+      - name: 运行全部测试（17 组 / 98 用例）
+        run: |
+          xcodebuild test \
+            -project GTOAcademy.xcodeproj \
+            -scheme GTOAcademy \
+            -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            -resultBundlePath TestResults.xcresult
+
+      - name: 失败时上传测试结果包（可下载排查）
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xcresult

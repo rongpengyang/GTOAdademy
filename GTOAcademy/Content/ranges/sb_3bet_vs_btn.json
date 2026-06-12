@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "sb-3bet-vs-btn-100bb",
+  "name": {
+    "zh": "SB 3-Bet 范围 · 对抗 BTN 开局（100bb，3-bet 或弃牌）",
+    "en": "SB 3-Bet vs BTN Open (100bb, 3-bet-or-fold)"
+  },
+  "position": "sb",
+  "stack": 100,
+  "action": "3bet",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "88+, ATs+, A2s-A5s, KJs+, QJs, JTs, AJo+, KQo"
+}

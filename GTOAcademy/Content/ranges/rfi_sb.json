@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "rfi-sb-100bb",
+  "name": {
+    "zh": "SB 开局加注范围（100bb · 加注或弃牌策略）",
+    "en": "SB Open-Raise Range (100bb, raise-or-fold)"
+  },
+  "position": "sb",
+  "stack": 100,
+  "action": "raise",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22+, A2s+, K2s+, Q4s+, J6s+, T6s+, 96s+, 85s+, 75s+, 64s+, 53s+, 43s, A2o+, K8o+, Q9o+, J9o+, T9o, 98o"
+}

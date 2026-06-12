@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "bb-call-vs-btn-100bb",
+  "name": {
+    "zh": "BB 防守跟注范围 · 对抗 BTN 开局（100bb）",
+    "en": "BB Defend (Call) vs BTN Open (100bb)"
+  },
+  "position": "bb",
+  "stack": 100,
+  "action": "call",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22-TT, A2s-A9s, K6s+, Q8s+, J8s+, T7s+, 96s+, 86s+, 75s+, 64s+, 53s+, 43s, A8o-AJo, KTo+, QTo+, JTo, T9o, 98o"
+}

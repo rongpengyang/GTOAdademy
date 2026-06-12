@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "track": {
+    "id": "track1",
+    "order": 1,
+    "title": {
+      "zh": "新手基础",
+      "en": "Foundations"
+    },
+    "subtitle": {
+      "zh": "规则、牌力与位置",
+      "en": "Rules, hand strength and position"
+    }
+  },
+  "lessons": [
+    {
+      "id": "l1-01-hand-rankings",
+      "order": 1,
+      "title": {
+        "zh": "手牌等级",
+        "en": "Hand Rankings"
+      },
+      "minutes": 4,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "成手牌从低到高共九级：高牌、一对、两对、三条、顺子、同花、葫芦（三条带一对）、四条、同花顺。比牌先比等级；等级相同再比组成牌的大小；仍相同则比踢脚（kicker）。",
+            "en": "Made hands rank from lowest to highest: high card, one pair, two pair, trips, straight, flush, full house (trips plus a pair), quads, and straight flush. Compare the category first, then the cards that form the hand, then the kicker."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "你拿 A♠K♠，公共牌 Q♠ J♠ 4♣ 7♦ 2♠——河牌完成 A 高同花，击败任何顺子和两对。注意：最终成手永远是七张牌里最好的五张。",
+            "en": "You hold A♠K♠ on Q♠ J♠ 4♣ 7♦ 2♠ — the river completes an ace-high flush, beating any straight or two pair. Remember: your final hand is always the best five of the seven cards."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：把两对当成大牌过度下注（两对经常输给顺子、同花和暗三条）；以及忘记 A 可以当 1，组成最小顺子 A-2-3-4-5（wheel）。",
+            "en": "Common mistakes: overvaluing two pair (it often loses to straights, flushes and sets), and forgetting the ace can play low in the A-2-3-4-5 wheel straight."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "记忆锚点：同花打顺子，葫芦打同花。不确定时，先报等级，再报关键牌——\"K 高同花\"\"A 顶两对\"。",
+            "en": "Memory anchor: a flush beats a straight; a full house beats a flush. When unsure, name the category first, then the key cards — \"king-high flush\", \"aces up\"."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-01a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-01b"
+        }
+      ]
+    },
+    {
+      "id": "l1-02-positions",
+      "order": 2,
+      "title": {
+        "zh": "六个位置",
+        "en": "The Six Positions"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "6-max 翻前按 UTG（枪口）→ HJ（劫机）→ CO（关煞）→ BTN（按钮）→ SB（小盲）→ BB（大盲）的顺序行动。翻后 BTN 永远最后行动——后行动意味着信息优势。位置越靠后，能盈利开局的牌就越多。",
+            "en": "In 6-max, preflop action runs UTG → HJ → CO → BTN → SB → BB. After the flop, the button always acts last — acting later means an information edge. The later your position, the more hands you can profitably open."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "同样一手 K♥T♦（KTo）：在 UTG 它太弱——后面还有五个玩家，经常被更强的 K 和 A 压制；在 BTN 它是标准开局——只剩两个盲注位防守，而且你翻后永远有位置。位置改变了同一手牌的价值。",
+            "en": "The same K♥T♦ (KTo): under the gun it is too weak — five players remain behind, and stronger kings and aces dominate it. On the button it is a standard open — only the blinds defend, and you act last on every postflop street. Position changes the value of the very same hand."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：在 UTG 用边缘牌（KTo、QJo、A5o 一类）开局。前位开局会被后面五个范围检验，被 3-bet 或被压制跟注的频率太高。原则：前位紧，后位松。",
+            "en": "Common mistake: opening marginal hands (KTo, QJo, A5o) from UTG. An early open gets tested by five ranges behind you, getting 3-bet or dominated far too often. Principle: tight early, looser late."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "记忆法：BTN 是全桌最好的位置，离 BTN 越远越要收紧。SB 翻后永远第一个行动，是最难打的位置——别在那里逞强。",
+            "en": "Rule of thumb: the button is the best seat at the table; the farther from it, the tighter you play. The small blind acts first on every postflop street — the hardest seat, so do not be a hero there."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-02a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-02b"
+        }
+      ]
+    },
+    {
+      "id": "l1-03-actions-and-streets",
+      "order": 3,
+      "title": {
+        "zh": "动作与下注轮",
+        "en": "Actions and Streets"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "一手牌最多四条下注轮：翻前（preflop）、翻牌（flop）、转牌（turn）、河牌（river）。每轮里你可以：无人下注时 check 或 bet；面对下注时 fold、call 或 raise。当所有未弃牌玩家投入相等，本轮结束。SB/BB 两个强制盲注启动翻前行动。",
+            "en": "A hand has at most four betting rounds: preflop, flop, turn and river. In each round you may check or bet when no one has bet, and fold, call or raise when facing a bet. The round ends once every remaining player has matched the bet. The small and big blinds kick off preflop action."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "翻前无人加注时，BB 可以直接 check 看翻牌（这叫 option）。翻后轮到你且前面没人下注，check 把决定推给对手——它本身不透露任何额外信息。",
+            "en": "If no one raises preflop, the big blind may simply check and see the flop (the option). Postflop, checking when no one has bet passes the decision along — by itself it reveals nothing extra."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "最常被滥用的动作是 call：「见注必跟」既不能让对手弃牌赢下底池，也不能封顶锅底。每次跟注前问自己——我靠什么赢：摊牌价值，还是后面的牌？",
+            "en": "The most abused action is the call: calling everything can never win the pot by folding opponents out, nor does it cap the damage. Before every call, ask what wins you the pot — showdown value, or cards to come?"
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "行动前默念三选项各自的目的：弃牌止损、跟注实现权益、加注施压或取价值。说不出加注理由，就先别加注。",
+            "en": "Before acting, name the purpose of each option: fold to cut losses, call to realize equity, raise to pressure or extract value. If you cannot state a reason to raise, do not raise."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-03a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-03b"
+        }
+      ]
+    },
+    {
+      "id": "l1-04-pot-odds",
+      "order": 4,
+      "title": {
+        "zh": "底池赔率",
+        "en": "Pot Odds"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "底池赔率回答一个问题：这次跟注的「价格」值不值。盈亏平衡胜率 = 跟注额 ÷（底池 + 对手下注 + 你的跟注）。例：底池 10，对手下 5，你跟 5——需要 5/(10+5+5) = 25% 胜率才不亏。",
+            "en": "Pot odds answer one question: is this call worth the price? Break-even equity = call ÷ (pot + bet + call). Example: pot 10, opponent bets 5, you call 5 — you need 5/(10+5+5) = 25% equity to break even."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "河牌：底池 20bb，对手全下 10bb。你需要 10/(20+10+10) = 25% 胜率。如果你判断只有两成把握抓到诈唬，这就是个弃牌——便宜不等于该跟。",
+            "en": "River: pot 20bb, opponent shoves 10bb. You need 10/(20+10+10) = 25% equity. If you put your bluff-catch chance at only one in five, this is a fold — cheap is not the same as correct."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "两个经典错误：只看「底池好大」却不算跟注价格；以及把自己之前投入的筹码当成本——那些已经属于底池（沉没成本），不该影响这一刻的决定。",
+            "en": "Two classic errors: noticing the pot is big without computing the price, and counting your earlier chips as a cost — those already belong to the pot (sunk cost) and must not sway this decision."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "背下三个速查值：半池下注 ≈ 25%，2/3 池 ≈ 28.5%，满池 ≈ 33%。桌上不必现算，对照即可。",
+            "en": "Memorize three anchors: half-pot ≈ 25%, two-thirds pot ≈ 28.5%, full pot ≈ 33%. At the table you compare, not compute."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-04a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-04b"
+        }
+      ]
+    },
+    {
+      "id": "l1-05-outs-and-equity",
+      "order": 5,
+      "title": {
+        "zh": "补牌与 2/4 法则",
+        "en": "Outs and the Rule of 2 & 4"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "Outs = 还没见到、且能让你反超的牌张数。速算胜率：翻牌后看到河牌 ≈ outs × 4%；转牌后只剩一张 ≈ outs × 2%。常见听牌：同花听 9 张，两头顺 8 张，卡顺 4 张。",
+            "en": "Outs are the unseen cards that put you ahead. Quick equity: flop to river ≈ outs × 4%; turn to river ≈ outs × 2%. Common draws: flush draw 9 outs, open-ended straight draw 8, gutshot 4."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "翻牌拿到同花听牌（9 outs）：到河牌约 9 × 4 ≈ 36%（精确值 35%）。转牌没中，只剩一张：约 9 × 2 ≈ 18%–20%。配合上一课的底池赔率，听牌该不该跟立刻有答案。",
+            "en": "Flop a flush draw (9 outs): about 9 × 4 ≈ 36% to the river (exactly 35%). Miss the turn and one card remains: about 9 × 2 ≈ 18–20%. Pair this with pot odds from the last lesson and draw decisions answer themselves."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "别把「脏 outs」全额计数：你的顺子补牌若同时给对手凑成同花，就得打折；对手可能已经领先更多时，你以为的 outs 也可能根本不算数。",
+            "en": "Do not count tainted outs at full value: a straight card that also completes the opponent's flush must be discounted, and when the opponent may already be far ahead, some of your outs are not outs at all."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "固定流程：数 outs → 乘 2 或 4 → 与盈亏平衡胜率比大小。这三步就是听牌决策的全部骨架。",
+            "en": "Fixed routine: count outs → multiply by 2 or 4 → compare with break-even equity. Those three steps are the whole skeleton of draw decisions."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-05a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-05b"
+        }
+      ]
+    },
+    {
+      "id": "l1-06-starting-hands",
+      "order": 6,
+      "title": {
+        "zh": "起手牌的形状",
+        "en": "Shapes of Starting Hands"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "169 种起手牌按形状分三类，组合数各不同：对子 6 种、同花 4 种、不同花 12 种。一手牌的价值来自三处：成对潜力、成顺/同花潜力、踢脚优势。同花比不同花胜率只高约 2–3%，真正的差距在可玩性。",
+            "en": "The 169 starting hands fall into three shapes with different combo counts: pairs 6, suited 4, offsuit 12. Value comes from three sources: pairing power, straight/flush potential, and kicker edge. Suited beats offsuit by only ~2–3% raw equity — the real gap is playability."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "AKs 对 AKo：胜率差不大，但 AKs 能开同花听牌，在更多转牌上继续战斗；T9s 这类同花连张平时安静，一旦成顺成同花就是赢大锅的牌。",
+            "en": "AKs versus AKo: similar raw equity, but AKs picks up flush draws and keeps fighting on far more turns. Suited connectors like T9s stay quiet most hands, then win big pots when the straight or flush arrives."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "高估「长得好看」的牌：KTo、QJo、A 带小不同花最容易被更大的同类牌压制，赢小锅、输大锅；也别把「同花」当成必玩的理由——花色救不了烂踢脚。",
+            "en": "Overrating pretty hands: KTo, QJo and weak offsuit aces get dominated by bigger versions of themselves — winning small, losing big. And suitedness alone is not a reason to play: two matching suits cannot rescue a bad kicker."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "把 6 / 4 / 12 刻进脑子：对手「有 AK」共 16 种组合，其中只有 4 种同花。读牌时这个比例每天都在用。",
+            "en": "Burn 6 / 4 / 12 into memory: an opponent's AK comes in 16 combos, only 4 of them suited. You will use that ratio in hand reading every single day."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-06a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-06b"
+        }
+      ]
+    },
+    {
+      "id": "l1-07-variance-and-mindset",
+      "order": 7,
+      "title": {
+        "zh": "方差与心态",
+        "en": "Variance and Mindset"
+      },
+      "minutes": 4,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "扑克的短期结果由运气主导，长期质量由决策主导——这中间的波动叫方差。评估自己只看一件事：这个决策在当时的信息下是否合理。本 App 的一切数值都是虚拟训练单位，与真实金钱无关。",
+            "en": "Short-term poker results are luck-driven; long-run quality is decision-driven — the gap between them is variance. Judge yourself on one thing only: was the decision sound given the information at the time? Every number in this app is a fictional training unit, unrelated to real money."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "AA 全下被 22 反超：决策正确、结果糟糕（bad beat）。复盘时问「换一次我还会这么打吗」，而不是「我输了多少」。",
+            "en": "Aces all-in get cracked by deuces: correct decision, terrible outcome — a bad beat. In review ask 'would I play it the same way again?', not 'how much did I lose?'."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "结果导向是头号思维病：赢了就以为打得对，输了就推翻正确逻辑。第二是上头（tilt）——情绪接管后范围越打越宽、注越下越大。",
+            "en": "Results-orientation is the number-one leak: a win 'proves' the play, a loss overturns sound logic. Second is tilt — once emotion takes over, ranges widen and bets balloon."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "给自己立两条训练纪律：每次只复盘错题本里的决策；连续答错 3 题就休息——在训练 App 里也会 tilt。",
+            "en": "Adopt two training rules: review only the decisions in your mistake book, and take a break after three wrong answers in a row — you can tilt in a training app too."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-07a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q1-07b"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1-01a",
+      "prompt": {
+        "zh": "同花与顺子同时摊牌，谁更大？",
+        "en": "Flush versus straight at showdown — which wins?"
+      },
+      "choices": [
+        {
+          "zh": "顺子",
+          "en": "Straight"
+        },
+        {
+          "zh": "同花",
+          "en": "Flush"
+        },
+        {
+          "zh": "平分底池",
+          "en": "Split pot"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "顺子排在同花之下——五张同花色比五张连牌更难组成。",
+          "en": "A straight ranks below a flush — five of one suit is harder to make than five in a row."
+        },
+        {
+          "zh": "正确：同花高于顺子。口诀：同花打顺子。",
+          "en": "Correct: a flush beats a straight."
+        },
+        {
+          "zh": "只有等级与组成牌完全相同才平分；这里等级就不同。",
+          "en": "Pots split only when category and cards are identical; here the categories differ."
+        }
+      ],
+      "objective": {
+        "zh": "记住九级牌力中同花 > 顺子。",
+        "en": "Remember that a flush outranks a straight."
+      },
+      "lessonRef": "l1-01-hand-rankings"
+    },
+    {
+      "id": "q1-01b",
+      "prompt": {
+        "zh": "A-2-3-4-5 算不算顺子？",
+        "en": "Does A-2-3-4-5 count as a straight?"
+      },
+      "choices": [
+        {
+          "zh": "算，这是最小的顺子（wheel）",
+          "en": "Yes — the lowest straight (the wheel)"
+        },
+        {
+          "zh": "不算，A 只能当最大",
+          "en": "No — the ace only plays high"
+        },
+        {
+          "zh": "只有同花色时才算",
+          "en": "Only when all five share a suit"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：A 可作 1，组成最小顺子 5-4-3-2-A。",
+          "en": "Correct: the ace plays low, making the five-high straight."
+        },
+        {
+          "zh": "A 可大可小，但不能\"绕圈\"——Q-K-A-2-3 不是顺子。",
+          "en": "The ace plays high or low, but never wraps around — Q-K-A-2-3 is not a straight."
+        },
+        {
+          "zh": "同花色的 A-2-3-4-5 是同花顺；普通花色组合本身已是顺子。",
+          "en": "Suited A-2-3-4-5 is a straight flush; the unsuited version is already a straight."
+        }
+      ],
+      "objective": {
+        "zh": "掌握 A 的双重取值与 wheel。",
+        "en": "Know the ace's dual value and the wheel."
+      },
+      "lessonRef": "l1-01-hand-rankings"
+    },
+    {
+      "id": "q1-02a",
+      "prompt": {
+        "zh": "翻牌后，哪个位置总是最后行动？",
+        "en": "After the flop, which position always acts last?"
+      },
+      "choices": [
+        {
+          "zh": "UTG",
+          "en": "UTG"
+        },
+        {
+          "zh": "BB",
+          "en": "BB"
+        },
+        {
+          "zh": "BTN",
+          "en": "BTN"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "UTG 翻前最先行动，翻后也早于 BTN。",
+          "en": "UTG acts first preflop and still before the button postflop."
+        },
+        {
+          "zh": "BB 翻前收尾，但翻后行动顺序排在前面。",
+          "en": "The big blind closes preflop action but acts early postflop."
+        },
+        {
+          "zh": "正确：BTN 翻后永远最后行动，信息优势最大。",
+          "en": "Correct: the button always acts last postflop — the biggest information edge."
+        }
+      ],
+      "objective": {
+        "zh": "理解 BTN 位置优势的来源。",
+        "en": "Understand where the button's edge comes from."
+      },
+      "lessonRef": "l1-02-positions"
+    },
+    {
+      "id": "q1-02b",
+      "prompt": {
+        "zh": "6-max 翻前谁最先行动？",
+        "en": "In 6-max, who acts first preflop?"
+      },
+      "choices": [
+        {
+          "zh": "SB",
+          "en": "SB"
+        },
+        {
+          "zh": "UTG",
+          "en": "UTG"
+        },
+        {
+          "zh": "CO",
+          "en": "CO"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "SB 翻前在 BTN 之后、BB 之前行动，并非最先。",
+          "en": "Preflop the small blind acts after the button, before the big blind — not first."
+        },
+        {
+          "zh": "正确：翻前从 UTG 开始，顺序为 UTG → HJ → CO → BTN → SB → BB。",
+          "en": "Correct: preflop action starts at UTG and runs UTG → HJ → CO → BTN → SB → BB."
+        },
+        {
+          "zh": "CO 在 UTG 与 HJ 之后才行动。",
+          "en": "The cutoff acts only after UTG and the hijack."
+        }
+      ],
+      "objective": {
+        "zh": "记住翻前行动顺序。",
+        "en": "Memorize the preflop action order."
+      },
+      "lessonRef": "l1-02-positions"
+    },
+    {
+      "id": "q1-03a",
+      "prompt": {
+        "zh": "翻牌轮无人下注，轮到你。哪些动作合法？",
+        "en": "Postflop, no one has bet and it is your turn. Which actions are legal?"
+      },
+      "choices": [
+        {
+          "zh": "Check 或 Bet",
+          "en": "Check or bet"
+        },
+        {
+          "zh": "只能 Call",
+          "en": "Only call"
+        },
+        {
+          "zh": "必须 Bet",
+          "en": "Must bet"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：无人下注时没有可跟的注——你可以 check 推走决定，或 bet 主动开火。",
+          "en": "Correct: with no bet there is nothing to call — check to pass, or bet to open fire."
+        },
+        {
+          "zh": "没有下注就没有 call 的对象。",
+          "en": "There is no bet to call."
+        },
+        {
+          "zh": "下注从来不是义务，check 永远是无人下注时的合法选项。",
+          "en": "Betting is never mandatory; checking is always legal when no one has bet."
+        }
+      ],
+      "objective": {
+        "zh": "分清每个局面下的合法动作集。",
+        "en": "Know the legal action set in each spot."
+      },
+      "lessonRef": "l1-03-actions-and-streets"
+    },
+    {
+      "id": "q1-03b",
+      "prompt": {
+        "zh": "一手牌最多有几条下注轮？",
+        "en": "At most how many betting rounds does a hand have?"
+      },
+      "choices": [
+        {
+          "zh": "3",
+          "en": "3"
+        },
+        {
+          "zh": "4",
+          "en": "4"
+        },
+        {
+          "zh": "5",
+          "en": "5"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "漏掉了一条街——再数一遍。",
+          "en": "You are missing a street — count again."
+        },
+        {
+          "zh": "正确：翻前、翻牌、转牌、河牌，共四轮。",
+          "en": "Correct: preflop, flop, turn and river — four rounds."
+        },
+        {
+          "zh": "摊牌不是下注轮。",
+          "en": "Showdown is not a betting round."
+        }
+      ],
+      "objective": {
+        "zh": "记住四条街的结构。",
+        "en": "Memorize the four-street structure."
+      },
+      "lessonRef": "l1-03-actions-and-streets"
+    },
+    {
+      "id": "q1-04a",
+      "prompt": {
+        "zh": "底池 12bb，对手下注 6bb。你至少需要多少胜率，跟注才不亏？",
+        "en": "Pot 12bb, opponent bets 6bb. What equity do you need for a break-even call?"
+      },
+      "choices": [
+        {
+          "zh": "约 20%",
+          "en": "About 20%"
+        },
+        {
+          "zh": "约 25%",
+          "en": "About 25%"
+        },
+        {
+          "zh": "约 33%",
+          "en": "About 33%"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "算小了：分母要包含你自己的跟注。",
+          "en": "Too low: the denominator includes your own call."
+        },
+        {
+          "zh": "正确：6 ÷ (12 + 6 + 6) = 25%。半池下注对应 25%，速查值之一。",
+          "en": "Correct: 6 ÷ (12 + 6 + 6) = 25%. Half-pot maps to 25% — one of the anchors."
+        },
+        {
+          "zh": "33% 是满池下注的盈亏平衡点，这里只是半池。",
+          "en": "33% is the break-even for a full-pot bet; this is only half pot."
+        }
+      ],
+      "objective": {
+        "zh": "会算 call ÷ (pot + bet + call)。",
+        "en": "Compute call ÷ (pot + bet + call)."
+      },
+      "lessonRef": "l1-04-pot-odds"
+    },
+    {
+      "id": "q1-04b",
+      "prompt": {
+        "zh": "对手满池下注，你的盈亏平衡胜率约为？",
+        "en": "Against a full-pot bet, your break-even equity is about?"
+      },
+      "choices": [
+        {
+          "zh": "25%",
+          "en": "25%"
+        },
+        {
+          "zh": "33%",
+          "en": "33%"
+        },
+        {
+          "zh": "50%",
+          "en": "50%"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "25% 对应的是半池下注。",
+          "en": "25% corresponds to a half-pot bet."
+        },
+        {
+          "zh": "正确：B ÷ (P + B + B)，B = P 时即 1/3 ≈ 33%。",
+          "en": "Correct: B ÷ (P + B + B); with B = P that is one third ≈ 33%."
+        },
+        {
+          "zh": "50% 是「跟注额 = 跟注后总池一半」的极端情况，满池远没到。",
+          "en": "50% would require calling half of the final pot — a full-pot bet is nowhere near that."
+        }
+      ],
+      "objective": {
+        "zh": "记住满池 ≈ 33% 的速查值。",
+        "en": "Anchor: full pot ≈ 33%."
+      },
+      "lessonRef": "l1-04-pot-odds"
+    },
+    {
+      "id": "q1-05a",
+      "prompt": {
+        "zh": "翻牌拿到同花听牌（9 outs），到河牌的胜率约为？",
+        "en": "You flop a flush draw (9 outs). Your equity to the river is about?"
+      },
+      "choices": [
+        {
+          "zh": "约 18%",
+          "en": "About 18%"
+        },
+        {
+          "zh": "约 36%",
+          "en": "About 36%"
+        },
+        {
+          "zh": "约 50%",
+          "en": "About 50%"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "18% 是转牌后只剩一张时的估值（9 × 2）。",
+          "en": "18% is the one-card estimate after the turn (9 × 2)."
+        },
+        {
+          "zh": "正确：还有两张牌，9 × 4 ≈ 36%（精确 35%）。",
+          "en": "Correct: two cards to come, 9 × 4 ≈ 36% (exactly 35%)."
+        },
+        {
+          "zh": "同花听牌没到接近抛硬币的程度。",
+          "en": "A flush draw is not close to a coin flip."
+        }
+      ],
+      "objective": {
+        "zh": "翻牌后用 ×4，转牌后用 ×2。",
+        "en": "Use ×4 on the flop, ×2 on the turn."
+      },
+      "lessonRef": "l1-05-outs-and-equity"
+    },
+    {
+      "id": "q1-05b",
+      "prompt": {
+        "zh": "两头顺听牌（open-ended）有几张补牌？",
+        "en": "How many outs does an open-ended straight draw have?"
+      },
+      "choices": [
+        {
+          "zh": "4",
+          "en": "4"
+        },
+        {
+          "zh": "8",
+          "en": "8"
+        },
+        {
+          "zh": "9",
+          "en": "9"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "4 张是卡顺（gutshot）。",
+          "en": "Four outs is a gutshot."
+        },
+        {
+          "zh": "正确：两端各 4 张，共 8 张。",
+          "en": "Correct: four cards on each end — eight outs."
+        },
+        {
+          "zh": "9 张是同花听牌。",
+          "en": "Nine outs is the flush draw."
+        }
+      ],
+      "objective": {
+        "zh": "记住三种常见听牌的 outs 数。",
+        "en": "Know the outs of the three common draws."
+      },
+      "lessonRef": "l1-05-outs-and-equity"
+    },
+    {
+      "id": "q1-06a",
+      "prompt": {
+        "zh": "同一个对子（如 88）有多少种花色组合？",
+        "en": "How many combos does a single pocket pair (like 88) have?"
+      },
+      "choices": [
+        {
+          "zh": "4",
+          "en": "4"
+        },
+        {
+          "zh": "6",
+          "en": "6"
+        },
+        {
+          "zh": "12",
+          "en": "12"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "4 是同花牌的组合数。",
+          "en": "Four is the combo count of a suited hand."
+        },
+        {
+          "zh": "正确：四种花色两两组合，C(4,2) = 6。",
+          "en": "Correct: choose two of four suits — C(4,2) = 6."
+        },
+        {
+          "zh": "12 是不同花牌的组合数。",
+          "en": "Twelve is the combo count of an offsuit hand."
+        }
+      ],
+      "objective": {
+        "zh": "掌握 6 / 4 / 12 组合计数。",
+        "en": "Master the 6 / 4 / 12 combo counts."
+      },
+      "lessonRef": "l1-06-starting-hands"
+    },
+    {
+      "id": "q1-06b",
+      "prompt": {
+        "zh": "AKs 相比 AKo 最大的优势是？",
+        "en": "The biggest edge of AKs over AKo is?"
+      },
+      "choices": [
+        {
+          "zh": "胜率高出 20% 以上",
+          "en": "Over 20% more raw equity"
+        },
+        {
+          "zh": "可玩性：能开同花听牌继续战斗",
+          "en": "Playability: it picks up flush draws and keeps fighting"
+        },
+        {
+          "zh": "翻前永远领先所有牌",
+          "en": "It is always ahead preflop"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "同花只比不同花高约 2–3% 胜率。",
+          "en": "Suited adds only about 2–3% raw equity."
+        },
+        {
+          "zh": "正确：同花带来的听牌让 AKs 在更多翻牌面上能继续，这才是主要差距。",
+          "en": "Correct: the flush-draw potential lets AKs continue on many more boards — that is the real gap."
+        },
+        {
+          "zh": "任何对子翻前都领先 AK。",
+          "en": "Every pocket pair is ahead of AK preflop."
+        }
+      ],
+      "objective": {
+        "zh": "理解「可玩性」高于「裸胜率」。",
+        "en": "Value playability over raw equity."
+      },
+      "lessonRef": "l1-06-starting-hands"
+    },
+    {
+      "id": "q1-07a",
+      "prompt": {
+        "zh": "评价一手牌打得好坏，最该看的是？",
+        "en": "The right way to judge how a hand was played is?"
+      },
+      "choices": [
+        {
+          "zh": "最终的输赢",
+          "en": "Whether you won"
+        },
+        {
+          "zh": "决策在当时信息下是否合理",
+          "en": "Whether the decision was sound given the information"
+        },
+        {
+          "zh": "运气好不好",
+          "en": "Whether you ran good"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "结果导向是头号思维病——坏决策也会赢，好决策也会输。",
+          "en": "Results-orientation is the number-one leak — bad plays win and good plays lose."
+        },
+        {
+          "zh": "正确：决策质量才是你唯一能控制的东西。",
+          "en": "Correct: decision quality is the only thing you control."
+        },
+        {
+          "zh": "运气决定单手结果，不决定你的水平。",
+          "en": "Luck decides single hands, not your skill."
+        }
+      ],
+      "objective": {
+        "zh": "建立决策导向的复盘习惯。",
+        "en": "Build a decision-first review habit."
+      },
+      "lessonRef": "l1-07-variance-and-mindset"
+    },
+    {
+      "id": "q1-07b",
+      "prompt": {
+        "zh": "发现自己连续冲动答错（tilt），最好的做法是？",
+        "en": "You notice impulsive wrong answers in a row (tilt). The best move is?"
+      },
+      "choices": [
+        {
+          "zh": "加快速度找回手感",
+          "en": "Speed up to regain rhythm"
+        },
+        {
+          "zh": "暂停休息，稳定后再回来",
+          "en": "Pause, reset, come back later"
+        },
+        {
+          "zh": "降低难度刷正确率",
+          "en": "Drop the difficulty and farm accuracy"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "加速只会放大情绪化决策。",
+          "en": "Speeding up amplifies emotional decisions."
+        },
+        {
+          "zh": "正确：tilt 的解药是离开，不是硬扛。",
+          "en": "Correct: the cure for tilt is stepping away, not pushing through."
+        },
+        {
+          "zh": "刷简单题修复的是数字，不是判断力。",
+          "en": "Farming easy questions fixes the number, not the judgment."
+        }
+      ],
+      "objective": {
+        "zh": "识别并打断 tilt 循环。",
+        "en": "Recognize and break the tilt loop."
+      },
+      "lessonRef": "l1-07-variance-and-mindset"
+    }
+  ]
+}

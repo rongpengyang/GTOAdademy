@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sampleMin": 30,
+  "borderlineMargin": 2,
+  "rules": [
+    {
+      "type": "maniac",
+      "vpip": { "gt": 40 },
+      "pfr": { "gt": 30 },
+      "af": { "gte": 3, "optional": true }
+    },
+    {
+      "type": "passive_fish",
+      "vpip": { "gt": 35 },
+      "pfr": { "lt": 10 },
+      "af": { "lt": 1.5, "optional": true }
+    },
+    {
+      "type": "calling_station",
+      "vpip": { "gt": 30 },
+      "pfr": { "lt": 12 },
+      "foldToCbet": { "lt": 40, "optional": true }
+    },
+    {
+      "type": "nit",
+      "vpip": { "lt": 18 },
+      "pfr": { "lt": 14 }
+    },
+    {
+      "type": "tag",
+      "vpip": { "gte": 18, "lte": 25 },
+      "pfr": { "gte": 15, "lte": 22 }
+    },
+    {
+      "type": "lag",
+      "vpip": { "gte": 26, "lte": 35 },
+      "pfr": { "gte": 22 }
+    }
+  ]
+}

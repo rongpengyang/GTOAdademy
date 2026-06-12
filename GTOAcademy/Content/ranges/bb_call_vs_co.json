@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "bb-call-vs-co-100bb",
+  "name": {
+    "zh": "BB 防守跟注范围 · 对抗 CO 开局（100bb）",
+    "en": "BB Defend (Call) vs CO Open (100bb)"
+  },
+  "position": "bb",
+  "stack": 100,
+  "action": "call",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22-TT, A2s-ATs, K8s+, Q9s+, J9s+, T8s+, 97s+, 86s+, 75s+, 65s, 54s, ATo-AQo, KJo+, QJo, JTo, T9o"
+}

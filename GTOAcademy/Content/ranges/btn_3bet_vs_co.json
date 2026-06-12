@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "btn-3bet-vs-co-100bb",
+  "name": {
+    "zh": "BTN 3-Bet 范围 · 对抗 CO 开局（100bb）",
+    "en": "BTN 3-Bet vs CO Open (100bb)"
+  },
+  "position": "btn",
+  "stack": 100,
+  "action": "3bet",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "TT+, AJs+, KQs, A4s-A5s, AQo+, 76s, 65s"
+}

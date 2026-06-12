@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "xp": {
+    "lessonComplete": 20,
+    "curatedCorrect": 5,
+    "endlessCorrect": 2,
+    "acceptable": 2,
+    "reviewPass": 3,
+    "dailyFirst": 10
+  },
+  "levels": [
+    {
+      "id": 1,
+      "key": "beginner",
+      "name": {
+        "zh": "新手入门",
+        "en": "Beginner"
+      },
+      "minXP": 0
+    },
+    {
+      "id": 2,
+      "key": "preflopRookie",
+      "name": {
+        "zh": "翻前新兵",
+        "en": "Preflop Rookie"
+      },
+      "minXP": 60
+    },
+    {
+      "id": 3,
+      "key": "aggressionBuilder",
+      "name": {
+        "zh": "进攻构建者",
+        "en": "Aggression Builder"
+      },
+      "minXP": 150
+    },
+    {
+      "id": 4,
+      "key": "postflopStudent",
+      "name": {
+        "zh": "翻后学生",
+        "en": "Postflop Student"
+      },
+      "minXP": 280
+    },
+    {
+      "id": 5,
+      "key": "rangeThinker",
+      "name": {
+        "zh": "范围思考者",
+        "en": "Range Thinker"
+      },
+      "minXP": 450
+    },
+    {
+      "id": 6,
+      "key": "exploitPlayer",
+      "name": {
+        "zh": "剥削玩家",
+        "en": "Exploit Player"
+      },
+      "minXP": 660
+    },
+    {
+      "id": 7,
+      "key": "gtoApprentice",
+      "name": {
+        "zh": "GTO 学徒",
+        "en": "GTO Apprentice"
+      },
+      "minXP": 920
+    },
+    {
+      "id": 8,
+      "key": "gtoGrinder",
+      "name": {
+        "zh": "GTO 磨砺者",
+        "en": "GTO Grinder"
+      },
+      "minXP": 1240
+    }
+  ]
+}

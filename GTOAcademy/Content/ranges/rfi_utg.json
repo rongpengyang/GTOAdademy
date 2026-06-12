@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "rfi-utg-100bb",
+  "name": { "zh": "UTG 开局加注范围（100bb）", "en": "UTG Open-Raise Range (100bb)" },
+  "position": "utg",
+  "stack": 100,
+  "action": "raise",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22+, ATs+, A5s-A4s, KTs+, QTs+, JTs, T9s, 98s, AJo+, KQo"
+}

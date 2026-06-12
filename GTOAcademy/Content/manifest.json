@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1.0.0",
+  "lessonFiles": [
+    "track1_foundations",
+    "track2_preflop",
+    "track3_postflop",
+    "track4_gto"
+  ],
+  "scenarioFiles": {
+    "preflop": "preflop",
+    "postflop": "postflop",
+    "playerType": "playertype"
+  },
+  "rangeFiles": [
+    "rfi_utg",
+    "rfi_hj",
+    "rfi_co",
+    "rfi_btn",
+    "rfi_sb",
+    "bb_call_vs_btn",
+    "bb_call_vs_utg",
+    "bb_call_vs_co",
+    "bb_call_vs_sb",
+    "bb_3bet_vs_btn",
+    "sb_3bet_vs_btn",
+    "btn_3bet_vs_co"
+  ]
+}

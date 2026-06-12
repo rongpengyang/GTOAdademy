@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "track": {
+    "id": "track3",
+    "order": 3,
+    "title": {
+      "zh": "翻后核心",
+      "en": "Postflop Core"
+    },
+    "subtitle": {
+      "zh": "持续下注、牌面、尺寸与河牌决策",
+      "en": "C-bets, textures, sizing and river decisions"
+    }
+  },
+  "lessons": [
+    {
+      "id": "l3-01-cbet-basics",
+      "order": 1,
+      "title": {
+        "zh": "持续下注基础",
+        "en": "Continuation Bet Basics"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "翻前加注者带着更强、更密的范围进入翻牌——这叫范围优势。在干燥牌面上，有位置的小额持续下注（约 33% 底池）可以高频执行：用整个范围说同一句话，让对手的弱牌立刻交租。",
+            "en": "The preflop raiser arrives at the flop with the stronger, denser range — range advantage. On dry boards, a small in-position c-bet (about 33% pot) can fire at high frequency: the whole range speaks with one voice and weak hands pay rent immediately."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "BTN 开局、BB 跟注，翻牌 K♠7♦2♣。这张面几乎没帮到 BB 的防守范围，BTN 用 33% 底池对几乎全部范围下注，是教科书式的高频小注点。",
+            "en": "BTN opens, BB calls, flop K♠7♦2♣. This board misses the BB's defend range almost entirely; BTN betting 33% pot with nearly everything is the textbook high-frequency small c-bet spot."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：在所有牌面用同一种大注「证明自己有牌」，或在湿面上闭眼全范围 c-bet——湿面利好跟注者，需要挑手牌。",
+            "en": "Common mistakes: one big sizing everywhere to 'prove a hand,' or auto c-betting wet boards — wet textures favor the caller and demand hand selection."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "口径：干面→小注高频；湿面→放慢脚步，挑能继续的牌再开火。",
+            "en": "Rule of thumb: dry board → small and often; wet board → slow down and pick hands that can continue."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-01a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-01b"
+        }
+      ]
+    },
+    {
+      "id": "l3-02-board-texture",
+      "order": 2,
+      "title": {
+        "zh": "牌面结构与范围优势",
+        "en": "Board Texture and Range Advantage"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "看到翻牌先别问「我中了吗」，先问「这张面利谁的范围」。高张干面（A83 彩虹）密合开局者的 AK、AQ、大对子；中低连面（7♠6♠5♦）反而撞进防守者的同花连张与小对子怀里。",
+            "en": "Before asking 'did I hit,' ask 'whose range does this board hit.' High dry boards (A83 rainbow) mesh with the opener's AK, AQ and big pairs; low connected boards (7♠6♠5♦) crash straight into the defender's suited connectors and small pairs."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "同样是 BTN vs BB：A♦8♣3♥ 上 BTN 可以放心高频小注；7♠6♠5♦ 上同样的自动下注会撞上 87s、65s、44 这些防守常客——这正是 BB 可以反击的面。",
+            "en": "Same BTN vs BB: on A♦8♣3♥ the BTN fires small with confidence; on 7♠6♠5♦ the same auto-bet runs into 87s, 65s and 44 — exactly the boards where the BB fights back."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：把「我没中」等同于「必须放弃」，或把「我中了」等同于「必须下注」。单手牌思维让你在错误的面上做错误的事。",
+            "en": "Common mistake: equating 'I missed' with 'give up' or 'I hit' with 'must bet.' Single-hand thinking puts the wrong action on the wrong board."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "练习：每张翻牌停一秒，先标「利攻方 / 利守方 / 中性」，再想自己这一手。",
+            "en": "Drill: pause one second on every flop and tag it 'raiser / defender / neutral' before thinking about your own hand."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-02a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-02b"
+        }
+      ]
+    },
+    {
+      "id": "l3-03-draws-semibluff",
+      "order": 3,
+      "title": {
+        "zh": "听牌与半诈唬",
+        "en": "Draws and the Semi-Bluff"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "半诈唬有两条赢牌路径：对手现在就弃牌，或者被跟注后听牌击中。纯诈唬只有一条腿，强听牌有两条——这就是为什么同花听、两头顺听适合主动进攻而不是被动跟注。",
+            "en": "A semi-bluff wins two ways: the opponent folds now, or the draw arrives after a call. A pure bluff stands on one leg; a strong draw stands on two — which is why flush draws and open-enders belong on offense, not in call-and-pray mode."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "你在 BTN 拿 A♠5♠，翻牌 K♠9♠4♦：坚果同花听加上一张超牌。下注或加注让 BB 的 9x、口袋小对当场弃牌；被跟注也仍有约三分之一的概率在后两街击中。",
+            "en": "You hold A♠5♠ on K♠9♠4♦: the nut flush draw plus an overcard. Betting or raising folds out the BB's 9x and small pairs right now; even when called you still hit roughly a third of the time by the river."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：拿着强听牌只会被动跟注「等中了再说」——白白放弃弃牌权益，还把底池主动权交给对手。",
+            "en": "Common mistake: passively calling with strong draws to 'wait and hit' — surrendering fold equity for free and handing the betting lead away."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "组合听牌（同花听 + 顺听 / 超牌）是最好的进攻燃料；裸内听则更适合放弃或控池。",
+            "en": "Combo draws (flush draw plus straight draw or overcards) are premium fuel for aggression; a bare gutshot mostly wants out or pot control."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-03a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-03b"
+        }
+      ]
+    },
+    {
+      "id": "l3-04-bet-sizing",
+      "order": 4,
+      "title": {
+        "zh": "下注尺寸的语言",
+        "en": "The Language of Bet Sizing"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "尺寸是一门语言：小注（约 33%）说「我整个范围都在下注」，大注（75% 及以上）说「我的范围两极分化——要么很强，要么在诈唬」。先选范围想表达什么，再选尺寸。",
+            "en": "Sizing is a language: small (about 33%) says 'my whole range is betting'; big (75%+) says 'my range is polarized — very strong or bluffing.' Decide what the range wants to say, then pick the size."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "K72 彩虹面，BTN 用 33% 对全范围施压；转牌打出 A 后改用 75% 两极下注——价值用 AK、Kx 最强档，诈唬用带阻断的听牌。",
+            "en": "On K72 rainbow the BTN presses 33% with everything; when an ace rolls off on the turn, the sizing shifts to a polar 75% — value from AK and strong Kx, bluffs from draws with blockers."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：用注码暴露手牌——强牌下大注、弱牌下小注的初学者模式，等于把底牌翻给会观察的对手。",
+            "en": "Common mistake: telegraphing with size — the beginner pattern of big-with-strong, small-with-weak shows your cards to anyone paying attention."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "同一类局面用同一种尺寸，让价值与诈唬穿同一件外套。",
+            "en": "Use one size per situation class, so value and bluffs wear the same coat."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-04a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-04b"
+        }
+      ]
+    },
+    {
+      "id": "l3-05-turn-barrels",
+      "order": 5,
+      "title": {
+        "zh": "转牌：继续开火还是收手",
+        "en": "The Turn: Barrel or Brake"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "转牌是「这张牌帮了谁」的第二次投票。利好自己范围的转牌（高张、给自己补充权益的牌）支持二次开火；帮到对手范围或毫无改善时，过牌控池往往比硬打更便宜。",
+            "en": "The turn is a second vote on 'who did that card help.' Cards that favor your range (high cards, equity-adders) support a second barrel; when the turn helps the caller or changes nothing, checking for pot control is usually cheaper than forcing it."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "K♠7♦2♣ 上 c-bet 被跟注，转牌 A♦：这张 A 几乎专属于翻前加注者的范围，继续下注让 BB 的 7x、口袋对深陷两难。换成转牌 6♠，对 BB 的连张大有帮助——刹车更聪明。",
+            "en": "Your K♠7♦2♣ c-bet gets called and the turn is the A♦: that ace belongs almost exclusively to the raiser's range, so barreling squeezes BB's 7x and pocket pairs. Make the turn the 6♠ instead — a gift to BB's connectors — and braking is the smarter line."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：翻牌下注、转牌自动放弃。对手会学到「跟一条街就能拿走底池」，你的 c-bet 从此失去牙齿。",
+            "en": "Common mistake: bet flop, auto-give-up turn. Opponents learn that one call buys the pot, and your c-bet loses its teeth."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "二次开火前自问两件事：这张转牌偏向谁？我被跟注后还有没有计划？",
+            "en": "Before barreling, ask two things: whom does this card favor, and do I have a plan if called?"
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-05a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-05b"
+        }
+      ]
+    },
+    {
+      "id": "l3-06-river-decisions",
+      "order": 6,
+      "title": {
+        "zh": "河牌：薄价值与抓诈",
+        "en": "The River: Thin Value and Bluff-Catching"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "河牌没有未来权益，只剩两个问题。下注前问：「有没有更差的牌会跟注？」有，才叫价值下注。面对下注问：「他的整条故事线连贯吗？我是否阻断他的价值、不阻断他的诈唬？」",
+            "en": "The river has no future equity, only two questions. Before betting: 'do worse hands call?' — only then is it a value bet. Facing a bet: 'does his whole story line up, and do I block his value while unblocking his bluffs?'"
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "你持 K♥Q♥，河牌面 K-8-4-2-9：顶对好踢脚做 40% 薄价值，能从 KJ、KT 与固执的 8x 那里多收一条街——这正是长期赢家与保本者的分水岭。",
+            "en": "Holding K♥Q♥ on K-8-4-2-9, a 40% thin value bet collects one more street from KJ, KT and stubborn 8x — exactly the street that separates long-term winners from break-even players."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：河牌怕被加注而放弃薄价值；或者用「他肯定在诈唬」的直觉替代故事线分析去英雄跟注。",
+            "en": "Common mistakes: skipping thin value for fear of a raise, and hero-calling on 'he must be bluffing' vibes instead of story analysis."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "抓诈前复盘他每条街的动作：诈唬的故事，通常在某一街讲不通。",
+            "en": "Before bluff-catching, replay his action street by street: bluff stories usually break somewhere."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-06a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-06b"
+        }
+      ]
+    },
+    {
+      "id": "l3-07-facing-bets",
+      "order": 7,
+      "title": {
+        "zh": "面对下注：MDF 直觉与弃牌纪律",
+        "en": "Facing Bets: MDF Intuition and Fold Discipline"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "MDF（最低防守频率）提醒你：如果对任何下注都大面积弃牌，对手用任意两张牌诈唬都有利可图。但防守要用合格的牌——底池赔率决定你需要的权益：面对半池下注，需要约 25%。",
+            "en": "MDF (minimum defense frequency) warns that if you fold too often to any bet, opponents profit by bluffing any two cards. But defend with qualified hands — pot odds set the equity bar: versus a half-pot bet you need about 25%."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "底池 10bb，对手下注 5bb：跟注 5 赢 15，需要 25% 权益。你的中对加后门听牌通常够格；裸高牌则交出底池毫不可惜。",
+            "en": "Pot 10bb, opponent bets 5bb: call 5 to win 15, so 25% equity required. Middle pair with a backdoor draw usually qualifies; naked high cards can let the pot go without regret."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：两个极端——「永不弃牌的好奇心」与「见注就缩的自动弃牌」。前者慢性失血，后者邀请全世界来诈唬你。",
+            "en": "Common mistakes at both poles: never-fold curiosity that bleeds chips, and auto-folding that invites the whole table to bluff you."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "跟注前先有计划：转牌哪些牌继续、哪些牌放弃。没有计划的跟注只是更贵的弃牌。",
+            "en": "Have a plan before calling: which turns continue, which give up. A call without a plan is just a more expensive fold."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-07a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q3-07b"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q3-01a",
+      "prompt": {
+        "zh": "BTN 开局、BB 跟注，翻牌 K♠7♦2♣。BTN 的标准持续下注是？",
+        "en": "BTN opens, BB calls, flop K♠7♦2♣. The standard c-bet for BTN is?"
+      },
+      "choices": [
+        {
+          "zh": "约 33% 底池，高频执行",
+          "en": "About 33% pot, at high frequency"
+        },
+        {
+          "zh": "约 100% 底池，只用强牌",
+          "en": "About 100% pot, strong hands only"
+        },
+        {
+          "zh": "永远过牌看转牌",
+          "en": "Always check to the turn"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：干面 + 范围优势 = 小注高频，让弱牌交租。",
+          "en": "Correct: dry board plus range advantage means small and often — make weak hands pay rent."
+        },
+        {
+          "zh": "大注会把对手能弃的牌全都吓走，强牌反而收不到钱。",
+          "en": "A big bet folds out everything that might pay you; strong hands earn less."
+        },
+        {
+          "zh": "白白放掉范围优势；这正是最该下注的牌面之一。",
+          "en": "That surrenders the range advantage on one of the best betting boards there is."
+        }
+      ],
+      "objective": {
+        "zh": "识别高频小额 c-bet 的标准场景。",
+        "en": "Recognize the standard high-frequency small c-bet spot."
+      },
+      "lessonRef": "l3-01-cbet-basics"
+    },
+    {
+      "id": "q3-01b",
+      "prompt": {
+        "zh": "持续下注的底层依据是什么？",
+        "en": "What is the underlying basis of the continuation bet?"
+      },
+      "choices": [
+        {
+          "zh": "加注者翻牌中牌的概率更高",
+          "en": "The raiser hits the flop more often"
+        },
+        {
+          "zh": "加注者带着更强更密的范围进入翻牌",
+          "en": "The raiser arrives with the stronger, denser range"
+        },
+        {
+          "zh": "先下注的人总是赢得更多",
+          "en": "Whoever bets first always wins more"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "任何两张牌中翻牌的概率都差不多——差别不在「中没中」。",
+          "en": "Any two cards hit the flop about equally often — the edge is not in 'hitting.'"
+        },
+        {
+          "zh": "正确：范围优势才是 c-bet 的发动机，与单手牌中没中无关。",
+          "en": "Correct: range advantage powers the c-bet, regardless of any single hand."
+        },
+        {
+          "zh": "没有范围支撑的「先手必胜」是迷信，对手会用加注教育你。",
+          "en": "First-in magic is superstition without a range behind it; raises will reeducate you."
+        }
+      ],
+      "objective": {
+        "zh": "把 c-bet 归因到范围优势。",
+        "en": "Attribute the c-bet to range advantage."
+      },
+      "lessonRef": "l3-01-cbet-basics"
+    },
+    {
+      "id": "q3-02a",
+      "prompt": {
+        "zh": "A♦8♣3♥ 彩虹翻牌，BTN 开局对 BB 防守。这张面更利于谁？",
+        "en": "Flop A♦8♣3♥ rainbow, BTN open vs BB defend. Whom does this board favor?"
+      },
+      "choices": [
+        {
+          "zh": "BB 的防守范围",
+          "en": "The BB's defending range"
+        },
+        {
+          "zh": "翻前加注者 BTN",
+          "en": "The preflop raiser (BTN)"
+        },
+        {
+          "zh": "完全中性",
+          "en": "Perfectly neutral"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "BB 的同花连张与小对子在 A 高干面上几乎全部落空。",
+          "en": "The BB's suited connectors and small pairs almost all whiff on an ace-high dry board."
+        },
+        {
+          "zh": "正确：AK、AQ、AJ 与大对子密集地住在开局者范围里。",
+          "en": "Correct: AK, AQ, AJ and big pairs live densely in the opener's range."
+        },
+        {
+          "zh": "范围与牌面的密合度差距明显，这张面远非中性。",
+          "en": "The mesh between range and board is lopsided — far from neutral."
+        }
+      ],
+      "objective": {
+        "zh": "判断高张干面的范围归属。",
+        "en": "Read who owns high dry boards."
+      },
+      "lessonRef": "l3-02-board-texture"
+    },
+    {
+      "id": "q3-02b",
+      "prompt": {
+        "zh": "7♠6♠5♦ 这类中低连面，通常更照顾谁？",
+        "en": "Low connected boards like 7♠6♠5♦ usually favor whom?"
+      },
+      "choices": [
+        {
+          "zh": "BB 等防守方的范围",
+          "en": "The defender's (e.g. BB's) range"
+        },
+        {
+          "zh": "永远是翻前加注者",
+          "en": "Always the preflop raiser"
+        },
+        {
+          "zh": "筹码更多的一方",
+          "en": "Whoever has more chips"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：87s、65s、44 这些防守常客在这里组成两对、顺子与暗三条。",
+          "en": "Correct: defend-range staples like 87s, 65s and 44 arrive here as two pair, straights and sets."
+        },
+        {
+          "zh": "加注者的 AK、AQ 在这张面上只剩两张高牌。",
+          "en": "The raiser's AK and AQ are just two high cards on this texture."
+        },
+        {
+          "zh": "筹码量影响可下注空间，但不改变范围与牌面的密合关系。",
+          "en": "Stack size shapes bet trees, not which range meshes with the board."
+        }
+      ],
+      "objective": {
+        "zh": "识别利守方的连张牌面。",
+        "en": "Spot connected boards that favor the defender."
+      },
+      "lessonRef": "l3-02-board-texture"
+    },
+    {
+      "id": "q3-03a",
+      "prompt": {
+        "zh": "半诈唬之所以强，是因为它有哪两条赢牌路径？",
+        "en": "A semi-bluff is strong because it wins in which two ways?"
+      },
+      "choices": [
+        {
+          "zh": "位置优势 + 筹码优势",
+          "en": "Position plus chip lead"
+        },
+        {
+          "zh": "对手立刻弃牌 + 被跟注后听牌击中",
+          "en": "Folds now plus hitting the draw when called"
+        },
+        {
+          "zh": "下注吓人 + 表情管理",
+          "en": "Scary bets plus a good poker face"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "两者都有帮助，但都不是半诈唬定义里的那两条腿。",
+          "en": "Both help, but neither is one of the semi-bluff's defining legs."
+        },
+        {
+          "zh": "正确：弃牌权益与成牌权益相加，让进攻在数学上立得住。",
+          "en": "Correct: fold equity plus card equity make the aggression add up."
+        },
+        {
+          "zh": "训练靠的是数学结构，不是吓唬与演技。",
+          "en": "We train on math structure, not intimidation and acting."
+        }
+      ],
+      "objective": {
+        "zh": "说出半诈唬的双重权益来源。",
+        "en": "Name the semi-bluff's two equity sources."
+      },
+      "lessonRef": "l3-03-draws-semibluff"
+    },
+    {
+      "id": "q3-03b",
+      "prompt": {
+        "zh": "以下哪手牌最适合在 K♠9♠4♦ 上做进攻性的半诈唬？",
+        "en": "Which hand is best suited to an aggressive semi-bluff on K♠9♠4♦?"
+      },
+      "choices": [
+        {
+          "zh": "A♠5♠（坚果同花听 + 超牌）",
+          "en": "A♠5♠ (nut flush draw + overcard)"
+        },
+        {
+          "zh": "Q♦J♥（裸内听）",
+          "en": "Q♦J♥ (bare gutshot)"
+        },
+        {
+          "zh": "7♣7♥（小对子）",
+          "en": "7♣7♥ (small pair)"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：组合权益最厚，弃牌权益之外还有约三分之一的命中率。",
+          "en": "Correct: the thickest combo equity — about a one-in-three arrival on top of fold equity."
+        },
+        {
+          "zh": "裸内听权益太薄，更适合放弃或低成本看牌。",
+          "en": "A bare gutshot is too thin; it prefers giving up or seeing cards cheaply."
+        },
+        {
+          "zh": "小对子靠摊牌价值吃饭，膨胀底池只会请来更强的牌。",
+          "en": "Small pairs live on showdown value; inflating the pot only invites better hands."
+        }
+      ],
+      "objective": {
+        "zh": "按权益厚度挑选半诈唬燃料。",
+        "en": "Pick semi-bluff fuel by equity thickness."
+      },
+      "lessonRef": "l3-03-draws-semibluff"
+    },
+    {
+      "id": "q3-04a",
+      "prompt": {
+        "zh": "两极分化的范围（很强或诈唬）通常搭配什么尺寸？",
+        "en": "A polarized range (very strong or bluffing) usually pairs with which sizing?"
+      },
+      "choices": [
+        {
+          "zh": "大注（约 75% 底池及以上）",
+          "en": "Big (about 75% pot or more)"
+        },
+        {
+          "zh": "小注（约 33% 底池）",
+          "en": "Small (about 33% pot)"
+        },
+        {
+          "zh": "最小下注",
+          "en": "The minimum bet"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：强牌要价值最大化，诈唬要施压最大化——大尺寸同时服务两者。",
+          "en": "Correct: value wants maximum payment, bluffs want maximum pressure — big sizing serves both."
+        },
+        {
+          "zh": "小注属于「全范围都在下注」的高频策略。",
+          "en": "Small sizing belongs to the whole-range, high-frequency story."
+        },
+        {
+          "zh": "最小下注几乎不施压，让对手用任何牌都能便宜继续。",
+          "en": "A min-bet applies no pressure and lets anything continue cheaply."
+        }
+      ],
+      "objective": {
+        "zh": "把两极范围与大尺寸配对。",
+        "en": "Pair polarized ranges with big sizes."
+      },
+      "lessonRef": "l3-04-bet-sizing"
+    },
+    {
+      "id": "q3-04b",
+      "prompt": {
+        "zh": "33% 底池的小额下注，通常在表达什么？",
+        "en": "What does a 33% pot bet usually communicate?"
+      },
+      "choices": [
+        {
+          "zh": "「我这一手特别强」",
+          "en": "'This exact hand is very strong'"
+        },
+        {
+          "zh": "「我的整个范围都在高频下注」",
+          "en": "'My whole range is betting at high frequency'"
+        },
+        {
+          "zh": "「我在害怕」",
+          "en": "'I am scared'"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "把尺寸和单手牌强度划等号，正是会被读穿的初学者模式。",
+          "en": "Equating size with single-hand strength is exactly the readable beginner pattern."
+        },
+        {
+          "zh": "正确：小注是范围下注的语言——强牌、中等牌与诈唬穿同一件外套。",
+          "en": "Correct: small is the range-bet language — value, mediums and bluffs in one coat."
+        },
+        {
+          "zh": "尺寸表达策略结构，不表达情绪。",
+          "en": "Sizing speaks strategy structure, not emotion."
+        }
+      ],
+      "objective": {
+        "zh": "读懂小尺寸的范围含义。",
+        "en": "Decode the range meaning of small sizing."
+      },
+      "lessonRef": "l3-04-bet-sizing"
+    },
+    {
+      "id": "q3-05a",
+      "prompt": {
+        "zh": "K♠7♦2♣ 上你 c-bet 被跟注，转牌 A♦。这张转牌对你（翻前加注者）意味着什么？",
+        "en": "Your c-bet on K♠7♦2♣ gets called; the turn is the A♦. For you (the raiser) this card means?"
+      },
+      "choices": [
+        {
+          "zh": "利好——继续下注施压",
+          "en": "Good news — keep barreling"
+        },
+        {
+          "zh": "危险——立刻放弃",
+          "en": "Danger — give up now"
+        },
+        {
+          "zh": "与策略无关",
+          "en": "Irrelevant to strategy"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：A 几乎专属加注者范围，二次开火让 7x 与口袋对进退两难。",
+          "en": "Correct: the ace belongs to the raiser's range; a second barrel squeezes 7x and pocket pairs."
+        },
+        {
+          "zh": "这张 A 大多数时候打不到防守者的范围——怕它没有依据。",
+          "en": "That ace mostly misses the defender's range — fearing it has no basis."
+        },
+        {
+          "zh": "每张转牌都在重新分配范围优势，没有「无关」的牌。",
+          "en": "Every turn re-divides range advantage; no card is irrelevant."
+        }
+      ],
+      "objective": {
+        "zh": "用「这张牌帮了谁」指导转牌开火。",
+        "en": "Barrel turns by asking whom the card helped."
+      },
+      "lessonRef": "l3-05-turn-barrels"
+    },
+    {
+      "id": "q3-05b",
+      "prompt": {
+        "zh": "转牌既没改善你的牌，也更可能帮到对手范围时，默认选择是？",
+        "en": "When the turn improves nothing for you and likely helps the caller's range, the default is?"
+      },
+      "choices": [
+        {
+          "zh": "加倍下注掩饰",
+          "en": "Bet bigger to disguise it"
+        },
+        {
+          "zh": "过牌控池",
+          "en": "Check for pot control"
+        },
+        {
+          "zh": "直接弃牌",
+          "en": "Fold immediately"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "硬打坏转牌是给对手的范围送钱。",
+          "en": "Forcing bad turns donates to the range that just improved."
+        },
+        {
+          "zh": "正确：刹车不是认输，是把底池控制在自己牌力匹配的尺寸。",
+          "en": "Correct: braking is not surrender — it keeps the pot sized to your hand."
+        },
+        {
+          "zh": "还没人下注，弃什么牌？过牌之后再根据行动决策。",
+          "en": "Nobody has bet yet — check first, then decide against real action."
+        }
+      ],
+      "objective": {
+        "zh": "学会在坏转牌上踩刹车。",
+        "en": "Learn to brake on bad turns."
+      },
+      "lessonRef": "l3-05-turn-barrels"
+    },
+    {
+      "id": "q3-06a",
+      "prompt": {
+        "zh": "河牌价值下注的判断标准是什么？",
+        "en": "What is the test for a river value bet?"
+      },
+      "choices": [
+        {
+          "zh": "我的牌在绝对牌力上够强",
+          "en": "My hand is strong in absolute terms"
+        },
+        {
+          "zh": "有更差的牌会跟注",
+          "en": "Worse hands will call"
+        },
+        {
+          "zh": "对手筹码还很多",
+          "en": "The opponent still has chips"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "绝对强度不重要——重要的是相对于会跟注的范围。",
+          "en": "Absolute strength is beside the point — only relative to what calls."
+        },
+        {
+          "zh": "正确：没有更差的跟注者，下注就只剩被加注和被更强跟注两种坏结局。",
+          "en": "Correct: without worse callers, a bet can only get raised or called by better."
+        },
+        {
+          "zh": "对方有筹码只说明能跟，不说明会用更差的牌跟。",
+          "en": "Deep stacks mean a call is possible, not that worse hands make it."
+        }
+      ],
+      "objective": {
+        "zh": "用「更差会跟」校准价值下注。",
+        "en": "Calibrate value bets by 'worse hands call.'"
+      },
+      "lessonRef": "l3-06-river-decisions"
+    },
+    {
+      "id": "q3-06b",
+      "prompt": {
+        "zh": "河牌抓诈时，最该检查的是什么？",
+        "en": "When bluff-catching on the river, the key check is?"
+      },
+      "choices": [
+        {
+          "zh": "自己的直觉强不强",
+          "en": "How strong my gut feeling is"
+        },
+        {
+          "zh": "对手整条故事线是否连贯，及我的阻断牌",
+          "en": "Whether his street-by-street story holds, plus my blockers"
+        },
+        {
+          "zh": "这局已经投入了多少",
+          "en": "How much I have already invested"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "直觉需要证据背书，否则只是情绪。",
+          "en": "Gut feelings need evidence behind them; otherwise they are mood."
+        },
+        {
+          "zh": "正确：诈唬的故事常在某一街讲不通；阻断价值、不阻断诈唬的牌最适合抓。",
+          "en": "Correct: bluff stories usually break on some street; hands that block value and unblock bluffs catch best."
+        },
+        {
+          "zh": "已投入的是沉没成本，与这次跟注是否+EV 无关。",
+          "en": "Money already in is sunk; it has no vote on whether this call is +EV."
+        }
+      ],
+      "objective": {
+        "zh": "用故事线 + 阻断牌做抓诈决策。",
+        "en": "Bluff-catch with story analysis and blockers."
+      },
+      "lessonRef": "l3-06-river-decisions"
+    },
+    {
+      "id": "q3-07a",
+      "prompt": {
+        "zh": "底池 10bb，对手下注 5bb（半池）。跟注所需的最低权益约为？",
+        "en": "Pot 10bb, opponent bets 5bb (half pot). The minimum equity to call is about?"
+      },
+      "choices": [
+        {
+          "zh": "约 25%",
+          "en": "About 25%"
+        },
+        {
+          "zh": "约 50%",
+          "en": "About 50%"
+        },
+        {
+          "zh": "约 33%",
+          "en": "About 33%"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：跟 5 赢 15，5 ÷ 20 = 25%。",
+          "en": "Correct: call 5 to win 15, and 5 ÷ 20 = 25%."
+        },
+        {
+          "zh": "50% 是「不亏」的摊牌均势，不是赔率给出的门槛。",
+          "en": "Fifty percent is coin-flip parity, not the threshold pot odds set."
+        },
+        {
+          "zh": "33% 对应的是跟注底池大小的下注。",
+          "en": "Thirty-three percent answers a full pot-sized bet."
+        }
+      ],
+      "objective": {
+        "zh": "把底池赔率换算成权益门槛。",
+        "en": "Convert pot odds into an equity bar."
+      },
+      "lessonRef": "l3-07-facing-bets"
+    },
+    {
+      "id": "q3-07b",
+      "prompt": {
+        "zh": "MDF（最低防守频率）这个概念提醒我们什么？",
+        "en": "What does the MDF concept warn us about?"
+      },
+      "choices": [
+        {
+          "zh": "每次被下注都必须跟注",
+          "en": "You must call every bet"
+        },
+        {
+          "zh": "弃牌过度会让任意两张牌的诈唬变得有利可图",
+          "en": "Over-folding makes any-two-cards bluffs profitable"
+        },
+        {
+          "zh": "永远不要诈唬",
+          "en": "Never bluff yourself"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "MDF 是频率下限的警戒线，不是「永不弃牌」的命令。",
+          "en": "MDF is a frequency floor, not a never-fold order."
+        },
+        {
+          "zh": "正确：自动弃牌站会被全桌当提款机；防守要到位，但用合格的牌。",
+          "en": "Correct: auto-folders get farmed by the whole table; defend enough, with qualified hands."
+        },
+        {
+          "zh": "恰恰相反——对手弃牌过度时，诈唬正是惩罚手段。",
+          "en": "Quite the opposite — bluffs are how over-folders get punished."
+        }
+      ],
+      "objective": {
+        "zh": "理解 MDF 防剥削的本质。",
+        "en": "Grasp MDF as anti-exploitation."
+      },
+      "lessonRef": "l3-07-facing-bets"
+    }
+  ]
+}

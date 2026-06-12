@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "scenarios": [
+    {
+      "id": "pt-maniac-01",
+      "stats": {
+        "vpip": 45,
+        "pfr": 35,
+        "af": 4.0,
+        "hands": 2000
+      },
+      "correct": "maniac",
+      "explanation": {
+        "zh": "VPIP 45 / PFR 35 远超松凶（LAG）上限，AF 4.0 说明下注与加注远多于跟注——典型 Maniac。针对思路：收紧范围，用强牌让他撞上来，减少 bluff，扩大跟注他下注的价值区间。",
+        "en": "VPIP 45 / PFR 35 is far beyond LAG territory, and AF 4.0 means bets and raises dwarf calls — a classic maniac. Adjustment: tighten up, let him barrel into your strong hands, bluff less, and widen your calldown value range."
+      },
+      "objective": {
+        "zh": "用 VPIP / PFR / AF 三件套识别极端激进型。",
+        "en": "Identify extreme aggression with the VPIP / PFR / AF trio."
+      },
+      "lessonRef": null,
+      "difficulty": 1
+    },
+    {
+      "id": "pt-station-01",
+      "stats": {
+        "vpip": 33,
+        "pfr": 8,
+        "af": 1.0,
+        "foldToCbet": 30,
+        "hands": 500
+      },
+      "correct": "calling_station",
+      "explanation": {
+        "zh": "VPIP 33 / PFR 8：入池多、主动加注少；Fold to C-bet 仅 30% 印证了\"什么都跟\"。与 Passive Fish 的区分点：VPIP 未超过 35，且核心特征是低弃牌率。针对思路：基本不 bluff，价值下注做大尺寸、做薄价值。",
+        "en": "VPIP 33 / PFR 8: enters many pots, rarely raises; folding to c-bets only 30% confirms the calls-everything pattern. Versus passive fish, the tell here is VPIP under 35 plus the low fold rate. Adjustment: almost never bluff, size value bets up, and go for thin value."
+      },
+      "objective": {
+        "zh": "结合 Fold to C-bet 区分跟注站与其他松弱型。",
+        "en": "Use fold-to-c-bet to separate calling stations from other loose-passive types."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-tag-01",
+      "stats": {
+        "vpip": 22,
+        "pfr": 18,
+        "hands": 1000
+      },
+      "correct": "tag",
+      "explanation": {
+        "zh": "VPIP 22 / PFR 18 落在紧凶区间：入池有选择，入池就带主动权，VPIP 与 PFR 差距小说明很少被动跟注。这是 6-max 的基准强对手画像——对他少诈唬、多用位置周旋。",
+        "en": "VPIP 22 / PFR 18 sits squarely in TAG territory: selective entries, almost always with initiative, and the small VPIP–PFR gap shows few passive calls. This is the baseline strong opponent in 6-max — bluff less, lean on position."
+      },
+      "objective": {
+        "zh": "识别 VPIP/PFR 差距小的紧凶基准画像。",
+        "en": "Recognize the tight-aggressive baseline by the narrow VPIP–PFR gap."
+      },
+      "lessonRef": null,
+      "difficulty": 1
+    },
+    {
+      "id": "pt-nit-01",
+      "stats": {
+        "vpip": 12,
+        "pfr": 9,
+        "hands": 800
+      },
+      "correct": "nit",
+      "explanation": {
+        "zh": "VPIP 12 远低于 18 的紧线，PFR 9 同样收敛——只玩范围最顶端的 Nit。针对思路：频繁偷他的盲注；他一旦加注或反加，给足尊重，边缘牌直接放弃。",
+        "en": "VPIP 12 sits far below the 18 tight-line and PFR 9 is just as reserved — a nit playing only the very top of the deck. Adjustment: steal his blinds relentlessly, and the moment he raises back, give it full respect and release your marginal hands."
+      },
+      "objective": {
+        "zh": "识别极紧画像，并据此偷盲与避战。",
+        "en": "Spot the ultra-tight profile; steal wide and avoid his strength."
+      },
+      "lessonRef": null,
+      "difficulty": 1
+    },
+    {
+      "id": "pt-lag-01",
+      "stats": {
+        "vpip": 30,
+        "pfr": 25,
+        "af": 2.8,
+        "hands": 1500
+      },
+      "correct": "lag",
+      "explanation": {
+        "zh": "VPIP 30 / PFR 25：宽且几乎逢入必带主动权，但尚未越过 Maniac 的失控线（VPIP 未超 35、AF 2.8 在控制内）——这是有章法的松凶 LAG。针对思路：用强牌让他替你建池，少用边缘牌与他对攻。",
+        "en": "VPIP 30 / PFR 25: wide and almost always entering with initiative, yet short of maniac territory (VPIP under 35, AF 2.8 still controlled) — a disciplined LAG. Adjustment: let your strong hands ride his aggression, and stop fighting him with marginal holdings."
+      },
+      "objective": {
+        "zh": "分清 LAG 与 Maniac / TAG 的边界。",
+        "en": "Separate the LAG from the maniac and the TAG."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-fish-01",
+      "stats": {
+        "vpip": 48,
+        "pfr": 6,
+        "af": 0.8,
+        "hands": 200
+      },
+      "correct": "passive_fish",
+      "explanation": {
+        "zh": "VPIP 48 入池近半，PFR 6 几乎从不主动加注，AF 0.8 全程被动——典型松弱鱼。与跟注站的判定差异：松度越过 35 的优先归入此类（规则表顺序在前）。针对思路：价值下注做大做厚，基本放弃诈唬。",
+        "en": "VPIP 48 enters nearly half the hands, PFR 6 almost never raises, and AF 0.8 stays passive throughout — the textbook passive fish. Versus the calling station, looseness beyond 35 routes here first (rule order). Adjustment: bet big and thick for value, and mostly retire your bluffs."
+      },
+      "objective": {
+        "zh": "识别 VPIP 与 PFR 巨大剪刀差的松弱型。",
+        "en": "Recognize the loose-passive profile by the huge VPIP–PFR scissor gap."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    }
+  ]
+}

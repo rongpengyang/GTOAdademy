@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "rfi-co-100bb",
+  "name": {
+    "zh": "CO 开局加注范围（100bb）",
+    "en": "CO Open-Raise Range (100bb)"
+  },
+  "position": "co",
+  "stack": 100,
+  "action": "raise",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22+, A2s+, K7s+, Q8s+, J8s+, T8s+, 97s+, 86s+, 75s+, 65s, 54s, A9o+, KTo+, QTo+, JTo"
+}

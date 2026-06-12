@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "rfi-hj-100bb",
+  "name": {
+    "zh": "HJ 开局加注范围（100bb）",
+    "en": "HJ Open-Raise Range (100bb)"
+  },
+  "position": "hj",
+  "stack": 100,
+  "action": "raise",
+  "source": "Original GTO-inspired training approximation v1",
+  "notation": "22+, A2s+, K9s+, Q9s+, J9s+, T9s, 98s, 87s, 76s, 65s, ATo+, KJo+, QJo"
+}

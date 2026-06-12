@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "track": {
+    "id": "track2",
+    "order": 2,
+    "title": {
+      "zh": "翻前训练营",
+      "en": "Preflop Camp"
+    },
+    "subtitle": {
+      "zh": "开局、范围与 3-Bet",
+      "en": "Opens, ranges and 3-bets"
+    }
+  },
+  "lessons": [
+    {
+      "id": "l2-01-rfi-principles",
+      "order": 1,
+      "title": {
+        "zh": "开局加注三原则",
+        "en": "Three Rules of Open-Raising"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "无人入池时，你的决策只剩两个：raise 或 fold。三原则：① 位置越靠后，开局范围越宽；② 统一加注尺寸（约 2.2–2.5bb），不随牌力变化；③ 不 open-limp——平跟既不能直接赢下底池，又放弃主动权、还给盲注免费看牌。",
+            "en": "When the pot is unopened, your decision tree has two branches: raise or fold. Three rules: 1) the later your position, the wider you open; 2) use one raise size (about 2.2–2.5bb) regardless of hand strength; 3) never open-limp — limping cannot win the pot outright, surrenders initiative, and hands the blinds a free flop."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "CO 拿 A8s：UTG、HJ 相继弃牌轮到你——加注 2.3bb，标准开局。注意：同一手 A8s 在 UTG 是弃牌。变的不是牌，是后面还剩几个人。",
+            "en": "You hold A8s in the cutoff: UTG and HJ fold to you — raise to 2.3bb, a standard open. Note that the very same A8s is a fold from UTG. The hand did not change; the number of players left to act did."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "按「心情」调尺寸是新手最响的马脚：大牌下大注、投机牌下小注，等于把底牌写在脸上。另一个是偶尔 limp 大对子「设陷阱」——固定模式很快会被识破，还训练坏了自己的习惯。",
+            "en": "Sizing by feel is the loudest beginner tell: big hands big, speculative hands small — you are writing your cards on your forehead. Another is the occasional trap-limp with big pairs: the pattern gets read fast and corrodes your own discipline."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "训练目标是让每个位置的范围边界长成肌肉记忆。Drill 页的翻前训练器（M3 上线）就是为这件事造的。",
+            "en": "The goal is to turn each position's range boundary into muscle memory. The preflop trainer on the Drill tab (arriving in M3) exists for exactly this."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-01a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-01b"
+        }
+      ]
+    },
+    {
+      "id": "l2-02-range-shapes",
+      "order": 2,
+      "title": {
+        "zh": "范围的形状",
+        "en": "The Shape of Ranges"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "各位置开局占比的训练近似：UTG ≈ 14%、HJ ≈ 17%、CO ≈ 26%、BTN ≈ 42%。范围向后位扩张有方向：先加入更多同花连张与带 A 的同花小牌，再加入更弱的 offsuit broadway。这些是训练基线，不是唯一正解。",
+            "en": "Training approximations for opening frequency: UTG ≈ 14%, HJ ≈ 17%, CO ≈ 26%, BTN ≈ 42%. Ranges widen toward the back in a specific direction: first more suited connectors and small suited aces, then weaker offsuit broadways. These are training baselines, not the one true answer."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "K7s 是典型的「随位置解锁」的牌：UTG、HJ 弃，CO 边缘，BTN 标准开。一手牌横跨弃牌到标准开局，全看你坐在哪。",
+            "en": "K7s is the textbook position-unlocked hand: fold from UTG and HJ, borderline in the CO, a standard open on the button. One hand spans fold to standard open depending purely on your seat."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "把范围表当圣经逐格死背是低效的：先记「形状」与边界牌（每个位置最弱的开局牌），细节用 Matrix 工具反复对照校准。",
+            "en": "Memorizing charts cell by cell is the slow road: learn the shape and the boundary hands (the weakest open at each seat) first, then calibrate details against the Matrix tool."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "现在就去 Tools 看 UTG 与 BTN 两张范围表（M4 上线完整 Matrix），直观感受 14% 与 42% 的面积差——比任何文字都快。",
+            "en": "Open the UTG and BTN charts under Tools (full Matrix arrives in M4) and let the area difference between 14% and 42% sink in — faster than any paragraph."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-02a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-02b"
+        }
+      ]
+    },
+    {
+      "id": "l2-03-threebet-basics",
+      "order": 3,
+      "title": {
+        "zh": "3-Bet 入门",
+        "en": "3-Bet Basics"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "3-bet 是对开局加注的再加注，分两类：价值 3-bet——用范围顶端（QQ+、AK 一级）向更差的牌取价值；轻 3-bet——用 A5s 一类「阻断 + 可玩性」的牌施压偷池。尺寸基线：有位置约 3 倍开局额，无位置约 4 倍。",
+            "en": "A 3-bet re-raises the open. Two families: value 3-bets — the top of your range (QQ+, AK tier) charging worse hands; light 3-bets — hands like A5s with blockers plus playability applying pressure. Sizing baseline: about 3x the open in position, 4x out of position."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "BTN 开 2.5bb，你在 BB 拿 A5s：3-bet 到约 10bb。那张 A 阻断对手的 AA/AK，被跟注后还有同花与顺子潜力兜底。同样的尺寸拿 AQs/AK 也加——目的换成了价值。",
+            "en": "BTN opens 2.5bb, you hold A5s in the BB: 3-bet to about 10bb. The ace blocks AA/AK, and if called you fall back on flush and wheel potential. Same size with AQs/AK — the purpose flips to value."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "只用 QQ+ 3-bet 会让范围透明——对手对你的再加注一律弃牌止损，你的大牌赚不到钱。反向错误是用 KJo 这类中段牌 3-bet：价值不够、阻断一般、被跟注后处处尴尬。",
+            "en": "3-betting only QQ+ makes you transparent — opponents simply fold to your re-raises and your monsters earn nothing. The mirror error is 3-betting middling hands like KJo: not enough value, mediocre blockers, awkward everywhere when called."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "入门口径：价值用范围顶端，轻 3-bet 优先选带 A 的同花小牌；中段牌走跟注或弃牌。先把这条线打直，再谈混合。",
+            "en": "Starter policy: value with the top of range, light 3-bets preferring small suited aces; middling hands call or fold. Straighten this line first — mixing comes later."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-03a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-03b"
+        }
+      ]
+    },
+    {
+      "id": "l2-04-facing-rfi",
+      "order": 4,
+      "title": {
+        "zh": "面对开局加注：三选项框架",
+        "en": "Facing a Raise: The Three-Option Frame"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "前面有人开局加注时，你只有三个选项：弃牌、跟注、3-bet。跟注需要好的可玩性与位置支撑；3-bet 范围以强牌为主体，掺入少量带阻断与同花潜力的牌；其余一律弃牌——纪律本身就是利润来源。",
+            "en": "When someone opens in front of you, there are only three options: fold, call, or 3-bet. Calling needs playability and position; the 3-bet range is built on strong hands plus a few blockers with suited potential; everything else folds — discipline itself is where the edge comes from."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "CO 开局 2.5bb，你在 BTN 拿 KQs：跟注与 3-bet 在训练表里都站得住。同样位置换成 A9o，则进入「看似漂亮、实则被支配」的弃牌区——它撞上 CO 的 AT+、AJ+ 时几乎全程落后。",
+            "en": "CO opens to 2.5bb and you hold KQs on the BTN: both calling and 3-betting are defensible in the training charts. Swap in A9o and you are in the 'pretty but dominated' fold zone — against CO's AT+ and AJ+ it is behind almost everywhere."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：用 A9o、KJo 这类被支配的牌冷跟开局加注。它们经常中对子还输——翻后亏损来自翻前的一念之差。",
+            "en": "Common mistake: cold-calling opens with dominated hands like A9o or KJo. They often make a pair and still lose — postflop bleed that started with one preflop click."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "位置越靠后越能跟注；没有位置时，倾向「3-bet 或弃牌」，让局面保持简单。",
+            "en": "The later your position, the more you can call; without position, lean 3-bet-or-fold and keep the tree simple."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-04a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-04b"
+        }
+      ]
+    },
+    {
+      "id": "l2-05-blind-battle",
+      "order": 5,
+      "title": {
+        "zh": "盲注攻防：SB 与 BB 为什么不同",
+        "en": "Blind Battles: Why SB and BB Differ"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "SB 是全桌最差位置：翻后永远先行动，所以训练表把它简化为「3-bet 或弃牌」。BB 则相反——已经投入一个盲注、收盘行动、跟注有折扣，因此防守范围全桌最宽。",
+            "en": "The SB is the worst seat at the table: it acts first on every postflop street, so the training charts simplify it to 3-bet-or-fold. The BB is the opposite — money already in, closing the action, calling at a discount — so it defends the widest range of any seat."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "BTN 开局，你在 SB 拿 K9o：弃牌（不在 3-bet 表里，平跟会把自己挤在两个位置劣势之间）。同一手牌坐在 BB：跟注防守完全成立。",
+            "en": "BTN opens and you hold K9o in the SB: fold (it is not in the 3-bet chart, and flatting squeezes you between two positional disadvantages). The same hand in the BB is a perfectly fine defend."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：SB 习惯性平跟「不想浪费半个盲注」。半个盲注是沉没成本；为它再搭上整个翻后劣势，才是真正的浪费。",
+            "en": "Common mistake: habitually flatting from the SB 'to not waste the half blind already posted.' That half blind is sunk; paying a full postflop disadvantage to chase it is the real waste."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "记口诀：SB 要么打回去，要么放手；BB 才是跟注防守的主场。",
+            "en": "Mantra: from the SB, fight back or let go; the BB is where call-defense lives."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-05a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-05b"
+        }
+      ]
+    },
+    {
+      "id": "l2-06-core-stats",
+      "order": 6,
+      "title": {
+        "zh": "三大指标：VPIP · PFR · AF",
+        "en": "The Three Core Stats: VPIP · PFR · AF"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "VPIP 是主动投钱入池的比例，PFR 是翻前加注比例，AF 是（下注+加注）÷ 跟注的进攻系数。三者合起来回答两个问题：他玩多少牌？他用这些牌做什么？",
+            "en": "VPIP is how often a player voluntarily puts money in, PFR how often they raise preflop, and AF the ratio of (bets + raises) to calls. Together they answer two questions: how many hands does this player play, and what do they do with them?"
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "一位 22/18、AF 2.5 的对手是教科书 TAG：玩得少、进攻多。另一位 45/8 的对手——什么都跟、几乎不加注——是典型的 Calling Station 信号。",
+            "en": "A 22/18 player with AF 2.5 is a textbook TAG: few hands, lots of aggression. A 45/8 player — calling everything, raising almost nothing — is the classic calling-station signature."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：把 VPIP 和 PFR 孤立来看。45 的 VPIP 单独看只是「松」，配上 8 的 PFR 才读出「松而被动」这个真正可剥削的画像。",
+            "en": "Common mistake: reading VPIP or PFR in isolation. A 45 VPIP alone just says 'loose'; only paired with an 8 PFR does it spell 'loose-passive' — the actually exploitable profile."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "先看 VPIP−PFR 的差值：差距越大，对手越爱跟注，你的价值下注就越能做厚。",
+            "en": "Check the VPIP−PFR gap first: the wider it is, the more this player calls, and the thicker your value bets can be."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-06a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-06b"
+        }
+      ]
+    },
+    {
+      "id": "l2-07-sample-size",
+      "order": 7,
+      "title": {
+        "zh": "样本量与置信度",
+        "en": "Sample Size and Confidence"
+      },
+      "minutes": 4,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "指标是统计量，统计量需要样本。30 手以下，VPIP 这类数字的噪声大到几乎不可用；这正是本应用的分类器在样本不足时拒绝下结论的原因。",
+            "en": "Stats are statistics, and statistics need samples. Under 30 hands, numbers like VPIP are mostly noise — which is exactly why this app's classifier refuses to label anyone on a thin sample."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "对手前 10 手玩了 6 手（VPIP 60%）？可能只是连续拿到好牌。再看 50 手，数字往往回落到 25 上下——人没变，样本变了。",
+            "en": "An opponent plays 6 of their first 10 hands (60% VPIP)? They may simply have been dealt a heater. Watch 50 hands and the number often settles near 25 — the player did not change, the sample did."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：三手牌就给人定型，然后按错误画像做大决定。早期标签贴得越快，撕下来越疼。",
+            "en": "Common mistake: typecasting someone after three hands, then making big decisions off the wrong read. The faster the early label goes on, the more it hurts to peel off."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "样本不足时，回到基础策略，把对手当未知打——这正是范围表存在的意义。",
+            "en": "On a thin sample, fall back to baseline strategy and play them as unknown — that is exactly what the charts are for."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-07a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q2-07b"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q2-01a",
+      "prompt": {
+        "zh": "无人入池轮到你，标准的决策集合是？",
+        "en": "Folded to you in an unopened pot — the standard decision set is?"
+      },
+      "choices": [
+        {
+          "zh": "raise 或 fold",
+          "en": "Raise or fold"
+        },
+        {
+          "zh": "limp 也是常规武器",
+          "en": "Limping is a regular weapon"
+        },
+        {
+          "zh": "只看牌力，与位置无关",
+          "en": "Hand strength only, position irrelevant"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：开局局面是 raise-or-fold——要么施压，要么放弃。",
+          "en": "Correct: unopened pots are raise-or-fold — apply pressure or let it go."
+        },
+        {
+          "zh": "open-limp 不能直接赢锅、放弃主动权、给盲注免费牌，本训练体系不采用。",
+          "en": "Open-limping cannot win the pot outright, surrenders initiative and gifts the blinds a free flop — this curriculum does not use it."
+        },
+        {
+          "zh": "同一手牌在不同位置可以从弃牌变成标准开局——位置是决策的一半。",
+          "en": "The same hand swings from fold to standard open by seat — position is half the decision."
+        }
+      ],
+      "objective": {
+        "zh": "确立 raise-or-fold 的开局纪律。",
+        "en": "Lock in raise-or-fold opening discipline."
+      },
+      "lessonRef": "l2-01-rfi-principles"
+    },
+    {
+      "id": "q2-01b",
+      "prompt": {
+        "zh": "开局加注的基线尺寸约为？",
+        "en": "The baseline open-raise size is about?"
+      },
+      "choices": [
+        {
+          "zh": "1bb，最省筹码",
+          "en": "1bb — cheapest"
+        },
+        {
+          "zh": "2.2–2.5bb",
+          "en": "2.2–2.5bb"
+        },
+        {
+          "zh": "5bb 起步",
+          "en": "5bb minimum"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "1bb 等于 limp 的价格，达不到施压目的。",
+          "en": "1bb is limp money — it applies no pressure."
+        },
+        {
+          "zh": "正确：约 2.2–2.5bb，并且全范围统一，不随牌力起伏。",
+          "en": "Correct: about 2.2–2.5bb, one size for the whole range, never keyed to hand strength."
+        },
+        {
+          "zh": "5bb 把自己的边缘开局牌全做成了大锅深坑。",
+          "en": "5bb turns every marginal open into an oversized trap for yourself."
+        }
+      ],
+      "objective": {
+        "zh": "记住统一尺寸 2.2–2.5bb。",
+        "en": "Remember the uniform 2.2–2.5bb size."
+      },
+      "lessonRef": "l2-01-rfi-principles"
+    },
+    {
+      "id": "q2-02a",
+      "prompt": {
+        "zh": "从 UTG 到 BTN，开局范围如何变化？",
+        "en": "From UTG to the button, how does the opening range change?"
+      },
+      "choices": [
+        {
+          "zh": "逐渐收紧",
+          "en": "Tightens"
+        },
+        {
+          "zh": "基本不变",
+          "en": "Stays roughly the same"
+        },
+        {
+          "zh": "显著放宽",
+          "en": "Widens substantially"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "方向反了：身后的对手越少，能开的牌越多。",
+          "en": "Backwards: fewer players behind means more hands to open."
+        },
+        {
+          "zh": "UTG≈14% 到 BTN≈42%，是三倍量级的差距。",
+          "en": "UTG ≈ 14% versus BTN ≈ 42% — a threefold gap."
+        },
+        {
+          "zh": "正确：从约 14% 放宽到约 42%（训练近似）。",
+          "en": "Correct: from about 14% to about 42% (training approximation)."
+        }
+      ],
+      "objective": {
+        "zh": "建立范围随位置扩张的直觉。",
+        "en": "Internalize range expansion by position."
+      },
+      "lessonRef": "l2-02-range-shapes"
+    },
+    {
+      "id": "q2-02b",
+      "prompt": {
+        "zh": "BTN 的开局范围大约覆盖全部起手牌的？",
+        "en": "The button's opening range covers roughly what share of all hands?"
+      },
+      "choices": [
+        {
+          "zh": "约 15%",
+          "en": "About 15%"
+        },
+        {
+          "zh": "约 42%",
+          "en": "About 42%"
+        },
+        {
+          "zh": "接近 70%",
+          "en": "Nearly 70%"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "15% 是 UTG 量级的占比。",
+          "en": "15% is UTG territory."
+        },
+        {
+          "zh": "正确：约 42%（训练近似）——最好的位置开最宽的范围。",
+          "en": "Correct: about 42% (training approximation) — the best seat opens the widest range."
+        },
+        {
+          "zh": "70% 连 72o 的邻居都要进场了——宽范围仍然弃掉最差的一半。",
+          "en": "70% would invite 72o's neighbors — even wide ranges fold the worse half."
+        }
+      ],
+      "objective": {
+        "zh": "记住 BTN ≈ 42% 的量级。",
+        "en": "Anchor the BTN at ≈ 42%."
+      },
+      "lessonRef": "l2-02-range-shapes"
+    },
+    {
+      "id": "q2-03a",
+      "prompt": {
+        "zh": "轻 3-bet（bluff 性质）优先选哪类牌？",
+        "en": "Which hands make the best light (bluff-leaning) 3-bets?"
+      },
+      "choices": [
+        {
+          "zh": "KJo 这类中间牌",
+          "en": "Middling hands like KJo"
+        },
+        {
+          "zh": "A5s 这类阻断 + 同花潜力的牌",
+          "en": "Hands like A5s — blockers plus suited potential"
+        },
+        {
+          "zh": "任意两张，重在气势",
+          "en": "Any two cards — it is about aggression"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "中段牌 3-bet 两头不靠：价值不足、被跟后难打——它们更适合跟注或弃牌。",
+          "en": "Middling hands sit in no-man's land: not enough value, awkward when called — they prefer call or fold."
+        },
+        {
+          "zh": "正确：A 阻断对手最强的跟注/反加范围，同花小 A 被跟后还有可玩性兜底。",
+          "en": "Correct: the ace blocks the strongest continue range, and the suited wheel ace keeps playability when called."
+        },
+        {
+          "zh": "无选择的激进只是更快的输法。",
+          "en": "Unselective aggression is just a faster way to lose."
+        }
+      ],
+      "objective": {
+        "zh": "理解阻断牌在轻 3-bet 中的作用。",
+        "en": "Understand blockers in light 3-bets."
+      },
+      "lessonRef": "l2-03-threebet-basics"
+    },
+    {
+      "id": "q2-03b",
+      "prompt": {
+        "zh": "无位置（如 BB 对 BTN）3-bet 的尺寸基线约为开局额的？",
+        "en": "Out of position (e.g. BB vs BTN), the 3-bet sizing baseline is about?"
+      },
+      "choices": [
+        {
+          "zh": "2 倍",
+          "en": "2x the open"
+        },
+        {
+          "zh": "4 倍",
+          "en": "4x the open"
+        },
+        {
+          "zh": "6 倍",
+          "en": "6x the open"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "2 倍给了对手近乎完美的跟注赔率，位置劣势雪上加霜。",
+          "en": "2x hands the opener near-perfect odds — painful when you are also out of position."
+        },
+        {
+          "zh": "正确：无位置约 4 倍（有位置约 3 倍），用尺寸补偿位置劣势。",
+          "en": "Correct: about 4x out of position (3x in position) — size compensates for the seat."
+        },
+        {
+          "zh": "6 倍把自己的轻 3-bet 全变成高价诈唬，代价失衡。",
+          "en": "6x makes every light 3-bet an overpriced bluff — the cost no longer balances."
+        }
+      ],
+      "objective": {
+        "zh": "记住 IP 3 倍 / OOP 4 倍的尺寸基线。",
+        "en": "Anchor 3x in position, 4x out of position."
+      },
+      "lessonRef": "l2-03-threebet-basics"
+    },
+    {
+      "id": "q2-04a",
+      "prompt": {
+        "zh": "CO 开局加注，你在 BTN 拿 A9o。三选项框架下最有纪律的选择是？",
+        "en": "CO opens and you hold A9o on the BTN. Under the three-option frame, the disciplined play is?"
+      },
+      "choices": [
+        {
+          "zh": "跟注",
+          "en": "Call"
+        },
+        {
+          "zh": "弃牌",
+          "en": "Fold"
+        },
+        {
+          "zh": "3-Bet 施压",
+          "en": "3-bet for pressure"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "A9o 撞上 CO 的 AT+ 几乎全程被支配，跟注是慢性失血。",
+          "en": "A9o 'is dominated by CO's AT+ almost everywhere; calling bleeds slowly."
+        },
+        {
+          "zh": "正确：看似漂亮、实则被支配的牌，弃牌就是利润。",
+          "en": "Correct: pretty-but-dominated hands make money by folding."
+        },
+        {
+          "zh": "它既没有足够牌力做价值，也缺少同花潜力做诈唬，3-bet 两头不靠。",
+          "en": "It lacks the strength for value and the suited potential for a bluff — a 3-bet serves neither goal."
+        }
+      ],
+      "objective": {
+        "zh": "识别被支配牌，守住三选项纪律。",
+        "en": "Spot dominated hands and keep three-option discipline."
+      },
+      "lessonRef": "l2-04-facing-rfi"
+    },
+    {
+      "id": "q2-04b",
+      "prompt": {
+        "zh": "3-Bet 范围里掺入 A5s 这类牌，主要理由是什么？",
+        "en": "Why do hands like A5s belong in a 3-bet range?"
+      },
+      "choices": [
+        {
+          "zh": "它经常翻出顶对",
+          "en": "It often flops top pair"
+        },
+        {
+          "zh": "阻断 AA / AK，且有同花与顺子潜力",
+          "en": "It blocks AA/AK and has suited, straight potential"
+        },
+        {
+          "zh": "它跟注时表现最好",
+          "en": "It performs best as a call"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "A5 中顶对的频率很低，这不是选它的原因。",
+          "en": "A5 rarely flops top pair; that is not the point."
+        },
+        {
+          "zh": "正确：持有 A 让对手更难拿到 AA/AK，被跟注时还有同花、轮子顺的后路。",
+          "en": "Correct: holding an ace makes opponent AA/AK rarer, and when called you keep flush and wheel equity."
+        },
+        {
+          "zh": "作为跟注它常被支配；它的价值恰恰在于当 3-bet 的进攻翼。",
+          "en": "As a call it is often dominated; its value is precisely as the aggressive wing of a 3-bet range."
+        }
+      ],
+      "objective": {
+        "zh": "理解 3-bet 诈唬翼的选牌逻辑。",
+        "en": "Understand how the bluff wing of a 3-bet range is chosen."
+      },
+      "lessonRef": "l2-04-facing-rfi"
+    },
+    {
+      "id": "q2-05a",
+      "prompt": {
+        "zh": "为什么 BB 是全桌防守最宽的位置？",
+        "en": "Why does the BB defend the widest range at the table?"
+      },
+      "choices": [
+        {
+          "zh": "已投入盲注、收盘行动、跟注有折扣",
+          "en": "Money already posted, closes the action, calls at a discount"
+        },
+        {
+          "zh": "BB 翻后有位置优势",
+          "en": "The BB has postflop position"
+        },
+        {
+          "zh": "BB 的牌通常更好",
+          "en": "The BB is dealt better cards"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：三个结构性因素叠加，让许多边缘牌的防守价格变得划算。",
+          "en": "Correct: three structural factors stack up to make marginal defends priced in."
+        },
+        {
+          "zh": "恰恰相反，BB 翻后几乎总是没有位置。",
+          "en": "Quite the opposite — the BB is almost always out of position postflop."
+        },
+        {
+          "zh": "发牌对每个位置都是均匀的，差异来自结构而非运气。",
+          "en": "Cards are dealt evenly to every seat; the difference is structural, not luck."
+        }
+      ],
+      "objective": {
+        "zh": "说出 BB 宽防守的三个结构性原因。",
+        "en": "Name the structural reasons behind wide BB defense."
+      },
+      "lessonRef": "l2-05-blind-battle"
+    },
+    {
+      "id": "q2-05b",
+      "prompt": {
+        "zh": "BTN 开局，你在 SB 拿 JTs。按训练表的口径，动作是？",
+        "en": "BTN opens and you hold JTs in the SB. Per the training charts, the action is?"
+      },
+      "choices": [
+        {
+          "zh": "平跟看翻牌",
+          "en": "Flat and see a flop"
+        },
+        {
+          "zh": "弃牌",
+          "en": "Fold"
+        },
+        {
+          "zh": "3-Bet",
+          "en": "3-bet"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "SB 训练表里没有平跟这个选项——平跟会把你挤在双重位置劣势里。",
+          "en": "The SB chart has no flatting option — a flat wedges you into a double positional disadvantage."
+        },
+        {
+          "zh": "JTs 的同花顺潜力足以进入进攻翼，直接放弃太可惜。",
+          "en": "JTs has enough suited-connector potential for the aggressive wing; folding gives up too much."
+        },
+        {
+          "zh": "正确：SB 采用「3-bet 或弃牌」，JTs 在 3-bet 表内。",
+          "en": "Correct: the SB plays 3-bet-or-fold, and JTs is in the 3-bet chart."
+        }
+      ],
+      "objective": {
+        "zh": "内化 SB 的 3-bet 或弃牌纪律。",
+        "en": "Internalize the SB's 3-bet-or-fold discipline."
+      },
+      "lessonRef": "l2-05-blind-battle"
+    },
+    {
+      "id": "q2-06a",
+      "prompt": {
+        "zh": "对手数据 VPIP 45 / PFR 8。这组数字最像哪类玩家？",
+        "en": "An opponent runs VPIP 45 / PFR 8. This profile most resembles?"
+      },
+      "choices": [
+        {
+          "zh": "TAG（紧凶）",
+          "en": "TAG"
+        },
+        {
+          "zh": "Calling Station（跟注站）",
+          "en": "Calling station"
+        },
+        {
+          "zh": "Maniac（疯狂型）",
+          "en": "Maniac"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "TAG 的画像是低 VPIP、高 PFR，与这组数字相反。",
+          "en": "A TAG runs low VPIP with high PFR — the opposite of these numbers."
+        },
+        {
+          "zh": "正确：玩一半的牌却几乎不加注——什么都想看、什么都跟。",
+          "en": "Correct: playing half the hands while almost never raising — wants to see everything, calls everything."
+        },
+        {
+          "zh": "Maniac 同样很松，但 PFR 也高、不停施压，与 8 的 PFR 不符。",
+          "en": "A maniac is also loose but with high PFR and relentless pressure — 8 PFR does not fit."
+        }
+      ],
+      "objective": {
+        "zh": "把 VPIP/PFR 组合映射到玩家类型。",
+        "en": "Map VPIP/PFR pairs to player types."
+      },
+      "lessonRef": "l2-06-core-stats"
+    },
+    {
+      "id": "q2-06b",
+      "prompt": {
+        "zh": "AF（进攻系数）衡量的是什么？",
+        "en": "What does AF (aggression factor) measure?"
+      },
+      "choices": [
+        {
+          "zh": "玩家入池的频率",
+          "en": "How often a player enters pots"
+        },
+        {
+          "zh": "（下注+加注）相对跟注的比例",
+          "en": "Bets plus raises relative to calls"
+        },
+        {
+          "zh": "翻前加注的频率",
+          "en": "Preflop raise frequency"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "入池频率是 VPIP 的领地。",
+          "en": "Entering pots is VPIP's territory."
+        },
+        {
+          "zh": "正确：AF 回答「他投钱时是主动进攻还是被动跟随」。",
+          "en": "Correct: AF answers whether money goes in aggressively or passively."
+        },
+        {
+          "zh": "翻前加注频率由 PFR 描述。",
+          "en": "Preflop raising is described by PFR."
+        }
+      ],
+      "objective": {
+        "zh": "区分三大指标各自的职责。",
+        "en": "Keep the three core stats in their own lanes."
+      },
+      "lessonRef": "l2-06-core-stats"
+    },
+    {
+      "id": "q2-07a",
+      "prompt": {
+        "zh": "只观察了对手 12 手牌，他的 VPIP 显示 58%。最合理的用法是？",
+        "en": "You have watched only 12 hands and the opponent's VPIP shows 58%. The right way to use this is?"
+      },
+      "choices": [
+        {
+          "zh": "立即按超松玩家剥削",
+          "en": "Exploit them as ultra-loose right away"
+        },
+        {
+          "zh": "仅作参考，先按基础策略应对",
+          "en": "Treat it as a hint and stay on baseline strategy"
+        },
+        {
+          "zh": "数据无意义，永远忽略",
+          "en": "Ignore stats entirely, forever"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "12 手的噪声可以让任何人看起来像疯子或岩石。",
+          "en": "Twelve hands of noise can make anyone look like a maniac or a rock."
+        },
+        {
+          "zh": "正确：小样本只配做假设，不配做结论；先按未知对手打。",
+          "en": "Correct: thin samples earn hypotheses, not conclusions; play them as unknown for now."
+        },
+        {
+          "zh": "数据并非无用——样本到位后它是最可靠的朋友。",
+          "en": "Stats are not useless — once the sample arrives they are your most reliable friend."
+        }
+      ],
+      "objective": {
+        "zh": "学会按样本大小给读数定权重。",
+        "en": "Weight reads by sample size."
+      },
+      "lessonRef": "l2-07-sample-size"
+    },
+    {
+      "id": "q2-07b",
+      "prompt": {
+        "zh": "按本应用的口径，指标大约从多少手起才开始有参考价值？",
+        "en": "Per this app's convention, stats start to mean something after roughly how many hands?"
+      },
+      "choices": [
+        {
+          "zh": "5 手",
+          "en": "5 hands"
+        },
+        {
+          "zh": "30 手",
+          "en": "30 hands"
+        },
+        {
+          "zh": "1000 手",
+          "en": "1,000 hands"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "5 手连「他在不在玩牌」都说不清。",
+          "en": "Five hands cannot even tell whether they are playing or folding."
+        },
+        {
+          "zh": "正确：30 手是分类器开始给出判断的最低样本线。",
+          "en": "Correct: 30 hands is the classifier's minimum line before it offers a read."
+        },
+        {
+          "zh": "1000 手当然更准，但实战中等不起；30 手已能给出方向。",
+          "en": "A thousand hands is better, but live play cannot wait; 30 already points a direction."
+        }
+      ],
+      "objective": {
+        "zh": "记住 sampleMin = 30 的工程与统计含义。",
+        "en": "Remember why sampleMin is 30."
+      },
+      "lessonRef": "l2-07-sample-size"
+    }
+  ]
+}

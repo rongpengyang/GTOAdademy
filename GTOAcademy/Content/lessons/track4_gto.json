@@ -1,0 +1,1180 @@
+{
+  "schemaVersion": 1,
+  "track": {
+    "id": "track4",
+    "order": 4,
+    "title": {
+      "zh": "GTO 之路",
+      "en": "The GTO Path"
+    },
+    "subtitle": {
+      "zh": "均衡、频率、阻断与平衡——理论落地训练",
+      "en": "Equilibrium, frequencies, blockers and balance — theory into reps"
+    }
+  },
+  "lessons": [
+    {
+      "id": "l4-01-what-is-gto",
+      "order": 1,
+      "title": {
+        "zh": "什么是 GTO",
+        "en": "What Is GTO"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "GTO（博弈论最优）是一套不可被剥削的均衡策略：当你按它行动，对手无论怎样偏离都无法长期占你便宜。它不追求对每个具体对手赢得最多，而是先立一条谁也撬不动的基线。",
+            "en": "GTO (game-theory optimal) is an unexploitable equilibrium strategy: play it, and no matter how an opponent deviates, they cannot profit off you in the long run. It does not try to win the most against each specific player — it plants a baseline nobody can lever open."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "石头剪刀布的均衡是各出三分之一、完全随机。你可以对着它出一万局石头，期望仍是零——这就是「不可被剥削」的手感。扑克的 GTO 同理，只是树大得多。",
+            "en": "Rock-paper-scissors at equilibrium is one-third each, fully random. Throw rock at it ten thousand times and your expectation stays zero — that is what 'unexploitable' feels like. Poker GTO is the same idea on a vastly bigger tree."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：把 GTO 当成每一手的万能答案。真实的均衡解极其复杂，本应用提供的是教学近似；而且对着明显的漏洞继续打均衡，等于放着更高的期望不拿。",
+            "en": "Common mistake: treating GTO as the universal answer for every hand. True equilibrium solutions are immensely complex — this app teaches approximations — and playing pure equilibrium into an obvious leak leaves better expectation on the table."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "学习顺序：先把基线练进肌肉，再学习何时、向哪个方向偏离。",
+            "en": "Order of learning: drill the baseline into muscle first, then learn when and which way to deviate."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-01a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-01b"
+        }
+      ]
+    },
+    {
+      "id": "l4-02-range-thinking",
+      "order": 2,
+      "title": {
+        "zh": "范围思维",
+        "en": "Range Thinking"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "高手不问「他拿的是哪一手」，而问「他的整个范围长什么样」。对手每个动作都在过滤范围；你自己的决策，也应当是替整个范围做的，而不是替这一把的两张牌。",
+            "en": "Strong players do not ask 'which hand does he hold' but 'what does his whole range look like.' Every action filters a range — and your own decisions should be made for your entire range, not for tonight's two cards."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "UTG 开局加注后，他的「手牌」其实是本应用图表里的 182 个组合：大对子、大同花、强高张。在 K 高面上，这团云密集命中；在 765 连面上，它大片落空。",
+            "en": "After a UTG open, his 'hand' is really the 182 combos in this app's chart: big pairs, big suited cards, strong broadways. On a king-high board that cloud lands densely; on 765 it largely whiffs."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：单点读牌——「他肯定是 AK」。一旦猜错，后面每条街的推理全部坍塌；范围思维允许你部分正确，而不是全对或全错。",
+            "en": "Common mistake: pinpoint reads — 'he definitely has AK.' Guess wrong once and every later street collapses; range thinking lets you be partly right instead of all-or-nothing."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "练习方法：训练答题时先大声（或心里）说出对手范围，再选自己的动作。",
+            "en": "Practice: before answering a drill, say the opponent's range out loud (or silently) — then pick your action."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-02a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-02b"
+        }
+      ]
+    },
+    {
+      "id": "l4-03-frequencies",
+      "order": 3,
+      "title": {
+        "zh": "频率与混合策略",
+        "en": "Frequencies and Mixed Strategies"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "均衡策略常常不是「这手牌永远做 X」，而是「这手牌 70% 做 X、30% 做 Y」。混合让你的每条线里都同时住着强牌与诈唬，对手无法通过你的动作反推你的牌。",
+            "en": "Equilibrium often is not 'always do X with this hand' but '70% X, 30% Y.' Mixing keeps strong hands and bluffs living together on every line, so opponents cannot reverse-engineer your holding from your action."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "BTN 面对 CO 开局拿 A5s：有时 3-bet 施压，有时直接弃牌。两种动作都对——重要的是比例，而不是某一次的选择。",
+            "en": "A5s on the BTN facing a CO open: sometimes it 3-bets, sometimes it folds. Both actions are right — what matters is the ratio, not any single instance."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：把每手牌的打法写死成固定模式。固定模式就是可读模式——观察力好的对手两圈就能把你锁死。",
+            "en": "Common mistake: hard-coding one fixed line per hand. Fixed patterns are readable patterns — an observant opponent locks you down within two orbits."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "训练里的「可接受」评级，正是混合策略的另一翼：它不扣满分，因为它在真实均衡里确实出现。",
+            "en": "The 'acceptable' grade in drills is exactly the other wing of a mix: it is not marked fully wrong because it genuinely appears in equilibrium."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-03a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-03b"
+        }
+      ]
+    },
+    {
+      "id": "l4-04-blockers",
+      "order": 4,
+      "title": {
+        "zh": "阻断牌",
+        "en": "Blockers"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "你手里的每张牌，都让对手少了若干种拿法——这就是阻断效应。持有一张 A，对手拿 AA 的组合从 6 种降到 3 种、AK 从 16 种降到 12 种；选择诈唬牌时，优先选阻断对方跟注范围的牌。",
+            "en": "Every card you hold removes combinations from the opponent's range — the blocker effect. Holding one ace cuts his AA combos from 6 to 3 and AK from 16 to 12; when choosing bluffs, prefer cards that block his calling range."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "牌面三张黑桃，你持 A♠ 却没有同花：这张 A♠ 阻断了坚果同花——对手最强的跟注理由变少了，你的诈唬成功率随之上升。",
+            "en": "Three spades on board and you hold the A♠ without a flush: that A♠ blocks the nut flush — his best reason to call just got rarer, and your bluff succeeds more often."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：高估阻断、忽略基本面。阻断是天平上的砝码，不是整座天平；一手毫无后路的烂牌，不会因为阻断了什么就变成好诈唬。",
+            "en": "Common mistake: overrating blockers while ignoring fundamentals. Blockers are weights on the scale, not the scale itself; a hopeless hand with no backup does not become a good bluff just because it blocks something."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "记两个经典：A♠ 在三黑桃面是诈唬加分项；持 A 让 3-bet 诈唬更不容易撞上 AA/AK。",
+            "en": "Two classics to remember: the A♠ on three-spade boards upgrades bluffs, and holding an ace keeps your 3-bet bluffs from running into AA/AK."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-04a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-04b"
+        }
+      ]
+    },
+    {
+      "id": "l4-05-balance",
+      "order": 5,
+      "title": {
+        "zh": "平衡：价值与诈唬的比例",
+        "en": "Balance: The Value-to-Bluff Ratio"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "河牌下注的均衡比例由尺寸决定：下注越大，给对手的赔率越差，你的范围里就可以（也应该）混入越多诈唬。底池大小的下注，均衡诈唬占比约三分之一。",
+            "en": "The equilibrium ratio on river bets follows from sizing: the bigger the bet, the worse the price you offer, and the more bluffs your range can (and should) carry. A pot-sized bet balances at roughly one-third bluffs."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "你在河牌下注一个底池：对手跟注赢 2 输 1，需要 33% 胜率才打平。如果你的范围恰好三分之一是诈唬，他跟与弃的期望相同——你变得无法被针对。",
+            "en": "You bet pot on the river: a call risks 1 to win 2, needing 33% to break even. If exactly one-third of your range is bluffing, his call and his fold have equal expectation — there is nothing to aim at."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：某条线里只有坚果。会观察的对手很快学会对你这条线安全弃牌——你的大牌从此再也收不到钱。",
+            "en": "Common mistake: a line that contains only the nuts. Observant opponents quickly learn to fold safely against it — and your monsters never get paid again."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "平衡是对会调整的对手的防御。对不观察、不调整的对手，直接剥削更值钱——这是下一课。",
+            "en": "Balance is a defense against adapting opponents. Versus players who never observe or adjust, straightforward exploitation earns more — that is the next lesson."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-05a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-05b"
+        }
+      ]
+    },
+    {
+      "id": "l4-06-exploit-vs-gto",
+      "order": 6,
+      "title": {
+        "zh": "剥削与回归基线",
+        "en": "Exploitation and Returning to Baseline"
+      },
+      "minutes": 6,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "剥削是有意偏离均衡去打击对手的具体漏洞：他弃牌太多就多诈唬，他什么都跟就只下价值。代价是你的策略也出现缺口——剥削别人的人，同时把自己暴露给反剥削。",
+            "en": "Exploitation means deliberately leaving equilibrium to attack a specific leak: bluff more against over-folders, value-bet only against stations. The cost is that your own strategy now has holes — the exploiter is simultaneously exposed to counter-exploitation."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "面对 Calling Station（什么都跟、几乎不加注）：砍掉几乎全部诈唬，把薄价值下得更厚、更大。他用第二对跟你三条街，正是你利润的来源。",
+            "en": "Versus a calling station (calls everything, almost never raises): cut nearly all bluffs and bet thinner value, bigger. His second pair calling three streets is exactly where your profit lives."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：对未知对手或强对手乱剥削。没有证据的偏离不是剥削，是漏洞；强对手会注意到并反打你。",
+            "en": "Common mistake: 'exploiting' unknown or strong opponents. Deviation without evidence is not exploitation, it is a leak — and strong players will notice and punch back."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "口诀：对未知，打基线；对已读懂的漏洞，做有方向的偏离；对手开始调整，就退回基线。",
+            "en": "Mantra: unknown → baseline; a confirmed leak → deviate with direction; the moment they adjust → step back to baseline."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-06a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-06b"
+        }
+      ]
+    },
+    {
+      "id": "l4-07-position-compound",
+      "order": 7,
+      "title": {
+        "zh": "位置的复利",
+        "en": "The Compounding Value of Position"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "位置是翻后每条街都重复支付的复利：后行动意味着先看到对方的决定再做自己的——信息更多、控池更稳、诈唬更准、薄价值更敢下。同一手牌，在 BTN 的价值远高于在 UTG。",
+            "en": "Position is interest that compounds on every postflop street: acting last means seeing his decision before making yours — more information, steadier pot control, sharper bluffs, braver thin value. The same hand is worth far more on the BTN than under the gun."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "本应用的开局表把这件事画了出来：UTG 只开 13.7% 的牌，BTN 却开 41.5%——三倍的差距，全部来自位置让边缘牌得以实现权益。",
+            "en": "This app's opening charts draw the picture: UTG opens just 13.7% of hands while the BTN opens 41.5% — a threefold gap, all because position lets marginal hands realize their equity."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：在没位置时玩投机牌「赌一把翻牌」。这类牌的利润恰恰依赖位置——换到 UTG 与盲注位，它们从资产变成负债。",
+            "en": "Common mistake: playing speculative hands out of position 'to gamble on a flop.' Their profit depends precisely on position — moved to UTG or the blinds, they flip from asset to liability."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "简单可靠的修正：位置每差一档，起手标准就收紧一档。",
+            "en": "A simple, reliable fix: for every step worse your position, tighten your starting standard one notch."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-07a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-07b"
+        }
+      ]
+    },
+    {
+      "id": "l4-08-preflop-shapes-postflop",
+      "order": 8,
+      "title": {
+        "zh": "翻前如何决定翻后",
+        "en": "How Preflop Shapes Postflop"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "翻前范围的形状，决定了你在每类牌面上的处境：紧而高张的范围在 A/K 高面上拥有天然范围优势；松而连张的范围在中低连面上更密合。翻后的难易，多半在翻前就写好了。",
+            "en": "The shape of your preflop range decides your standing on every board class: tight, high-card ranges own A/K-high boards; loose, connected ranges mesh with middling connected ones. How hard postflop feels was mostly written preflop."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "UTG 开局范围（大对子 + 大高张）来到 A♥K♦6♣：几乎每个组合都命中或压制——可以放心高频施压。同一范围掉进 7♠6♠5♦，优势立刻易主。",
+            "en": "The UTG opening range (big pairs plus big broadways) arrives on A♥K♦6♣: nearly every combo connects or dominates — press with confidence. Drop the same range onto 7♠6♠5♦ and the advantage changes hands instantly."
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：翻前用杂牌乱跟，把自己的范围搅成一团浑水——翻后没有任何一类牌面真正属于你，每条街都在逆风做题。",
+            "en": "Common mistake: splashing preflop with junk until your range is mud — no board class truly belongs to you, and every street becomes an uphill quiz."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "翻前纪律的真正回报在翻后：范围干净的人，翻后的决策树也干净。",
+            "en": "The real payoff of preflop discipline arrives postflop: a clean range makes a clean decision tree."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-08a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-08b"
+        }
+      ]
+    },
+    {
+      "id": "l4-09-training-loop",
+      "order": 9,
+      "title": {
+        "zh": "训练循环：刻意练习",
+        "en": "The Training Loop: Deliberate Practice"
+      },
+      "minutes": 5,
+      "blocks": [
+        {
+          "type": "concept",
+          "text": {
+            "zh": "进步来自闭环而不是堆量：学一个概念 → 在训练场用题目验证 → 错题进入间隔复习 → 在数据页确认正确率回升。四步缺一，知识就会从指缝漏走。",
+            "en": "Improvement comes from a closed loop, not raw volume: learn a concept → verify it in drills → send mistakes into spaced review → confirm on the stats page that accuracy recovers. Remove any step and knowledge leaks through your fingers."
+          }
+        },
+        {
+          "type": "example",
+          "text": {
+            "zh": "本应用的错题本按 1 → 3 → 7 → 14 天安排复习——恰好卡在遗忘临界点之前重练。连续答对四个阶段，这道题才算真正「掌握」。",
+            "en": "This app's mistake book schedules reviews at 1 → 3 → 7 → 14 days — re-drilling just before the forgetting cliff. Only after passing all four stages is a question truly 'mastered.'"
+          }
+        },
+        {
+          "type": "mistake",
+          "text": {
+            "zh": "常见错误：只刷新题、从不复盘错因。错题是你个人漏洞的精确地图，跳过它等于把地图扔掉重新迷路。",
+            "en": "Common mistake: grinding new questions while never revisiting errors. Your mistakes are a precise map of your personal leaks; skipping review throws the map away and gets lost again."
+          }
+        },
+        {
+          "type": "tip",
+          "text": {
+            "zh": "小而稳的节奏赢过偶尔的爆肝：每天十分钟，先清到期复习，再开新训练。",
+            "en": "Small and steady beats occasional binges: ten minutes a day — clear due reviews first, then start new drills."
+          }
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-09a"
+        },
+        {
+          "type": "quizRef",
+          "ref": "q4-09b"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q4-01a",
+      "prompt": {
+        "zh": "GTO 策略最核心的特征是什么？",
+        "en": "What is the defining property of a GTO strategy?"
+      },
+      "choices": [
+        {
+          "zh": "对每个对手都赢得最多",
+          "en": "It wins the most against every opponent"
+        },
+        {
+          "zh": "不可被剥削——对手偏离也无法长期占便宜",
+          "en": "It is unexploitable — deviations cannot profit against it long-run"
+        },
+        {
+          "zh": "永远选择最激进的动作",
+          "en": "It always picks the most aggressive action"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "赢得最多靠的是针对性剥削；GTO 提供的是不被针对的基线。",
+          "en": "Winning the most takes targeted exploitation; GTO provides the un-targetable baseline."
+        },
+        {
+          "zh": "正确：均衡的意义就是「无论你怎么偏离，都拿我没办法」。",
+          "en": "Correct: equilibrium means 'however you deviate, you cannot hurt me.'"
+        },
+        {
+          "zh": "均衡里既有激进也有克制——频率服从结构，不服从情绪。",
+          "en": "Equilibrium contains both aggression and restraint — frequencies follow structure, not mood."
+        }
+      ],
+      "objective": {
+        "zh": "用一句话说清 GTO 的本质。",
+        "en": "State the essence of GTO in one line."
+      },
+      "lessonRef": "l4-01-what-is-gto"
+    },
+    {
+      "id": "q4-01b",
+      "prompt": {
+        "zh": "石头剪刀布的均衡策略是什么？",
+        "en": "What is the equilibrium strategy in rock-paper-scissors?"
+      },
+      "choices": [
+        {
+          "zh": "三种手势各三分之一，完全随机",
+          "en": "One-third each, fully random"
+        },
+        {
+          "zh": "永远出石头，保持强硬",
+          "en": "Always rock, stay firm"
+        },
+        {
+          "zh": "模仿对手的上一手",
+          "en": "Copy the opponent's last throw"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：均匀随机让任何对策的期望都归零——这就是不可被剥削。",
+          "en": "Correct: uniform randomness zeroes out every counter-strategy — that is unexploitability."
+        },
+        {
+          "zh": "固定出石头会被「永远出布」打到怀疑人生。",
+          "en": "Pure rock loses endlessly to pure paper."
+        },
+        {
+          "zh": "任何可预测的模式都能被反制——包括模仿。",
+          "en": "Any predictable pattern can be countered — imitation included."
+        }
+      ],
+      "objective": {
+        "zh": "用最小博弈理解均衡与随机化。",
+        "en": "Grasp equilibrium and randomization in the smallest game."
+      },
+      "lessonRef": "l4-01-what-is-gto"
+    },
+    {
+      "id": "q4-02a",
+      "prompt": {
+        "zh": "「范围思维」指的是什么？",
+        "en": "What does 'range thinking' mean?"
+      },
+      "choices": [
+        {
+          "zh": "猜出对手具体的两张牌",
+          "en": "Guessing the opponent's exact two cards"
+        },
+        {
+          "zh": "只考虑自己手牌的强度",
+          "en": "Considering only your own hand strength"
+        },
+        {
+          "zh": "按对手全部可能组合的分布来推理与决策",
+          "en": "Reasoning over the full distribution of combos the opponent can hold"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "单点猜测一旦落空，后续推理全部坍塌。",
+          "en": "A pinpoint guess that misses collapses every later inference."
+        },
+        {
+          "zh": "只看自己，等于闭着一只眼打牌。",
+          "en": "Watching only your own cards is playing with one eye shut."
+        },
+        {
+          "zh": "正确：动作过滤范围、牌面切割范围——决策对着整团分布做。",
+          "en": "Correct: actions filter ranges, boards carve them — decide against the whole cloud."
+        }
+      ],
+      "objective": {
+        "zh": "从单手思维切换到范围思维。",
+        "en": "Switch from hand thinking to range thinking."
+      },
+      "lessonRef": "l4-02-range-thinking"
+    },
+    {
+      "id": "q4-02b",
+      "prompt": {
+        "zh": "按本应用的图表，UTG 开局范围大约占全部起手牌的多少？",
+        "en": "Per this app's charts, the UTG opening range covers roughly what share of all starting hands?"
+      },
+      "choices": [
+        {
+          "zh": "约 5%",
+          "en": "About 5%"
+        },
+        {
+          "zh": "约 14%",
+          "en": "About 14%"
+        },
+        {
+          "zh": "约 30%",
+          "en": "About 30%"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "5% 几乎只剩超强对子——比 UTG 的实际口径紧得多。",
+          "en": "Five percent is nearly premium-pairs-only — far tighter than UTG actually plays."
+        },
+        {
+          "zh": "正确：182 个组合 ≈ 13.7%——六人桌最紧的开局位。",
+          "en": "Correct: 182 combos ≈ 13.7% — the tightest opening seat at six-max."
+        },
+        {
+          "zh": "30% 已接近 CO 的口径，UTG 前面还有四个人等着反击。",
+          "en": "Thirty percent is closer to the CO; UTG still has four players waiting to fight back."
+        }
+      ],
+      "objective": {
+        "zh": "记住 UTG ≈ 14% 这个锚点数字。",
+        "en": "Anchor the number: UTG ≈ 14%."
+      },
+      "lessonRef": "l4-02-range-thinking"
+    },
+    {
+      "id": "q4-03a",
+      "prompt": {
+        "zh": "混合策略（同一手牌按比例选不同动作）的目的为何？",
+        "en": "Why mix actions (play the same hand different ways by ratio)?"
+      },
+      "choices": [
+        {
+          "zh": "让对手无法从动作反推手牌，保持平衡",
+          "en": "So opponents cannot infer the hand from the action — staying balanced"
+        },
+        {
+          "zh": "给牌局增加趣味",
+          "en": "To make the game more fun"
+        },
+        {
+          "zh": "掩饰自己的犹豫",
+          "en": "To hide indecision"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：混合让每条线里强弱共存，固定模式才是被读穿的根源。",
+          "en": "Correct: mixing keeps strength and bluffs together on every line; fixed patterns are what get read."
+        },
+        {
+          "zh": "趣味是副产品，平衡才是目的。",
+          "en": "Fun is a byproduct; balance is the purpose."
+        },
+        {
+          "zh": "均衡里的随机是设计出来的纪律，不是犹豫。",
+          "en": "Equilibrium randomness is designed discipline, not hesitation."
+        }
+      ],
+      "objective": {
+        "zh": "理解混合策略的防御价值。",
+        "en": "Understand mixing as defense."
+      },
+      "lessonRef": "l4-03-frequencies"
+    },
+    {
+      "id": "q4-03b",
+      "prompt": {
+        "zh": "训练判分里的「可接受」评级，最准确的含义是？",
+        "en": "In drill grading, the 'acceptable' rating most precisely means?"
+      },
+      "choices": [
+        {
+          "zh": "答错了，但给个安慰分",
+          "en": "Wrong, but here is a consolation point"
+        },
+        {
+          "zh": "它是混合策略中的另一翼合理选项",
+          "en": "It is the other legitimate wing of a mixed strategy"
+        },
+        {
+          "zh": "系统无法判断对错",
+          "en": "The system cannot tell right from wrong"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "「可接受」不是错——它在真实均衡里确实以一定频率出现。",
+          "en": "'Acceptable' is not wrong — it genuinely occurs at some frequency in equilibrium."
+        },
+        {
+          "zh": "正确：主答案是主频动作，可接受是同一均衡里的次频动作。",
+          "en": "Correct: the main answer is the majority action; acceptable is the minority action of the same equilibrium."
+        },
+        {
+          "zh": "判分口径来自图表频率，清晰且可解释。",
+          "en": "Grading follows chart frequencies — explicit and explainable."
+        }
+      ],
+      "objective": {
+        "zh": "正确解读「可接受」评级。",
+        "en": "Read the 'acceptable' grade correctly."
+      },
+      "lessonRef": "l4-03-frequencies"
+    },
+    {
+      "id": "q4-04a",
+      "prompt": {
+        "zh": "牌面三张黑桃，你持 A♠ 但没有同花。这张 A♠ 为什么提升你的诈唬？",
+        "en": "Three spades on board and you hold the A♠ without a flush. Why does that card upgrade your bluff?"
+      },
+      "choices": [
+        {
+          "zh": "它阻断了坚果同花，对手最强的跟注理由变少",
+          "en": "It blocks the nut flush — his best calling hands got rarer"
+        },
+        {
+          "zh": "A 是最大的牌，自带威慑",
+          "en": "An ace is the biggest card and intimidates"
+        },
+        {
+          "zh": "它保证下一张还能中同花",
+          "en": "It promises another spade is coming"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：对手拿坚果同花的组合被你掐掉了一批——他更难用强牌跟注。",
+          "en": "Correct: you have removed a chunk of his nut-flush combos — strong calls just got scarcer."
+        },
+        {
+          "zh": "威慑是心理叙事；阻断是组合数学。",
+          "en": "Intimidation is a story; blocking is combinatorics."
+        },
+        {
+          "zh": "阻断改变的是对手现在的组合分布，不预言未来的牌。",
+          "en": "Blockers reshape his current combo distribution; they predict no future cards."
+        }
+      ],
+      "objective": {
+        "zh": "用组合数解释经典的 A♠ 阻断。",
+        "en": "Explain the classic A♠ block with combos."
+      },
+      "lessonRef": "l4-04-blockers"
+    },
+    {
+      "id": "q4-04b",
+      "prompt": {
+        "zh": "阻断牌发挥作用的机制是什么？",
+        "en": "Through what mechanism do blockers work?"
+      },
+      "choices": [
+        {
+          "zh": "提升你自己的成牌概率",
+          "en": "They raise your own chance of making a hand"
+        },
+        {
+          "zh": "减少对手范围里特定组合的数量",
+          "en": "They reduce specific combo counts inside the opponent's range"
+        },
+        {
+          "zh": "改变底池赔率",
+          "en": "They change the pot odds"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "你的成牌概率由自己的听牌结构决定，与阻断无关。",
+          "en": "Your own hand-making odds come from your draw structure, not blockers."
+        },
+        {
+          "zh": "正确：你持有的牌，对手就拿不到——一张 A 让 AA 从 6 组降到 3 组。",
+          "en": "Correct: cards in your hand cannot be in his — one ace cuts AA from 6 combos to 3."
+        },
+        {
+          "zh": "赔率由注码与底池决定；阻断改变的是范围构成。",
+          "en": "Odds come from bet and pot size; blockers reshape range composition."
+        }
+      ],
+      "objective": {
+        "zh": "说清阻断效应的组合学原理。",
+        "en": "State the combinatorial principle of blocking."
+      },
+      "lessonRef": "l4-04-blockers"
+    },
+    {
+      "id": "q4-05a",
+      "prompt": {
+        "zh": "河牌做底池大小的下注，均衡状态下诈唬大约占多少？",
+        "en": "Betting pot on the river, what share of the range bluffs at equilibrium?"
+      },
+      "choices": [
+        {
+          "zh": "约三分之二",
+          "en": "About two-thirds"
+        },
+        {
+          "zh": "约一半",
+          "en": "About half"
+        },
+        {
+          "zh": "约三分之一",
+          "en": "About one-third"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "诈唬到三分之二，对手闭眼跟注都有得赚。",
+          "en": "At two-thirds bluffs, blind calls print against you."
+        },
+        {
+          "zh": "一半仍然超过这个尺寸允许的密度。",
+          "en": "Half is still denser than this sizing supports."
+        },
+        {
+          "zh": "正确：对手跟注需 33% 胜率，诈唬占比 1/3 让他跟与弃无差——无懈可击。",
+          "en": "Correct: a pot-odds call needs 33%, and one-third bluffs makes call and fold equal — nothing to attack."
+        }
+      ],
+      "objective": {
+        "zh": "把尺寸与诈唬密度挂钩。",
+        "en": "Tie sizing to bluff density."
+      },
+      "lessonRef": "l4-05-balance"
+    },
+    {
+      "id": "q4-05b",
+      "prompt": {
+        "zh": "如果你的某条下注线里永远只有坚果，长期会发生什么？",
+        "en": "If one of your betting lines only ever contains the nuts, what happens long-term?"
+      },
+      "choices": [
+        {
+          "zh": "会观察的对手对这条线安全弃牌，你的大牌再也收不到钱",
+          "en": "Observant opponents fold safely to it, and your monsters stop getting paid"
+        },
+        {
+          "zh": "你变得更难被击败",
+          "en": "You become harder to beat"
+        },
+        {
+          "zh": "毫无影响",
+          "en": "Nothing changes"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：可读的强即是弱——没人付钱的坚果只是漂亮的摆设。",
+          "en": "Correct: readable strength is weakness — unpaid nuts are just decoration."
+        },
+        {
+          "zh": "这条线确实「输不了」，却也赢不到——期望被弃牌抽干。",
+          "en": "The line cannot lose, but it also cannot earn — folds drain its expectation."
+        },
+        {
+          "zh": "对会调整的对手，任何固定模式都会被定价。",
+          "en": "Against adapting players, every fixed pattern gets priced in."
+        }
+      ],
+      "objective": {
+        "zh": "理解「只有坚果的线」为何被弃牌剥削。",
+        "en": "See why nuts-only lines get exploited by folding."
+      },
+      "lessonRef": "l4-05-balance"
+    },
+    {
+      "id": "q4-06a",
+      "prompt": {
+        "zh": "面对典型 Calling Station（什么都跟、几乎不加注），最直接的调整是？",
+        "en": "Versus a textbook calling station (calls everything, rarely raises), the most direct adjustment is?"
+      },
+      "choices": [
+        {
+          "zh": "增加诈唬频率压垮他",
+          "en": "Bluff more to overwhelm him"
+        },
+        {
+          "zh": "加厚价值下注，删减几乎全部诈唬",
+          "en": "Bet thinner value bigger and cut nearly all bluffs"
+        },
+        {
+          "zh": "严格维持均衡频率",
+          "en": "Hold exact equilibrium frequencies"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "对不弃牌的人诈唬，是把筹码直接递过去。",
+          "en": "Bluffing someone who never folds hands him your chips."
+        },
+        {
+          "zh": "正确：他付钱看牌的习惯，正好用更厚、更大的价值去收。",
+          "en": "Correct: his pay-to-see habit is harvested with thicker, bigger value."
+        },
+        {
+          "zh": "均衡防的是会调整的对手；对不调整的漏洞，偏离才是利润。",
+          "en": "Equilibrium guards against adapters; versus a static leak, deviation is the profit."
+        }
+      ],
+      "objective": {
+        "zh": "对跟注站执行教科书剥削。",
+        "en": "Run the textbook station exploit."
+      },
+      "lessonRef": "l4-06-exploit-vs-gto"
+    },
+    {
+      "id": "q4-06b",
+      "prompt": {
+        "zh": "什么时候应该回到 GTO 基线打法？",
+        "en": "When should you return to the GTO baseline?"
+      },
+      "choices": [
+        {
+          "zh": "永远不需要——剥削总是更好",
+          "en": "Never — exploitation is always better"
+        },
+        {
+          "zh": "只在拿到强牌时",
+          "en": "Only when dealt strong hands"
+        },
+        {
+          "zh": "对手未知，或对手已开始针对你的偏离时",
+          "en": "When opponents are unknown, or have begun countering your deviation"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "剥削依赖证据；没有读数的偏离只是自己的漏洞。",
+          "en": "Exploitation runs on evidence; deviation without reads is just your own leak."
+        },
+        {
+          "zh": "基线是整套策略框架，与某一手牌的强弱无关。",
+          "en": "The baseline is a whole framework, independent of any single hand."
+        },
+        {
+          "zh": "正确：「未知打基线，被反制就回家」——基线是进可攻退可守的大本营。",
+          "en": "Correct: unknown → baseline, countered → come home; the baseline is base camp."
+        }
+      ],
+      "objective": {
+        "zh": "掌握剥削与回归的切换时机。",
+        "en": "Time the switch between exploiting and returning."
+      },
+      "lessonRef": "l4-06-exploit-vs-gto"
+    },
+    {
+      "id": "q4-07a",
+      "prompt": {
+        "zh": "位置优势的本质是什么？",
+        "en": "What is the essence of positional advantage?"
+      },
+      "choices": [
+        {
+          "zh": "后行动：先看到对手决定再做自己的",
+          "en": "Acting last: seeing his decision before making yours"
+        },
+        {
+          "zh": "离庄家按钮更近，气场更强",
+          "en": "Sitting near the button radiates strength"
+        },
+        {
+          "zh": "能拿到更好的起手牌",
+          "en": "Being dealt better starting hands"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：信息差在每条街复利——控池、诈唬、薄价值全部因此变准。",
+          "en": "Correct: the information edge compounds every street — pot control, bluffs and thin value all sharpen."
+        },
+        {
+          "zh": "气场不进底池；信息才进。",
+          "en": "Aura does not enter the pot; information does."
+        },
+        {
+          "zh": "发牌对每个座位一视同仁，位置改变的是牌的「可实现价值」。",
+          "en": "Cards fall evenly on every seat; position changes what the cards can realize."
+        }
+      ],
+      "objective": {
+        "zh": "把位置优势归因到信息顺序。",
+        "en": "Attribute position to information order."
+      },
+      "lessonRef": "l4-07-position-compound"
+    },
+    {
+      "id": "q4-07b",
+      "prompt": {
+        "zh": "为什么 BTN 能开 41.5% 的牌，而 UTG 只开 13.7%？",
+        "en": "Why can the BTN open 41.5% of hands while UTG opens only 13.7%?"
+      },
+      "choices": [
+        {
+          "zh": "BTN 的运气传统上更好",
+          "en": "The BTN is traditionally luckier"
+        },
+        {
+          "zh": "位置让大量边缘牌得以实现权益",
+          "en": "Position lets a mass of marginal hands realize their equity"
+        },
+        {
+          "zh": "规则要求 BTN 多开牌",
+          "en": "The rules require the BTN to open more"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "没有「位置运」这回事——只有位置期望。",
+          "en": "There is no positional luck — only positional expectation."
+        },
+        {
+          "zh": "正确：同一手 T8s，在 BTN 是资产、在 UTG 是负债；三倍差距全是位置的复利。",
+          "en": "Correct: the same T8s is an asset on the BTN and a liability under the gun; the threefold gap is position compounding."
+        },
+        {
+          "zh": "规则只规定行动顺序；开局宽窄是策略对顺序的回应。",
+          "en": "Rules fix the order of action; range width is strategy's answer to that order."
+        }
+      ],
+      "objective": {
+        "zh": "用实现权益解释 41.5% 对 13.7%。",
+        "en": "Explain 41.5% vs 13.7% through equity realization."
+      },
+      "lessonRef": "l4-07-position-compound"
+    },
+    {
+      "id": "q4-08a",
+      "prompt": {
+        "zh": "翻前范围的形状，决定了翻后的什么？",
+        "en": "The shape of a preflop range decides what, postflop?"
+      },
+      "choices": [
+        {
+          "zh": "公共牌会发出哪些牌",
+          "en": "Which community cards will fall"
+        },
+        {
+          "zh": "底池最终的大小",
+          "en": "The final size of the pot"
+        },
+        {
+          "zh": "你在各类牌面上的范围优势归属",
+          "en": "Who owns range advantage on each board class"
+        }
+      ],
+      "correctIndex": 2,
+      "choiceExplanations": [
+        {
+          "zh": "发什么牌是随机的；范围决定的是你与每类牌面的关系。",
+          "en": "Which cards fall is random; ranges decide your relationship to each board class."
+        },
+        {
+          "zh": "底池大小由下注树决定，那是结果不是原因。",
+          "en": "Pot size follows the betting tree — an effect, not the cause."
+        },
+        {
+          "zh": "正确：紧高张范围拥有 A/K 高面，松连张范围拥有中低连面——版图翻前已划定。",
+          "en": "Correct: tight high-card ranges own A/K-high boards, loose connected ranges own middling ones — the map is drawn preflop."
+        }
+      ],
+      "objective": {
+        "zh": "把翻后优势追溯到翻前范围。",
+        "en": "Trace postflop advantage back to preflop range."
+      },
+      "lessonRef": "l4-08-preflop-shapes-postflop"
+    },
+    {
+      "id": "q4-08b",
+      "prompt": {
+        "zh": "UTG 的开局范围（大对子 + 大高张）最舒服的翻牌是哪类？",
+        "en": "Which flop class is most comfortable for the UTG opening range (big pairs plus big broadways)?"
+      },
+      "choices": [
+        {
+          "zh": "A/K 高的干燥牌面",
+          "en": "Ace- or king-high dry boards"
+        },
+        {
+          "zh": "765 这类中低连面",
+          "en": "Low connected boards like 765"
+        },
+        {
+          "zh": "所有牌面都一样",
+          "en": "Every board feels the same"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：AK、AQ、KQ 与大对子在这里密集命中或压制。",
+          "en": "Correct: AK, AQ, KQ and big pairs land densely or dominate here."
+        },
+        {
+          "zh": "中低连面正撞防守方的同花连张——是 UTG 范围最落空的版图。",
+          "en": "Low connected boards crash into the defender's suited connectors — UTG's biggest whiff zone."
+        },
+        {
+          "zh": "范围与牌面的密合度天差地别，「都一样」恰是单手思维的症状。",
+          "en": "Range-board mesh varies wildly; 'all the same' is the symptom of hand-only thinking."
+        }
+      ],
+      "objective": {
+        "zh": "识别紧范围的主场牌面。",
+        "en": "Identify a tight range's home turf."
+      },
+      "lessonRef": "l4-08-preflop-shapes-postflop"
+    },
+    {
+      "id": "q4-09a",
+      "prompt": {
+        "zh": "错题按 1 → 3 → 7 → 14 天间隔复习，价值在哪里？",
+        "en": "Reviews at 1 → 3 → 7 → 14 day intervals — what is the value?"
+      },
+      "choices": [
+        {
+          "zh": "把复习拖到最后一刻更省事",
+          "en": "Procrastinating reviews is simply easier"
+        },
+        {
+          "zh": "在遗忘临界点之前重练，把短期记忆固化为长期",
+          "en": "Re-drilling just before the forgetting cliff turns short-term recall into long-term"
+        },
+        {
+          "zh": "间隔本身没有意义，只是排版好看",
+          "en": "The spacing is meaningless decoration"
+        }
+      ],
+      "correctIndex": 1,
+      "choiceExplanations": [
+        {
+          "zh": "拖延复习等于每次都从零重学。",
+          "en": "Procrastinated review means relearning from zero each time."
+        },
+        {
+          "zh": "正确：间隔重复是对抗遗忘曲线最被验证的武器。",
+          "en": "Correct: spaced repetition is the best-proven weapon against the forgetting curve."
+        },
+        {
+          "zh": "递增的间隔正对应记忆衰减的节奏——它是科学，不是排版。",
+          "en": "The widening gaps track memory decay — science, not typesetting."
+        }
+      ],
+      "objective": {
+        "zh": "理解 SRS 间隔背后的记忆原理。",
+        "en": "Understand the memory science behind SRS intervals."
+      },
+      "lessonRef": "l4-09-training-loop"
+    },
+    {
+      "id": "q4-09b",
+      "prompt": {
+        "zh": "本应用建议的完整训练循环是？",
+        "en": "What is the full training loop this app recommends?"
+      },
+      "choices": [
+        {
+          "zh": "学课程 → 练场景 → 复习错题 → 看统计复盘",
+          "en": "Learn lessons → drill scenarios → review mistakes → check stats"
+        },
+        {
+          "zh": "只刷无尽模式，量大出奇迹",
+          "en": "Grind endless mode only — volume cures all"
+        },
+        {
+          "zh": "把全部课程读完再开始做题",
+          "en": "Read every lesson before attempting any drill"
+        }
+      ],
+      "correctIndex": 0,
+      "choiceExplanations": [
+        {
+          "zh": "正确：学、练、复习、复盘四步闭环，缺一处知识就漏一处。",
+          "en": "Correct: learn, drill, review, reflect — a closed loop that leaks wherever a step is missing."
+        },
+        {
+          "zh": "没有复盘的量只是重复，重复同样的漏洞。",
+          "en": "Volume without reflection is repetition — of the same leaks."
+        },
+        {
+          "zh": "概念要趁热在题目里验证；攒到最后一起读，遗忘曲线先到。",
+          "en": "Concepts want immediate testing in drills; saved-up reading loses to the forgetting curve."
+        }
+      ],
+      "objective": {
+        "zh": "把四步循环变成日常习惯。",
+        "en": "Make the four-step loop a daily habit."
+      },
+      "lessonRef": "l4-09-training-loop"
+    }
+  ]
+}

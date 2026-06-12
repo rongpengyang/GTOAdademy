@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "scenarios": [
+    {
+      "id": "po-flop-cbet-btn-ak",
+      "street": "flop",
+      "heroPosition": "btn",
+      "villainPosition": "bb",
+      "heroHand": "AhKh",
+      "board": [
+        "Kd",
+        "7s",
+        "2c"
+      ],
+      "potBB": 5.5,
+      "effStackBB": 97.5,
+      "villainType": null,
+      "history": [
+        {
+          "zh": "翻前：BTN（你）加注 2.5bb，BB 跟注。",
+          "en": "Preflop: BTN (you) raises to 2.5bb, BB calls."
+        },
+        {
+          "zh": "翻牌 K♦7♠2♣：BB 过牌。",
+          "en": "Flop K♦7♠2♣: BB checks."
+        }
+      ],
+      "correct": {
+        "action": "bet",
+        "sizePct": 33
+      },
+      "acceptable": [
+        {
+          "action": "bet",
+          "sizePct": 25
+        },
+        {
+          "action": "bet",
+          "sizePct": 50
+        }
+      ],
+      "reasonTags": [
+        "cbet",
+        "value"
+      ],
+      "explanation": {
+        "zh": "K72 彩虹面强烈偏向 BTN 的开局范围（范围优势 + 坚果优势）。顶对顶踢用小尺寸 c-bet（25%–50%）：BB 的口袋对、7x、后门听牌会继续付钱，而小注让你整个范围都能便宜施压、被加注时损失也小。",
+        "en": "K72 rainbow heavily favors the BTN opening range (range and nut advantage). Top pair top kicker c-bets small (25–50%): BB's pocket pairs, 7x and backdoors keep paying, and the small size lets your whole range apply cheap pressure with little lost when raised."
+      },
+      "wrongChoices": {
+        "check": {
+          "zh": "过牌放掉两条街的价值。干燥面上 BB 很少有反击的牌，没有\"设陷阱\"的必要。",
+          "en": "Checking gives up streets of value. On this dry board BB rarely has a hand to fight back with — there is nothing to trap."
+        },
+        "bet100": {
+          "zh": "全底池会把 BB 的弱牌全部赶走，留下的恰是能抗衡你的部分——价值变薄而不是变厚。",
+          "en": "A pot-sized bet folds out everything worse and keeps exactly what competes with you — value gets thinner, not thicker."
+        }
+      },
+      "objective": {
+        "zh": "在范围优势牌面用小尺寸 c-bet 取价值。",
+        "en": "Use a small range-advantage c-bet for value."
+      },
+      "lessonRef": null,
+      "difficulty": 1,
+      "tags": [
+        "cbet",
+        "dry-board"
+      ]
+    },
+    {
+      "id": "po-flop-checkback-btn-66",
+      "street": "flop",
+      "heroPosition": "btn",
+      "villainPosition": "bb",
+      "heroHand": "6h6s",
+      "board": [
+        "Ks",
+        "Qd",
+        "8c"
+      ],
+      "potBB": 5.5,
+      "effStackBB": 97.5,
+      "villainType": null,
+      "history": [
+        {
+          "zh": "翻前：BTN（你）加注 2.5bb，BB 跟注。",
+          "en": "Preflop: BTN (you) raises to 2.5bb, BB calls."
+        },
+        {
+          "zh": "翻牌 K♠Q♦8♣：BB 过牌。",
+          "en": "Flop K♠Q♦8♣: BB checks."
+        }
+      ],
+      "correct": {
+        "action": "check"
+      },
+      "acceptable": [],
+      "reasonTags": [
+        "check_back",
+        "pot_control"
+      ],
+      "explanation": {
+        "zh": "66 在 KQ8 上是脆弱的摊牌价值：下注几乎不会被更差的牌跟注（被跟即落后），也很难把 Qx/Kx 诈走——两头不讨好。过牌控池、保留摊牌价值，转牌再根据行动与来牌决定。",
+        "en": "66 on KQ8 is fragile showdown value: a bet is rarely called by worse (called means behind) and will not fold out Qx/Kx — it accomplishes neither goal. Check back for pot control, keep your showdown value, and reassess on the turn."
+      },
+      "wrongChoices": {
+        "bet33": {
+          "zh": "小注也达不到目的：更差的牌大多弃牌，更好的牌一张不弃——既非 value 也非有效 bluff。",
+          "en": "Even a small bet achieves nothing: worse hands mostly fold, better hands never do — neither value nor an effective bluff."
+        },
+        "bet75": {
+          "zh": "大注把 66 变成纯 bluff，可它明明还有摊牌价值——烧掉它得不偿失。",
+          "en": "A big bet turns 66 into a pure bluff while it still has showdown value — burning that value is a losing trade."
+        }
+      },
+      "objective": {
+        "zh": "识别\"下注两头不讨好\"的中等牌，学会 check back 控池。",
+        "en": "Recognize hands where betting accomplishes neither goal, and check back for pot control."
+      },
+      "lessonRef": null,
+      "difficulty": 2,
+      "tags": [
+        "check-back",
+        "marginal"
+      ]
+    },
+    {
+      "id": "po-flop-semibluff-btn-98s",
+      "street": "flop",
+      "heroPosition": "btn",
+      "villainPosition": "bb",
+      "heroHand": "9h8h",
+      "board": [
+        "Ah",
+        "6h",
+        "2s"
+      ],
+      "potBB": 5.5,
+      "effStackBB": 97.5,
+      "villainType": null,
+      "history": [
+        {
+          "zh": "翻前：BTN（你）加注 2.5bb，BB 跟注。",
+          "en": "Preflop: BTN (you) raises to 2.5bb, BB calls."
+        },
+        {
+          "zh": "翻牌 A♥6♥2♠：BB 过牌。",
+          "en": "Flop A♥6♥2♠: BB checks."
+        }
+      ],
+      "correct": {
+        "action": "bet",
+        "sizePct": 33
+      },
+      "acceptable": [
+        {
+          "action": "bet",
+          "sizePct": 25
+        },
+        {
+          "action": "bet",
+          "sizePct": 50
+        }
+      ],
+      "reasonTags": [
+        "semi_bluff",
+        "range_bet"
+      ],
+      "explanation": {
+        "zh": "A 高干燥面强烈偏向 BTN 范围，整个范围可以小注施压；9♥8♥ 是完美的半诈唬——对手弃牌你直接赢，被跟注还有 9 张同花补牌（到河约 36%）随时反超。",
+        "en": "The ace-high dry board heavily favors the button's range, so the whole range can stab small; 9♥8♥ is the perfect semi-bluff — folds win now, and if called you still hold nine flush outs (~36% by the river) to take over."
+      },
+      "wrongChoices": {
+        "check": {
+          "zh": "放过范围压力，还送 BB 一张免费转牌来反超你的 9 高——半诈唬的两条赢牌路径全被关掉。",
+          "en": "Checking surrenders the range pressure and gifts BB a free turn to outdraw your nine-high — both ways a semi-bluff wins get switched off."
+        },
+        "bet100": {
+          "zh": "把半诈唬打成高价纯诈唬：你有 36% 权益兜底，根本不需要为弃牌率支付全池的价格。",
+          "en": "A pot-sized bet turns the semi-bluff into an overpriced pure bluff: with 36% equity as a floor, you never needed to pay full pot for folds."
+        }
+      },
+      "objective": {
+        "zh": "学会用听牌做半诈唬：弃牌赢 + 补牌赢的双路径。",
+        "en": "Semi-bluff with draws: win by folds now or by outs later."
+      },
+      "lessonRef": "l1-05-outs-and-equity",
+      "difficulty": 2,
+      "tags": [
+        "semi-bluff",
+        "flush-draw"
+      ]
+    },
+    {
+      "id": "po-turn-value-co-kq",
+      "street": "turn",
+      "heroPosition": "co",
+      "villainPosition": "bb",
+      "heroHand": "KsQs",
+      "board": [
+        "Kd",
+        "8c",
+        "4h",
+        "Qc"
+      ],
+      "potBB": 12.0,
+      "effStackBB": 92.0,
+      "villainType": null,
+      "history": [
+        {
+          "zh": "翻前：CO（你）加注 2.5bb，BB 跟注。",
+          "en": "Preflop: CO (you) raises to 2.5bb, BB calls."
+        },
+        {
+          "zh": "翻牌 K♦8♣4♥：BB 过牌，你下注 1.8bb，BB 跟注。",
+          "en": "Flop K♦8♣4♥: BB checks, you bet 1.8bb, BB calls."
+        },
+        {
+          "zh": "转牌 Q♣：BB 过牌。",
+          "en": "Turn Q♣: BB checks."
+        }
+      ],
+      "correct": {
+        "action": "bet",
+        "sizePct": 75
+      },
+      "acceptable": [
+        {
+          "action": "bet",
+          "sizePct": 50
+        }
+      ],
+      "reasonTags": [
+        "value",
+        "sizing_up"
+      ],
+      "explanation": {
+        "zh": "转牌 Q 把你升级成顶两对，同时给 BB 的 Qx、KJ、顺子听牌更多跟注理由——强成手在变湿的牌面要敢做大尺寸：75% 池取足价值，并为河牌的最后一枪铺路。",
+        "en": "The turn queen upgrades you to top two pair while giving BB's Qx, KJ and straight draws more reasons to call — strong hands size up on wetter boards: 75% pot charges full value and sets up the river barrel."
+      },
+      "wrongChoices": {
+        "check": {
+          "zh": "顶两对过牌是双重浪费：错过一条街的价值，还让同花/顺子听牌免费抽牌。",
+          "en": "Checking top two wastes a street of value and lets the flush and straight draws peel for free."
+        },
+        "bet33": {
+          "zh": "尺寸与牌力错配：能跟 33% 的牌大多也能跟 75%——小注只是在给自己的强牌打折。",
+          "en": "Size mismatched to strength: most hands calling 33% also call 75% — the small bet just discounts your monster."
+        }
+      },
+      "objective": {
+        "zh": "强成手在转牌敢于做大价值尺寸。",
+        "en": "Size up for value on the turn with strong made hands."
+      },
+      "lessonRef": null,
+      "difficulty": 2,
+      "tags": [
+        "value-bet",
+        "turn"
+      ]
+    },
+    {
+      "id": "po-river-folddiscipline-btn-a5s",
+      "street": "river",
+      "heroPosition": "btn",
+      "villainPosition": "bb",
+      "heroHand": "Ah5h",
+      "board": [
+        "Kd",
+        "Qc",
+        "8s",
+        "7h",
+        "2d"
+      ],
+      "potBB": 14.0,
+      "effStackBB": 88.0,
+      "villainType": null,
+      "history": [
+        {
+          "zh": "翻前：BTN（你）加注 2.5bb，BB 跟注。",
+          "en": "Preflop: BTN (you) raises to 2.5bb, BB calls."
+        },
+        {
+          "zh": "翻牌 K♦Q♣8♠：双方过牌。",
+          "en": "Flop K♦Q♣8♠: both players check."
+        },
+        {
+          "zh": "转牌 7♥：BB 下注 3bb，你跟注。",
+          "en": "Turn 7♥: BB bets 3bb, you call."
+        },
+        {
+          "zh": "河牌 2♦：BB 下注 10.5bb（约 3/4 池）。",
+          "en": "River 2♦: BB bets 10.5bb (about 3/4 pot)."
+        }
+      ],
+      "correct": {
+        "action": "fold"
+      },
+      "acceptable": [],
+      "reasonTags": [
+        "fold_discipline",
+        "bluff_catch"
+      ],
+      "explanation": {
+        "zh": "面对转牌-河牌的连续火力，A 高需要约 30% 胜率才能平衡这笔 3/4 池的跟注（10.5 ÷ 35），而 BB 这条线上价值组合远多于诈唬组合。纪律性弃牌不是认输，它本身就是 +EV 的决策。",
+        "en": "Against turn-and-river barrels, ace-high needs about 30% equity to break even on this 3/4-pot call (10.5 ÷ 35), and BB's line is packed with far more value than bluffs. A disciplined fold is not surrender — it is the +EV decision itself."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "A 高在这条行动线上抓不到足够的诈唬：对手两条街开火的范围以成手为主，30% 的需求胜率达不到。",
+          "en": "Ace-high cannot catch enough bluffs on this line: a two-street barreling range is value-heavy, and you fall short of the 30% you need."
+        },
+        "raise100": {
+          "zh": "把一手有明确弃牌权的牌变成昂贵诈唬：对手敢在河牌开 3/4 池的范围很少向加注弃牌。",
+          "en": "Turning a clear fold into an expensive bluff: a range confident enough to bet 3/4 pot on the river rarely folds to a raise."
+        }
+      },
+      "objective": {
+        "zh": "河牌面对持续火力，守住弃牌纪律。",
+        "en": "Hold the fold-discipline line against river barrels."
+      },
+      "lessonRef": "l1-04-pot-odds",
+      "difficulty": 3,
+      "tags": [
+        "river",
+        "fold"
+      ]
+    }
+  ]
+}
