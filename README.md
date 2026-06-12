@@ -152,6 +152,7 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - 课程 10 → **30**（4 轨道：新手 7 · 翻前与指标 7 · 翻后核心 7 · GTO 之路 9，课内题 60）。
 - 范围 6 → **12**（RFI ×5 + BB 防守跟注 ×4 + 3-Bet ×3；其中 BB vs BTN 为同局面「跟注 + 3-Bet」双动作图）。组合数全部经校验器同源解析审计并固化窗口。
 - App 图标（程序化生成：墨底 / 毛毡绿黑桃 / 金色细节）、`Docs/AppStore.md` 商店物料（名称 / 描述 / 分级 / 隐私 / 审核备注 / 检查清单）、Profile XP 条入场动效（尊重「减弱动态」）。内容版本升至 **1.0.0**；新增 SettingsStoreTests 4 用例。
+- CI 首跑修复：移除全部 5 处 `nonisolated init`（Swift 6 下 `@Observable` 存储属性 setter 为 MainActor 隔离，nonisolated init 无法对其赋值；iOS 18 SDK 中 `View`/`App` 协议已整体 `@MainActor`，调用侧 @State 初始化天然在主 actor，无需 nonisolated）。
 
 ## 没有 Mac？在云端编译与测试（GitHub Actions）
 

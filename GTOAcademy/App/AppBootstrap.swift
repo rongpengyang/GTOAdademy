@@ -15,8 +15,8 @@ final class AppBootstrap {
     private(set) var state: State = .loading
     private var started = false
 
-    /// @State 的属性初始化发生在 nonisolated 上下文，故 init 必须 nonisolated。
-    nonisolated init() {}
+    /// iOS 18 SDK 下 App 协议整体 @MainActor，@State 初始化已在主 actor 上，init 保持隔离即可。
+    init() {}
 
     func loadIfNeeded() async {
         guard !started else { return }

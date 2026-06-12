@@ -17,7 +17,7 @@ final class PlayerTypeToolViewModel {
 
     private let classifier: PlayerClassifier
 
-    nonisolated init(config: ClassifierConfig, initial: PlayerStats? = nil) {
+    init(config: ClassifierConfig, initial: PlayerStats? = nil) {
         classifier = PlayerClassifier(config: config)
         let initialVPIP = initial?.vpip ?? 24
         vpip = initialVPIP

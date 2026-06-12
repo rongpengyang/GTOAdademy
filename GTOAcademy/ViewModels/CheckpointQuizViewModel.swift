@@ -15,8 +15,9 @@ final class CheckpointQuizViewModel {
     private(set) var correctCount = 0
     private(set) var finished = false
 
-    /// View 的 @State 属性初始化发生在 nonisolated 上下文。
-    nonisolated init(lesson: Lesson, repository: LessonRepository) {
+    /// iOS 18 SDK 下 View 协议整体 @MainActor，@State 初始化已在主 actor 上；
+    /// 且 @Observable 存储属性 setter 为 MainActor 隔离，init 必须保持隔离（Swift 6）。
+    init(lesson: Lesson, repository: LessonRepository) {
         self.lesson = lesson
         self.questions = lesson.quizIDs.compactMap { repository.question(id: $0) }
     }

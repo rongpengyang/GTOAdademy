@@ -17,7 +17,7 @@ final class StatCalculatorViewModel {
     /// 跟注次数（AF 分母）。
     var calls = 0
 
-    nonisolated init() {}
+    init() {}
 
     var vpipPercent: Double? {
         guard hands > 0 else { return nil }

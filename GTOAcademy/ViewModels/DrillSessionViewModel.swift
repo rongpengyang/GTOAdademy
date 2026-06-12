@@ -17,7 +17,9 @@ final class DrillSessionViewModel<Item: Sendable> {
     /// 无尽模式：advance 时由调用方续题，结束由用户主动触发。
     let isEndless: Bool
 
-    nonisolated init(items: [Item], isEndless: Bool = false) {
+    /// Swift 6：@Observable 存储属性的 setter 为 MainActor 隔离，init 必须保持隔离；
+    /// 调用方（View 自定义 init / @State 默认值 / 测试）在 iOS 18 SDK 下均处于主 actor。
+    init(items: [Item], isEndless: Bool = false) {
         self.items = items
         self.isEndless = isEndless
     }
