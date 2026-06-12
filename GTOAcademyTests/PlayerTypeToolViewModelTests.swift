@@ -2,16 +2,13 @@ import XCTest
 @testable import GTOAcademy
 
 /// 类型工具 VM：输入 → 分类联动、样本门槛、可选项 nil 语义、初值直通与钳制。
+/// 范式说明：不写 setUpWithError（nonisolated override 无法给 @MainActor 属性赋值），
+/// 测试体内 loadConfig()。
 @MainActor
 final class PlayerTypeToolViewModelTests: XCTestCase {
-    private var config: ClassifierConfig!
 
-    override func setUpWithError() throws {
-        config = try ContentLoader.load().classifier
-    }
-
-    func testManiacInputs() {
-        let vm = PlayerTypeToolViewModel(config: config)
+    func testManiacInputs() throws {
+        let vm = PlayerTypeToolViewModel(config: try loadConfig())
         vm.vpip = 45
         vm.pfr = 35
         vm.includeAF = true
@@ -22,15 +19,16 @@ final class PlayerTypeToolViewModelTests: XCTestCase {
         }
     }
 
-    func testInsufficientSample() {
+    func testInsufficientSample() throws {
+        let config = try loadConfig()
         let vm = PlayerTypeToolViewModel(config: config)
         vm.hands = 10
         XCTAssertEqual(vm.classification,
                        .insufficientSample(minimum: config.sampleMin))
     }
 
-    func testTogglesNilOptionalStats() {
-        let vm = PlayerTypeToolViewModel(config: config)
+    func testTogglesNilOptionalStats() throws {
+        let vm = PlayerTypeToolViewModel(config: try loadConfig())
         vm.includeAF = false
         vm.includeFoldToCbet = false
         XCTAssertNil(vm.stats.af)
@@ -41,9 +39,9 @@ final class PlayerTypeToolViewModelTests: XCTestCase {
         XCTAssertEqual(vm.stats.af, 2.5)
     }
 
-    func testInitialPassthroughAndClamp() {
+    func testInitialPassthroughAndClamp() throws {
         let initial = PlayerStats(vpip: 48, pfr: 6, af: 0.8, foldToCbet: nil, hands: 200)
-        let vm = PlayerTypeToolViewModel(config: config, initial: initial)
+        let vm = PlayerTypeToolViewModel(config: try loadConfig(), initial: initial)
         XCTAssertEqual(vm.vpip, 48)
         XCTAssertEqual(vm.pfr, 6)
         XCTAssertTrue(vm.includeAF, "初值带 AF 应自动启用开关")
@@ -55,5 +53,11 @@ final class PlayerTypeToolViewModelTests: XCTestCase {
         vm.pfr = 60
         vm.clampPFR()
         XCTAssertEqual(vm.pfr, vm.vpip, "clampPFR 应把 PFR 压回 VPIP")
+    }
+
+    // MARK: - Helpers
+
+    private func loadConfig() throws -> ClassifierConfig {
+        try ContentLoader.load().classifier
     }
 }

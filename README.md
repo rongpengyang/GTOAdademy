@@ -154,6 +154,7 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - App 图标（程序化生成：墨底 / 毛毡绿黑桃 / 金色细节）、`Docs/AppStore.md` 商店物料（名称 / 描述 / 分级 / 隐私 / 审核备注 / 检查清单）、Profile XP 条入场动效（尊重「减弱动态」）。内容版本升至 **1.0.0**；新增 SettingsStoreTests 4 用例。
 - CI 首跑修复：移除全部 5 处 `nonisolated init`（Swift 6 下 `@Observable` 存储属性 setter 为 MainActor 隔离，nonisolated init 无法对其赋值；iOS 18 SDK 中 `View`/`App` 协议已整体 `@MainActor`，调用侧 @State 初始化天然在主 actor，无需 nonisolated）。
 - CI 修复 2：修正 2 个文件共 3 处误用 rawValue 写法的 case 引用（`.calling_station` / `.passive_fish` → `.callingStation` / `.passiveFish`）。枚举本体自 M1 即含此两型（驼峰 case 名 + snake_case rawValue），无需也不可增补 case——强行增补会触发 rawValue 重复的编译错误。
+- CI 修复 3：两个 @MainActor 测试类（RangeLibraryTests / PlayerTypeToolViewModelTests）移除 `setUpWithError` 与隐式解包存储属性，改为测试体内 `loadLibrary()` / `loadConfig()`——`setUpWithError` 的 override 继承父类的 nonisolated 隔离，无法对 @MainActor 属性赋值。非 @MainActor 的 PlayerClassifierTests / DrillScoringEngineTests 属性与类同隔离，保留原写法。
 
 ## 没有 Mac？在云端编译与测试（GitHub Actions）
 
