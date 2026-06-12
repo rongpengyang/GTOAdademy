@@ -48,7 +48,7 @@ final class PlayerTypeToolViewModelTests: XCTestCase {
         XCTAssertEqual(vm.pfr, 6)
         XCTAssertTrue(vm.includeAF, "初值带 AF 应自动启用开关")
         XCTAssertFalse(vm.includeFoldToCbet)
-        guard case .classified(.passive_fish, _) = vm.classification else {
+        guard case .classified(.passiveFish, _) = vm.classification else {
             return XCTFail("应判为 passive_fish，实际 \(vm.classification)")
         }
 

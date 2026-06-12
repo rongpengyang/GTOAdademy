@@ -153,6 +153,7 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - 范围 6 → **12**（RFI ×5 + BB 防守跟注 ×4 + 3-Bet ×3；其中 BB vs BTN 为同局面「跟注 + 3-Bet」双动作图）。组合数全部经校验器同源解析审计并固化窗口。
 - App 图标（程序化生成：墨底 / 毛毡绿黑桃 / 金色细节）、`Docs/AppStore.md` 商店物料（名称 / 描述 / 分级 / 隐私 / 审核备注 / 检查清单）、Profile XP 条入场动效（尊重「减弱动态」）。内容版本升至 **1.0.0**；新增 SettingsStoreTests 4 用例。
 - CI 首跑修复：移除全部 5 处 `nonisolated init`（Swift 6 下 `@Observable` 存储属性 setter 为 MainActor 隔离，nonisolated init 无法对其赋值；iOS 18 SDK 中 `View`/`App` 协议已整体 `@MainActor`，调用侧 @State 初始化天然在主 actor，无需 nonisolated）。
+- CI 修复 2：修正 2 个文件共 3 处误用 rawValue 写法的 case 引用（`.calling_station` / `.passive_fish` → `.callingStation` / `.passiveFish`）。枚举本体自 M1 即含此两型（驼峰 case 名 + snake_case rawValue），无需也不可增补 case——强行增补会触发 rawValue 重复的编译错误。
 
 ## 没有 Mac？在云端编译与测试（GitHub Actions）
 

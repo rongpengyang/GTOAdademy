@@ -200,11 +200,11 @@ struct PlayerTypeToolView: View {
             LocalizedText(
                 zh: "极度激进：下注频率远超合理范围。用中强牌跟住，让方差替你工作。",
                 en: "Hyper-aggressive: bets far beyond a balanced range. Call down lighter with solid hands and let variance work for you.")
-        case .calling_station:
+        case .callingStation:
             LocalizedText(
                 zh: "跟注站：很少弃牌也很少加注。多用价值下注，几乎不要诈唬。",
                 en: "Calling station: folds little, raises little. Value bet relentlessly and almost never bluff.")
-        case .passive_fish:
+        case .passiveFish:
             LocalizedText(
                 zh: "松弱被动：入池过宽、缺乏主动。持续价值下注宽范围，他的加注往往是强牌。",
                 en: "Loose-passive: plays too many hands with little initiative. Value bet wide; their raises usually mean it.")
