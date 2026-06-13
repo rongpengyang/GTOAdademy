@@ -175,6 +175,20 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - **iPad 阅读宽度**：新增 `readableWidth()`（680pt 居中列，DesignSystem/Layout.swift），统一挂在 9 个内容页的滚动容器（Home / 学习路径 / 课程详情 / 测验 / Drill 首页 / 三训练器 / 错题复习）；Tools 的 13×13 矩阵**有意保持全宽**。iPhone 上无感知。
 - **L10n → xcstrings 迁移有意推迟至 v1.2**：提审前冻结字符串管线是标准做法；现有 LocalizedText 单点已完整覆盖双语，迁移属内部改造、零用户可见收益。
 
+### 构建排障：Multiple commands produce（已修复）
+
+XcodeGen 默认把 `sources: GTOAcademy` 递归成**分组**（逐文件引用），`Content/` 下
+`config / lessons / scenarios / ranges` 四个子目录的 JSON 在 `createIntermediateGroups`
+扁平化时会让多条 copy-resource 命令指向同一输出目录而冲突。修法（已写入 `project.yml`）：
+
+1. App target 的 Swift 源码树 `excludes: [Content]`，把内容目录从分组里摘出去；
+2. `Content` 单独以 **folder reference**（`type: folder` + `buildPhase: resources`）整目录拷贝——
+   蓝色文件夹一次拷贝、保留子目录、零 per-file 冲突；
+3. `ContentLoader.url(for:)` 的 `subdirectory` 兜底（`Content`、`Content/config` …）正好匹配
+   folder-reference 的 bundle 内路径，24 个 JSON 全部命中（已离线模拟验证）。
+
+云端 Mac 操作：`rm -rf GTOAcademy.xcodeproj ~/Library/Developer/Xcode/DerivedData/* && xcodegen generate && open GTOAcademy.xcodeproj`，⌘R 直接 Run。
+
 ### M10 新增（上架冲刺）
 
 - `Docs/QA-Checklist.md`：真机走查清单——TestFlight 装机后逐项打勾，覆盖启动、五 Tab 全链路、每日抽样、SRS 晋级降级、设置与系统集成（深浅色 / 动态字体 / 减弱动态 / iPad 旋转）、进度持久化。
