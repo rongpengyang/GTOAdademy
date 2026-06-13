@@ -175,19 +175,28 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - **iPad 阅读宽度**：新增 `readableWidth()`（680pt 居中列，DesignSystem/Layout.swift），统一挂在 9 个内容页的滚动容器（Home / 学习路径 / 课程详情 / 测验 / Drill 首页 / 三训练器 / 错题复习）；Tools 的 13×13 矩阵**有意保持全宽**。iPhone 上无感知。
 - **L10n → xcstrings 迁移有意推迟至 v1.2**：提审前冻结字符串管线是标准做法；现有 LocalizedText 单点已完整覆盖双语，迁移属内部改造、零用户可见收益。
 
-### 构建排障：Multiple commands produce（已修复）
+### 构建排障：Multiple commands produce / duplicate output（已修复）
 
-XcodeGen 默认把 `sources: GTOAcademy` 递归成**分组**（逐文件引用），`Content/` 下
-`config / lessons / scenarios / ranges` 四个子目录的 JSON 在 `createIntermediateGroups`
-扁平化时会让多条 copy-resource 命令指向同一输出目录而冲突。修法（已写入 `project.yml`）：
+**现象**：GitHub Actions（Xcode 16）全绿，但本地 Xcode 26 打开报 `Multiple commands produce … duplicate output file`，清 DerivedData + 重新 `xcodegen generate` 仍在。
 
-1. App target 的 Swift 源码树 `excludes: [Content]`，把内容目录从分组里摘出去；
-2. `Content` 单独以 **folder reference**（`type: folder` + `buildPhase: resources`）整目录拷贝——
-   蓝色文件夹一次拷贝、保留子目录、零 per-file 冲突；
-3. `ContentLoader.url(for:)` 的 `subdirectory` 兜底（`Content`、`Content/config` …）正好匹配
-   folder-reference 的 bundle 内路径，24 个 JSON 全部命中（已离线模拟验证）。
+**根因**：`options.createIntermediateGroups: true` 在 Xcode 26 的新构建系统下，会为包含资源的中间分组（`Content/config`、`Content/scenarios` …）**重复登记 copy-resource 命令**——旧构建系统（Xcode 16）静默合并，新构建系统报冲突。这正是 CI 绿、本地红的根源（工具链版本差异，非缓存差异）。
 
-云端 Mac 操作：`rm -rf GTOAcademy.xcodeproj ~/Library/Developer/Xcode/DerivedData/* && xcodegen generate && open GTOAcademy.xcodeproj`，⌘R 直接 Run。
+**修复**（已写入 `project.yml`）：移除 `createIntermediateGroups`（回落默认 `false`），保持单一 source 树 `path: GTOAcademy` 让 XcodeGen 按扩展名自动归类。全树已离线核验**零同名资源**（仅 `.xcassets` 内部各自的 `Contents.json`，由资产编译器独占处理，不进 copy 阶段），单一 resources phase 内不可能再产生重复输出。
+
+**云端 Mac 重建**：
+```bash
+rm -rf GTOAcademy.xcodeproj ~/Library/Developer/Xcode/DerivedData/*
+xcodegen generate && open GTOAcademy.xcodeproj
+```
+⌘R 直接 Run。
+
+**若仍复现（定位用，一行命令打印真凶）**：在生成后的工程上跑——
+```bash
+xcodebuild -project GTOAcademy.xcodeproj -scheme GTOAcademy \
+  -showBuildSettings >/dev/null 2>build_diag.txt; \
+grep -n "duplicate\|Multiple commands" build_diag.txt
+```
+或在 Xcode 报错行点开三角，把 "duplicate output file:" 后面那条**完整路径**贴回来，即可精确定位是哪个文件被登记两次。
 
 ### M10 新增（上架冲刺）
 

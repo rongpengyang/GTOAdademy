@@ -1,13 +1,15 @@
 # GTO Academy — XcodeGen 工程定义
 # 用法: brew install xcodegen && xcodegen generate && open GTOAcademy.xcodeproj
+#
+# "Multiple commands produce / duplicate output file"（Xcode 26 本地，CI Xcode 16 不报）：
+# 根因是 createIntermediateGroups: true 在新版 Xcode 构建系统下，为包含资源的中间分组
+# 重复登记 copy-resource 命令。修复 = 关闭该选项（默认 false）。全树已核验无同名资源。
 name: GTOAcademy
 options:
   bundleIdPrefix: com.yourcompany # TODO: 替换为你的反向域名
   deploymentTarget:
     iOS: "18.0"
-  createIntermediateGroups: true
-  # 资源若同名跨目录会触发 "Multiple commands produce"；本工程靠 Content 的
-  # folder-reference（见下）规避，无需 generateEmptyDirectories。
+  # createIntermediateGroups 不设置（默认 false）：避免子目录资源被重复登记。
 
 settings:
   base:
@@ -24,26 +26,20 @@ targets:
   GTOAcademy:
     type: application
     platform: iOS
+    # 单一 source 树：.swift 编译，.xcassets 资产编译，.json/.xcprivacy 资源拷贝。
+    # 全树无同名资源（已离线核验），同一 resources phase 内不会重复输出。
     sources:
-      # ① Swift 源码 + 资产目录：按文件类型各自归属，排除 Content 避免重复收录。
       - path: GTOAcademy
-        excludes:
-          - "Content" # 见 ② 单独以 folder reference 加入，二者互斥不重叠
-      # ② 内容 JSON：作为 folder reference 整目录拷贝（蓝色文件夹，保留子目录），
-      #    一次拷贝、零 per-file 冲突；ContentLoader 的 subdirectory 兜底正好匹配。
-      - path: GTOAcademy/Content
-        type: folder
-        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.gtoacademy # TODO: 替换
         TARGETED_DEVICE_FAMILY: "1,2" # iPhone + iPad
         INFOPLIST_KEY_CFBundleDisplayName: "GTO Academy"
-        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait"
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
 
   GTOAcademyTests:
     type: bundle.unit-test
