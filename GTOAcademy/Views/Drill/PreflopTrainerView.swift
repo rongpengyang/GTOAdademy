@@ -84,7 +84,7 @@ struct PreflopTrainerView: View {
         let items: [PreflopItem]
         switch mode {
         case .curated:
-            items = engine.curatedPreflop().map(PreflopItem.curated)
+            items = engine.dailyPreflop().map(PreflopItem.curated)
         case .endless:
             items = engine.endlessRFISpot(index: 0, using: &generator)
                 .map { [PreflopItem.endless($0)] } ?? []
@@ -153,6 +153,7 @@ struct PreflopTrainerView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .safeAreaInset(edge: .bottom) {

@@ -18,6 +18,7 @@ struct LearnPathView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .navigationTitle(L10n.tabLearn)

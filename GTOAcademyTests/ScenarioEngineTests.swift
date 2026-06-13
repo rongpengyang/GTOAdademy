@@ -67,4 +67,40 @@ final class ScenarioEngineTests: XCTestCase {
             XCTAssertTrue((a.difficulty, a.id) <= (b.difficulty, b.id))
         }
     }
+
+    /// 每日抽样：定量、去重、子集、难度升序，且同一天内不同时刻结果稳定。
+    func testDailySamplingStableWithinDay() throws {
+        let engine = try makeEngine()
+        let calendar = Calendar.current
+        let morning = try XCTUnwrap(calendar.date(
+            from: DateComponents(year: 2026, month: 6, day: 12, hour: 9)))
+        let evening = try XCTUnwrap(calendar.date(
+            from: DateComponents(year: 2026, month: 6, day: 12, hour: 22)))
+
+        let sample = engine.dailyPreflop(on: morning)
+        XCTAssertEqual(sample.count, ScenarioEngine.dailySessionSize)
+        XCTAssertEqual(Set(sample.map(\.id)).count, sample.count, "抽样内有重复题")
+        let poolIDs = Set(engine.curatedPreflop().map(\.id))
+        XCTAssertTrue(sample.allSatisfy { poolIDs.contains($0.id) }, "抽样越出题库")
+        for (a, b) in zip(sample, sample.dropFirst()) {
+            XCTAssertTrue((a.difficulty, a.id) <= (b.difficulty, b.id), "抽样应保持难度升序")
+        }
+        XCTAssertEqual(sample.map(\.id), engine.dailyPreflop(on: evening).map(\.id),
+                       "同一天不同时刻应是同一套题")
+    }
+
+    /// 每日抽样跨天轮换；池子不足请求量时全量返回。
+    func testDailySamplingRotatesAcrossDays() throws {
+        let engine = try makeEngine()
+        let calendar = Calendar.current
+        let day1 = try XCTUnwrap(calendar.date(
+            from: DateComponents(year: 2026, month: 6, day: 12)))
+        let day2 = try XCTUnwrap(calendar.date(
+            from: DateComponents(year: 2026, month: 6, day: 13)))
+        XCTAssertNotEqual(engine.dailyPostflop(on: day1).map(\.id),
+                          engine.dailyPostflop(on: day2).map(\.id),
+                          "相邻两天的题面不应完全相同")
+        XCTAssertEqual(engine.dailyPlayerType(count: 99, on: day1).count,
+                       engine.scenarios.playerType.count, "池子不足时应全量返回")
+    }
 }

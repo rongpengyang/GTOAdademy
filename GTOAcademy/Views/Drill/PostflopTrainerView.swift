@@ -16,7 +16,7 @@ struct PostflopTrainerView: View {
 
     init(engine: ScenarioEngine) {
         _session = State(initialValue: DrillSessionViewModel(
-            items: engine.curatedPostflop()))
+            items: engine.dailyPostflop()))
     }
 
     var body: some View {
@@ -51,6 +51,7 @@ struct PostflopTrainerView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .safeAreaInset(edge: .bottom) {

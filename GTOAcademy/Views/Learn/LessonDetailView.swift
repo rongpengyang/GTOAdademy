@@ -22,6 +22,7 @@ struct LessonDetailView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .navigationTitle(lesson.title.localized)

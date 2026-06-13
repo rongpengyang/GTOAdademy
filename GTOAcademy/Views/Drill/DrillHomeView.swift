@@ -19,8 +19,8 @@ struct DrillHomeView: View {
                         icon: "slider.horizontal.3",
                         title: LocalizedText(zh: "翻后下注训练", en: "Postflop Sizing"),
                         subtitle: LocalizedText(
-                            zh: "\(deps.scenarios.postflop.count) 道精编题 · 尺寸与理由",
-                            en: "\(deps.scenarios.postflop.count) curated spots · sizes and reasons"))
+                            zh: "每日 \(ScenarioEngine.dailySessionSize) 题 · 题库 \(deps.scenarios.postflop.count) · 尺寸与理由",
+                            en: "Daily \(ScenarioEngine.dailySessionSize) · pool of \(deps.scenarios.postflop.count) · sizes and reasons"))
                 }
                 .buttonStyle(.plain)
 
@@ -29,12 +29,13 @@ struct DrillHomeView: View {
                         icon: "person.text.rectangle",
                         title: LocalizedText(zh: "玩家类型判断", en: "Player Typing"),
                         subtitle: LocalizedText(
-                            zh: "\(deps.scenarios.playerType.count) 道精编题 · 读数识人",
-                            en: "\(deps.scenarios.playerType.count) curated spots · read the numbers"))
+                            zh: "每日 \(ScenarioEngine.dailySessionSize) 题 · 题库 \(deps.scenarios.playerType.count) · 读数识人",
+                            en: "Daily \(ScenarioEngine.dailySessionSize) · pool of \(deps.scenarios.playerType.count) · read the numbers"))
                 }
                 .buttonStyle(.plain)
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .navigationTitle(L10n.tabDrill)
@@ -70,8 +71,8 @@ struct DrillHomeView: View {
             HStack(spacing: Spacing.s12) {
                 NavigationLink(value: Route.preflop(.curated)) {
                     modePill(
-                        title: LocalizedText(zh: "精编 \(deps.scenarios.preflop.count) 题",
-                                             en: "Curated · \(deps.scenarios.preflop.count)"),
+                        title: LocalizedText(zh: "今日精编 \(ScenarioEngine.dailySessionSize) 题",
+                                             en: "Daily \(ScenarioEngine.dailySessionSize) curated"),
                         icon: "list.number")
                 }
                 .buttonStyle(.plain)

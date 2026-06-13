@@ -137,6 +137,7 @@ struct ReviewSessionView: View {
                         if session.revealed { feedbackSection(card) }
                     }
                     .padding(Spacing.s16)
+                    .readableWidth()
                 }
                 .animation(Motion.standard, value: session.revealed)
             }
@@ -186,6 +187,13 @@ struct ReviewSessionView: View {
 
         case .postflop(let scenario):
             VStack(alignment: .leading, spacing: Spacing.s12) {
+                VStack(alignment: .leading, spacing: Spacing.s4) {
+                    ForEach(scenario.history, id: \.self) { line in
+                        Text(line.localized)
+                            .font(Typo.caption)
+                            .foregroundStyle(Theme.textSecondary)
+                    }
+                }
                 HStack(spacing: 6) {
                     ForEach(scenario.board, id: \.self) { CardView(card: $0, width: 38, fourColor: fourColor) }
                 }

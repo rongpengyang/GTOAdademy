@@ -32,6 +32,51 @@ struct ScenarioEngine: Sendable {
         scenarios.playerType.sorted { ($0.difficulty, $0.id) < ($1.difficulty, $1.id) }
     }
 
+    // MARK: - 每日精编抽样（M9）
+
+    /// 每日精编会话题量。
+    static let dailySessionSize = 12
+
+    /// 同一天结果稳定（中断重进、当日复盘是同一套题），跨天自动轮换；
+    /// 采样后保持难度升序，先易后难的训练曲线不变。池子不足时全量返回。
+    func dailyPreflop(count: Int = ScenarioEngine.dailySessionSize,
+                      on date: Date = .now) -> [PreflopScenario] {
+        dailySample(curatedPreflop(), count: count, on: date)
+    }
+
+    func dailyPostflop(count: Int = ScenarioEngine.dailySessionSize,
+                       on date: Date = .now) -> [PostflopScenario] {
+        dailySample(curatedPostflop(), count: count, on: date)
+    }
+
+    func dailyPlayerType(count: Int = ScenarioEngine.dailySessionSize,
+                         on date: Date = .now) -> [PlayerTypeScenario] {
+        dailySample(curatedPlayerType(), count: count, on: date)
+    }
+
+    private func dailySample<T>(_ pool: [T], count: Int, on date: Date) -> [T] {
+        guard pool.count > count else { return pool }
+        var generator = DailySeededGenerator(seed: Self.daySeed(on: date))
+        var indices = Array(pool.indices)
+        for slot in 0..<count {
+            let pick = Int.random(in: slot..<indices.count, using: &generator)
+            indices.swapAt(slot, pick)
+        }
+        return indices.prefix(count).sorted().map { pool[$0] }
+    }
+
+    /// 设备日历的年月日 → 种子，再过两轮 splitmix64 打散，
+    /// 避免相邻日期的线性种子导致首轮采样雷同。
+    static func daySeed(on date: Date) -> UInt64 {
+        let c = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        var z = UInt64(max(0, c.year ?? 0)) &* 372
+            &+ UInt64(max(0, c.month ?? 0)) &* 31
+            &+ UInt64(max(0, c.day ?? 0))
+        z = (z ^ (z >> 30)) &* 0xBF58_476D_1CE4_E5B9
+        z = (z ^ (z >> 27)) &* 0x94D0_49BB_1331_11EB
+        return z ^ (z >> 31)
+    }
+
     // MARK: - 无尽 RFI
 
     /// 可用作无尽出题的开局范围表（当前 UTG 与 BTN，随内容扩充自动增位）。
@@ -60,5 +105,18 @@ struct ScenarioEngine: Sendable {
             hand: hand,
             correct: pickInRange ? .raise : .fold,
             rangePercent: chart.percentOfDeck)
+    }
+}
+
+/// 每日抽样用确定性 RNG（线性同余，与测试侧 SeededGenerator 同参）。
+/// 种子相同 → 序列相同：同日稳定、跨天轮换、可单测。
+struct DailySeededGenerator: RandomNumberGenerator, Sendable {
+    var state: UInt64
+
+    init(seed: UInt64) { state = seed }
+
+    mutating func next() -> UInt64 {
+        state = state &* 6364136223846793005 &+ 1442695040888963407
+        return state
     }
 }

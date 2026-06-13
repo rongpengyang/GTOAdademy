@@ -13,7 +13,7 @@ struct PlayerTypeTrainerView: View {
 
     init(engine: ScenarioEngine) {
         _session = State(initialValue: DrillSessionViewModel(
-            items: engine.curatedPlayerType()))
+            items: engine.dailyPlayerType()))
     }
 
     var body: some View {
@@ -55,6 +55,7 @@ struct PlayerTypeTrainerView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .safeAreaInset(edge: .bottom) {

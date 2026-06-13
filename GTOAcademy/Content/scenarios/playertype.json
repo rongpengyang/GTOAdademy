@@ -119,6 +119,388 @@
       },
       "lessonRef": null,
       "difficulty": 2
+    },
+    {
+      "id": "pt-nit-02",
+      "stats": {
+        "vpip": 14,
+        "pfr": 11,
+        "af": 2.5,
+        "hands": 1200
+      },
+      "correct": "nit",
+      "explanation": {
+        "zh": "VPIP 14 / PFR 11：七手只玩一手，进锅几乎都带加注——教科书石头。调整：他不在锅里就收他的盲注；他加注就只用范围顶端应战；他转牌后还在下注时，连顶对都要重新掂量。",
+        "en": "VPIP 14 / PFR 11: barely one hand in seven, nearly always entering with a raise — a textbook rock. Adjust: steal his blinds relentlessly, continue only with the top of your range against his raises, and re-rate even top pair when he keeps betting on the turn."
+      },
+      "objective": {
+        "zh": "识别超紧范围并围绕它偷盲。",
+        "en": "Spot ultra-tight ranges and steal around them."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-nit-03",
+      "stats": {
+        "vpip": 12,
+        "pfr": 8,
+        "hands": 350
+      },
+      "correct": "nit",
+      "explanation": {
+        "zh": "缺 AF 不影响结论：VPIP 12 已把范围钉死在最顶端，PFR 8 说明连这点牌也常常只是平跟进锅。调整：他主动进攻时给予最高级别的尊重；其余时间，他的盲注就是你的长期利润来源。",
+        "en": "No AF needed: VPIP 12 nails the range to the very top, and PFR 8 says even those hands often limp along. Adjust: give his aggression maximum respect; the rest of the time, his blinds are your steady profit source."
+      },
+      "objective": {
+        "zh": "缺可选指标时用核心两件套定型。",
+        "en": "Type a player from the core duo when optional stats are missing."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-nit-04",
+      "stats": {
+        "vpip": 16,
+        "pfr": 13,
+        "af": 1.6,
+        "foldToCbet": 68,
+        "hands": 2400
+      },
+      "correct": "nit",
+      "explanation": {
+        "zh": "16 / 13 是石头里偏「正规」的一档，而 68% 的弃 c-bet 率暴露软肋：翻牌没中就走人。调整：他跟注你开局后，几乎任何牌面都值得一发小额 c-bet；他不弃的那一次，你就知道该立刻收手。",
+        "en": "16 / 13 is the orthodox shade of rock, and the 68% fold-to-c-bet betrays the soft spot: miss the flop, leave the pot. Adjust: after he calls your open, almost every board deserves a small c-bet — and the one time he stays tells you exactly when to stop."
+      },
+      "objective": {
+        "zh": "用弃 c-bet 率找紧手的翻后漏洞。",
+        "en": "Use fold-to-c-bet to find a tight player's postflop leak."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 2
+    },
+    {
+      "id": "pt-tag-02",
+      "stats": {
+        "vpip": 21,
+        "pfr": 18,
+        "af": 2.8,
+        "hands": 3000
+      },
+      "correct": "tag",
+      "explanation": {
+        "zh": "21 / 18 / 2.8 三件套全部落在职业化区间：选牌严格、进攻为主、几乎不漏。调整：别幻想从他身上挖矿——避免无位置和他打大锅，把火力留给桌上更软的座位。",
+        "en": "21 / 18 / 2.8 lands squarely in the professional zone: tight selection, aggression-first, few leaks. Adjust: stop mining here — avoid big out-of-position pots against him and aim your firepower at softer seats."
+      },
+      "objective": {
+        "zh": "认出正规军并绕开硬碰硬。",
+        "en": "Recognize the regular and route around him."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-tag-03",
+      "stats": {
+        "vpip": 24,
+        "pfr": 20,
+        "foldToCbet": 52,
+        "hands": 800
+      },
+      "correct": "tag",
+      "explanation": {
+        "zh": "24 / 20 贴着 TAG 区间的上沿，属于偏松的正规军；52% 的弃 c-bet 说明他翻后同样讲纪律。调整：对他后位偏宽的开局适度加大 3-Bet 频率，翻后则别指望他轻易付钱。",
+        "en": "24 / 20 hugs the loose edge of TAG — regular army, slightly expanded; the 52% fold-to-c-bet shows postflop discipline too. Adjust: 3-bet his wider late-position opens a touch more, and expect no easy money after the flop."
+      },
+      "objective": {
+        "zh": "分辨 TAG 区间内的松紧档位。",
+        "en": "Read the loose-to-tight shades inside the TAG box."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-tag-04",
+      "stats": {
+        "vpip": 19,
+        "pfr": 16,
+        "af": 2.1,
+        "hands": 160
+      },
+      "correct": "tag",
+      "explanation": {
+        "zh": "19 / 16 / 2.1 是标准 TAG 画像，但 160 手只够画轮廓：VPIP 这类高频指标已可参考，AF 这类低频指标仍然毛糙。调整：先按 TAG 应对，同时把读数当铅笔稿，随样本增长随时改写。",
+        "en": "19 / 16 / 2.1 reads standard TAG, but 160 hands sketches an outline only: high-frequency stats like VPIP are usable, low-frequency ones like AF stay fuzzy. Adjust: play him as TAG while keeping the read in pencil, rewritten as the sample grows."
+      },
+      "objective": {
+        "zh": "区分高频与低频指标的样本需求。",
+        "en": "Match each stat to the sample it needs."
+      },
+      "lessonRef": "l2-07-sample-size",
+      "difficulty": 3
+    },
+    {
+      "id": "pt-lag-02",
+      "stats": {
+        "vpip": 30,
+        "pfr": 25,
+        "af": 3.2,
+        "hands": 1800
+      },
+      "correct": "lag",
+      "explanation": {
+        "zh": "30 / 25 / 3.2：参与广、加注狠、火力足，但仍守在 LAG 框内而非失控。调整：别和他比谁更野——收紧到能扛压的范围，用强牌引他冲锋，把跟注他下注的价值区间整体放宽一档。",
+        "en": "30 / 25 / 3.2: wide, raise-heavy and well-armed, yet still inside the LAG frame rather than unhinged. Adjust: do not out-wild him — tighten into hands that take pressure, bait his charges with monsters, and widen your calldown range a full notch."
+      },
+      "objective": {
+        "zh": "用 LAG 三件套与疯子划清界限。",
+        "en": "Separate the LAG profile from the maniac's."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-lag-03",
+      "stats": {
+        "vpip": 33,
+        "pfr": 28,
+        "hands": 600
+      },
+      "correct": "lag",
+      "explanation": {
+        "zh": "33 / 28 的缺口只有 5：他很少平跟，进锅基本靠加注开路——典型 LAG 骨架，缺 AF 也认得出。调整：位置是第一武器，带着位置和摊牌价值与他周旋，让他替你建锅。",
+        "en": "A gap of only 5 between 33 / 28: he rarely flat-calls, raising his way into pots — the LAG skeleton is unmistakable even without AF. Adjust: position is weapon one; tangle in position with showdown value and let him build your pots."
+      },
+      "objective": {
+        "zh": "从 VPIP–PFR 缺口读进攻性。",
+        "en": "Read aggression from the VPIP–PFR gap."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-lag-04",
+      "stats": {
+        "vpip": 28,
+        "pfr": 24,
+        "af": 2.7,
+        "foldToCbet": 36,
+        "hands": 2200
+      },
+      "correct": "lag",
+      "explanation": {
+        "zh": "28 / 24 是 LAG 没错，36% 的低弃 c-bet 率再补一笔：他翻后黏性十足。调整：对他砍掉单纯的诈唬 c-bet，价值注敢于下薄、下大——黏性玩家就该多付门票。",
+        "en": "28 / 24 is LAG, and the 36% fold-to-c-bet adds the footnote: sticky after the flop. Adjust: cut pure bluff c-bets and bet your value thinner and bigger — sticky players pay more admission."
+      },
+      "objective": {
+        "zh": "对低弃 c-bet 对手重排价值与诈唬。",
+        "en": "Rebalance value and bluffs versus low fold-to-c-bet."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-maniac-02",
+      "stats": {
+        "vpip": 52,
+        "pfr": 41,
+        "af": 5.0,
+        "hands": 900
+      },
+      "correct": "maniac",
+      "explanation": {
+        "zh": "52 / 41 / 5.0：一半的牌都要进，进了就加，加完还要再加——仪表盘全部爆表。调整：范围收到最紧，让他的诈唬把筹码送进你的强牌；和他打大锅前先确认自己拿的是真家伙。",
+        "en": "52 / 41 / 5.0: in half the hands, raising on entry, re-raising after — every dial pinned. Adjust: tighten to your strongest, let his bluffs deliver chips into your made hands, and confirm you hold the real thing before any big pot."
+      },
+      "objective": {
+        "zh": "极端读数下的反向收紧。",
+        "en": "Counter extreme aggression by tightening up."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-maniac-03",
+      "stats": {
+        "vpip": 44,
+        "pfr": 34,
+        "hands": 260
+      },
+      "correct": "maniac",
+      "explanation": {
+        "zh": "没有 AF 也不妨碍定罪：44 / 34 的翻前数据已是疯子的笔迹，260 手对 VPIP / PFR 这类高频指标也基本可信。调整：提前决定好用什么牌接他的全下，免得在桌上临时心软。",
+        "en": "No AF required for the verdict: 44 / 34 preflop is a maniac's handwriting, and 260 hands is plenty for high-frequency stats. Adjust: decide in advance which hands stack off against him, so the table never catches you improvising mercy."
+      },
+      "objective": {
+        "zh": "高频指标小样本即可定罪极端型。",
+        "en": "Extreme types convict early on high-frequency stats."
+      },
+      "lessonRef": "l2-07-sample-size",
+      "difficulty": 2
+    },
+    {
+      "id": "pt-maniac-04",
+      "stats": {
+        "vpip": 47,
+        "pfr": 36,
+        "af": 3.8,
+        "foldToCbet": 24,
+        "hands": 1500
+      },
+      "correct": "maniac",
+      "explanation": {
+        "zh": "47 / 36 / 3.8 已是疯子，24% 的弃 c-bet 率再补充：他不但乱打，还不弃牌。调整：对他诈唬是慈善行为；拿到价值就一路下注到底，尺寸往大里选。",
+        "en": "47 / 36 / 3.8 is the maniac, and the 24% fold-to-c-bet adds: he does not fold either. Adjust: bluffing him is charity; with value, bet every street and pick the bigger sizes."
+      },
+      "objective": {
+        "zh": "对不弃牌的疯子只做价值。",
+        "en": "Versus the no-fold maniac, value only."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-station-02",
+      "stats": {
+        "vpip": 34,
+        "pfr": 8,
+        "foldToCbet": 24,
+        "hands": 1100
+      },
+      "correct": "calling_station",
+      "explanation": {
+        "zh": "VPIP 34 / PFR 8：进得多、加得少；24% 的弃 c-bet 率把身份钉死——付钱看牌是他的爱好。调整：解雇你的诈唬，雇佣你的价值注：任何能被更差的牌跟注的牌都该下注，而且可以下厚。",
+        "en": "VPIP 34 / PFR 8: enters plenty, raises little; the 24% fold-to-c-bet seals it — paying to see cards is his hobby. Adjust: fire your bluffs and hire your value bets: anything worse hands can call should bet, and bet thick."
+      },
+      "objective": {
+        "zh": "对跟注站做价值最大化。",
+        "en": "Maximize value against the calling station."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-station-03",
+      "stats": {
+        "vpip": 38,
+        "pfr": 11,
+        "af": 1.1,
+        "foldToCbet": 31,
+        "hands": 700
+      },
+      "correct": "calling_station",
+      "explanation": {
+        "zh": "VPIP 38 看着像被动鱼，但 PFR 11 跨过了 10 的门槛——按规则顺位他落进跟注站而非鱼。这正是分类「先到先得」的现场练习。应对不变：价值最大化、诈唬最小化，他的跟注键比你的耐心更耐用。",
+        "en": "VPIP 38 smells like passive fish, but PFR 11 clears the 10 threshold — by rule order he lands in calling station, not fish. A live exercise in first-match classification. The play is unchanged: maximize value, minimize bluffs; his call button outlasts your patience."
+      },
+      "objective": {
+        "zh": "练习规则顺位的边界判型。",
+        "en": "Practice first-match typing at the boundary."
+      },
+      "lessonRef": null,
+      "difficulty": 3
+    },
+    {
+      "id": "pt-station-04",
+      "stats": {
+        "vpip": 41,
+        "pfr": 6,
+        "af": 1.8,
+        "hands": 1900
+      },
+      "correct": "calling_station",
+      "explanation": {
+        "zh": "41 / 6 的轮廓与被动鱼几乎重叠，分水岭在 AF 1.8：他翻后并非纯挨打，偶有下注与加注，把他从「鱼」推进了「跟注站」。调整：仍以价值为主旋律，但他突然的加注值得多一分尊重——那不是常态动作。",
+        "en": "The 41 / 6 silhouette nearly overlaps a passive fish; the divider is AF 1.8 — enough postflop bets and raises to push him from fish to station. Adjust: value stays the melody, but his sudden raises deserve extra respect — they are not routine."
+      },
+      "objective": {
+        "zh": "用 AF 在两类被动型之间裁决。",
+        "en": "Let AF arbitrate between the two passive types."
+      },
+      "lessonRef": null,
+      "difficulty": 3
+    },
+    {
+      "id": "pt-fish-02",
+      "stats": {
+        "vpip": 45,
+        "pfr": 5,
+        "af": 0.6,
+        "hands": 1000
+      },
+      "correct": "passive_fish",
+      "explanation": {
+        "zh": "45 / 5 / 0.6：什么都想看、什么都不想加、翻后只会跟——被动鱼的全套体征。调整：用大量薄价值持续收钱；他罕见的下注或加注往往就是成手，给路别给戏。",
+        "en": "45 / 5 / 0.6: wants to see everything, raise nothing, and only call after the flop — the complete passive-fish chart. Adjust: collect with wide thin value; his rare bet or raise usually means a made hand — yield, don't dance."
+      },
+      "objective": {
+        "zh": "识别被动鱼并放宽价值区间。",
+        "en": "Spot the passive fish and widen your value range."
+      },
+      "lessonRef": "l2-06-core-stats",
+      "difficulty": 1
+    },
+    {
+      "id": "pt-fish-03",
+      "stats": {
+        "vpip": 39,
+        "pfr": 8,
+        "hands": 420
+      },
+      "correct": "passive_fish",
+      "explanation": {
+        "zh": "39 与 8 之间的鸿沟本身就是答案：进锅热情高涨，主动权一概不要——缺 AF 也不影响判型。调整：他在场的锅以价值为唯一主题，连续诈唬留给别的对手。",
+        "en": "The canyon between 39 and 8 is the answer by itself: eager to enter, allergic to initiative — no AF needed for the verdict. Adjust: pots with him have one theme only, value; save the multi-barrel bluffs for someone else."
+      },
+      "objective": {
+        "zh": "从 VPIP–PFR 鸿沟直读被动松。",
+        "en": "Read loose-passive straight off the VPIP–PFR canyon."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-fish-04",
+      "stats": {
+        "vpip": 55,
+        "pfr": 4,
+        "af": 0.9,
+        "foldToCbet": 72,
+        "hands": 2600
+      },
+      "correct": "passive_fish",
+      "explanation": {
+        "zh": "55 / 4 / 0.9 是深度被动鱼，72% 的弃 c-bet 率给出第二把钥匙：翻前什么都跟，翻牌没中就跑。调整：对他的跟注几乎逢锅必 c-bet；他不弃的那一小部分，老老实实只用价值跟进。",
+        "en": "55 / 4 / 0.9 is deep passive fish, and the 72% fold-to-c-bet hands you a second key: calls everything preflop, leaves whenever the flop misses. Adjust: c-bet nearly every pot against his calls — and versus the small part that stays, continue with value only."
+      },
+      "objective": {
+        "zh": "给「松进紧弃」型配 c-bet 策略。",
+        "en": "Pair the fit-or-fold fish with a c-bet plan."
+      },
+      "lessonRef": null,
+      "difficulty": 2
+    },
+    {
+      "id": "pt-fish-05",
+      "stats": {
+        "vpip": 43,
+        "pfr": 9,
+        "af": 1.2,
+        "foldToCbet": 36,
+        "hands": 95
+      },
+      "correct": "passive_fish",
+      "explanation": {
+        "zh": "读数同时踩进鱼（VPIP>35、PFR<10、AF<1.5）与跟注站（弃 c-bet 36%）两套体征，规则顺位先判被动鱼；95 手的样本也提醒你结论先持铅笔。调整：按鱼应对——价值优先，并随样本增长复核 PFR 与 AF 是否回升。",
+        "en": "The numbers step into both fish (VPIP>35, PFR<10, AF<1.5) and station (fold-to-c-bet 36%) territory; rule order rules fish first, and the 95-hand sample keeps the verdict in pencil. Adjust: play him as the fish — value first — and re-check whether PFR and AF climb as hands accumulate."
+      },
+      "objective": {
+        "zh": "顺位裁决 + 小样本谨慎并用。",
+        "en": "Combine rule order with small-sample caution."
+      },
+      "lessonRef": "l2-07-sample-size",
+      "difficulty": 3
     }
   ]
 }

@@ -426,6 +426,2770 @@
         "dominated",
         "fold-discipline"
       ]
+    },
+    {
+      "id": "pf-g-rfi-utg-ats",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "ATs",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "ATs 落在 UTG 约 14% 的开局范围之内：同花高张：命中顶对带好踢脚，还有坚果同花潜力。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "ATs sits inside UTG's ~14% opening range: suited broadway: top pair comes with a good kicker plus nut-flush potential. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 UTG 约 14% 的范围口径，ATs 是标准开局——弃牌过紧。",
+          "en": "By UTG's ~14% range, ATs is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-utg-99",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "99",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "99 落在 UTG 约 14% 的开局范围之内：中口袋对兼具摊牌价值与成套潜力。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "99 sits inside UTG's ~14% opening range: a middling pair with both showdown value and set potential. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 UTG 约 14% 的范围口径，99 是标准开局——弃牌过紧。",
+          "en": "By UTG's ~14% range, 99 is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-utg-kqo",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "KQo",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：UTG 的开局表收录了 KQo——两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: UTG's opening range includes KQo — two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "KQo 在 UTG 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "KQo is inside UTG's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-utg-a9s",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "A9s",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "A9s 紧贴 UTG 开局线的外侧：同样的结构放进更宽的范围就是标准开局，在这里仍是纪律弃牌——每一格收紧，都是位置在说话。",
+        "en": "A9s hugs the outside of UTG's opening line: the same structure is a standard open in a wider range, here it stays a disciplined fold — every notch of tightening is position speaking."
+      },
+      "wrongChoices": {
+        "raise": {
+          "zh": "范围纪律的意义正在这种牌上：偶尔偷成一锅，长期漏率稳定为负。",
+          "en": "Range discipline exists for exactly this hand: it steals the odd pot and leaks steadily forever."
+        }
+      },
+      "objective": {
+        "zh": "体会范围随位置逐格收紧。",
+        "en": "Feel the range tighten seat by seat."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 3,
+      "tags": [
+        "rfi",
+        "f",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-utg-qjs",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "QJs",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "QJs 进入 UTG 开局表靠的不是当下牌力而是结构：同花连张的全方位可玩性：同花、顺子、两对路线齐备。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "QJs earns its slot in UTG's chart on structure, not raw strength: a suited connector with full playability — flush, straight and two-pair routes. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 UTG 约 14% 的范围口径，QJs 是标准开局——弃牌过紧。",
+          "en": "By UTG's ~14% range, QJs is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-utg-66",
+      "kind": "rfi",
+      "position": "utg",
+      "facing": [],
+      "hand": "66",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "66 进入 UTG 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "66 earns its slot in UTG's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 UTG 约 14% 的范围口径，66 是标准开局——弃牌过紧。",
+          "en": "By UTG's ~14% range, 66 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-ajo",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "AJo",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "AJo 落在 HJ 约 20% 的开局范围之内：两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "AJo sits inside HJ's ~20% opening range: two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，AJo 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, AJo is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-kqo",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "KQo",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：HJ 的开局表收录了 KQo——两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: HJ's opening range includes KQo — two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "KQo 在 HJ 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "KQo is inside HJ's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-77",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "77",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "77 进入 HJ 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "77 earns its slot in HJ's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，77 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, 77 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-a9s",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "A9s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "HJ 约 20% 的范围宽到足以容纳 A9s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "HJ's ~20% range is wide enough for A9s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "A9s 在 HJ 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "A9s is inside HJ's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-kts",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "KTs",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KTs 落在 HJ 约 20% 的开局范围之内：同花高张：命中顶对带好踢脚，还有坚果同花潜力。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "KTs sits inside HJ's ~20% opening range: suited broadway: top pair comes with a good kicker plus nut-flush potential. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，KTs 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, KTs is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-qts",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "QTs",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "QTs 落在 HJ 约 20% 的开局范围之内：同花高张：命中顶对带好踢脚，还有坚果同花潜力。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "QTs sits inside HJ's ~20% opening range: suited broadway: top pair comes with a good kicker plus nut-flush potential. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，QTs 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, QTs is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-44",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "44",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "44 进入 HJ 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "44 earns its slot in HJ's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，44 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, 44 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-hj-t9s",
+      "kind": "rfi",
+      "position": "hj",
+      "facing": [],
+      "hand": "T9s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "T9s 进入 HJ 开局表靠的不是当下牌力而是结构：同花连张的全方位可玩性：同花、顺子、两对路线齐备。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "T9s earns its slot in HJ's chart on structure, not raw strength: a suited connector with full playability — flush, straight and two-pair routes. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 HJ 约 20% 的范围口径，T9s 是标准开局——弃牌过紧。",
+          "en": "By HJ's ~20% range, T9s is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-a5s",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "A5s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "CO 约 26% 的范围宽到足以容纳 A5s：轮子 A 同花：阻断 AA/AK 关键组合，还带同花与顺子补牌，偷盲收益与翻后可玩性双线进账。",
+        "en": "CO's ~26% range is wide enough for A5s: a wheel ace: it blocks key AA/AK combos and carries flush and straight backup, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "A5s 在 CO 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "A5s is inside CO's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-kjo",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "KJo",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KJo 落在 CO 约 26% 的开局范围之内：两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。标准加注 2.5bb，让更差的牌付费进场。",
+        "en": "KJo sits inside CO's ~26% opening range: two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. Open the standard 2.5bb and make worse hands pay to play."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 CO 约 26% 的范围口径，KJo 是标准开局——弃牌过紧。",
+          "en": "By CO's ~26% range, KJo is a standard open — folding is too tight."
+        },
+        "call": {
+          "zh": "跛入是最贵的中庸：不抢位、不施压，还把盲注请进多人锅。",
+          "en": "Limping is the priciest compromise: no position fight, no pressure, and the blinds get invited into a multiway pot."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-66",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "66",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "66 进入 CO 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "66 earns its slot in CO's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 CO 约 26% 的范围口径，66 是标准开局——弃牌过紧。",
+          "en": "By CO's ~26% range, 66 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-jts",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "JTs",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "CO 约 26% 的范围宽到足以容纳 JTs：同花连张的全方位可玩性：同花、顺子、两对路线齐备，偷盲收益与翻后可玩性双线进账。",
+        "en": "CO's ~26% range is wide enough for JTs: a suited connector with full playability — flush, straight and two-pair routes, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "JTs 在 CO 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "JTs is inside CO's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-a9o",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "A9o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：CO 的开局表收录了 A9o——既缺连接又缺同花，几乎没有翻后剧本。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: CO's opening range includes A9o — no connectivity, no suit — almost no postflop script. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "A9o 在 CO 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "A9o is inside CO's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-k9s",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "K9s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "CO 约 26% 的范围宽到足以容纳 K9s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "CO's ~26% range is wide enough for K9s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "K9s 在 CO 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "K9s is inside CO's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-q9s",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "Q9s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "CO 约 26% 的范围宽到足以容纳 Q9s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "CO's ~26% range is wide enough for Q9s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "Q9s 在 CO 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "Q9s is inside CO's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-co-22",
+      "kind": "rfi",
+      "position": "co",
+      "facing": [],
+      "hand": "22",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "22 进入 CO 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "22 earns its slot in CO's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 CO 约 26% 的范围口径，22 是标准开局——弃牌过紧。",
+          "en": "By CO's ~26% range, 22 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-btn-33",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "33",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "33 进入 BTN 开局表靠的不是当下牌力而是结构：小口袋对的核心资产是暗三条潜力。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "33 earns its slot in BTN's chart on structure, not raw strength: a small pair whose core asset is set potential. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 BTN 约 41% 的范围口径，33 是标准开局——弃牌过紧。",
+          "en": "By BTN's ~41% range, 33 is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-btn-q9o",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "Q9o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：BTN 的开局表收录了 Q9o——既缺连接又缺同花，几乎没有翻后剧本。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: BTN's opening range includes Q9o — no connectivity, no suit — almost no postflop script. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "Q9o 在 BTN 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "Q9o is inside BTN's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-btn-96s",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "96s",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "96s 与 BTN 约 41% 的开局范围之间隔着整张牌表：同花结构提供后门与可玩性，但当下牌力有限。弃牌，把筹码留给有故事的牌。",
+        "en": "96s sits a full chart away from BTN's ~41% opening range: the suited structure offers backdoors and playability, though raw strength is modest. Fold and save the chips for hands with a story."
+      },
+      "wrongChoices": {
+        "raise": {
+          "zh": "把 96s 开进 BTN 是给后排送 3-bet 靶子——范围外的牌经不起反击。",
+          "en": "Opening 96s from BTN hangs a 3-bet target for the seats behind — off-chart hands cannot take the counterpunch."
+        }
+      },
+      "objective": {
+        "zh": "垃圾牌不进锅。",
+        "en": "Junk stays out of the pot."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "f",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-btn-k5s",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "K5s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "BTN 约 41% 的范围宽到足以容纳 K5s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "BTN's ~41% range is wide enough for K5s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "K5s 在 BTN 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "K5s is inside BTN's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-btn-a7o",
+      "kind": "rfi",
+      "position": "btn",
+      "facing": [],
+      "hand": "A7o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：BTN 的开局表收录了 A7o——既缺连接又缺同花，几乎没有翻后剧本。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: BTN's opening range includes A7o — no connectivity, no suit — almost no postflop script. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "A7o 在 BTN 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "A7o is inside BTN's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-k7s",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "K7s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "K7s 进入 SB 开局表靠的不是当下牌力而是结构：同花结构提供后门与可玩性，但当下牌力有限。位置越靠后这类牌越值钱，照表加注 2.5bb。",
+        "en": "K7s earns its slot in SB's chart on structure, not raw strength: the suited structure offers backdoors and playability, though raw strength is modest. Hands like this gain value with position — open 2.5bb per the chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "按 SB 约 44% 的范围口径，K7s 是标准开局——弃牌过紧。",
+          "en": "By SB's ~44% range, K7s is a standard open — folding is too tight."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-q8s",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "Q8s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "SB 约 44% 的范围宽到足以容纳 Q8s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "SB's ~44% range is wide enough for Q8s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "Q8s 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "Q8s is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-a8o",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "A8o",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "按表行事：SB 的开局表收录了 A8o——既缺连接又缺同花，几乎没有翻后剧本。开到 2.5bb 即可，不需要额外理由。",
+        "en": "Play the chart: SB's opening range includes A8o — no connectivity, no suit — almost no postflop script. Raise to 2.5bb; no further justification required."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "A8o 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "A8o is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        },
+        "call": {
+          "zh": "开局表里没有「跛入」这一栏——要么加注要么弃牌。",
+          "en": "There is no limp column on an opening chart — raise or fold."
+        }
+      },
+      "objective": {
+        "zh": "按位置范围执行标准开局。",
+        "en": "Execute the standard open by positional range."
+      },
+      "lessonRef": "l2-01-rfi-principles",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-87s",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "87s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "SB 约 44% 的范围宽到足以容纳 87s：同花连张的全方位可玩性：同花、顺子、两对路线齐备，偷盲收益与翻后可玩性双线进账。",
+        "en": "SB's ~44% range is wide enough for 87s: a suited connector with full playability — flush, straight and two-pair routes, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "87s 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "87s is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-t7s",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "T7s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "SB 约 44% 的范围宽到足以容纳 T7s：同花结构提供后门与可玩性，但当下牌力有限，偷盲收益与翻后可玩性双线进账。",
+        "en": "SB's ~44% range is wide enough for T7s: the suited structure offers backdoors and playability, though raw strength is modest, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "T7s 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "T7s is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-65s",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "65s",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "SB 约 44% 的范围宽到足以容纳 65s：同花连张的全方位可玩性：同花、顺子、两对路线齐备，偷盲收益与翻后可玩性双线进账。",
+        "en": "SB's ~44% range is wide enough for 65s: a suited connector with full playability — flush, straight and two-pair routes, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "65s 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "65s is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-84o",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "84o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "84o 与 SB 约 44% 的开局范围之间隔着整张牌表：既缺连接又缺同花，几乎没有翻后剧本。弃牌，把筹码留给有故事的牌。",
+        "en": "84o sits a full chart away from SB's ~44% opening range: no connectivity, no suit — almost no postflop script. Fold and save the chips for hands with a story."
+      },
+      "wrongChoices": {
+        "raise": {
+          "zh": "把 84o 开进 SB 是给后排送 3-bet 靶子——范围外的牌经不起反击。",
+          "en": "Opening 84o from SB hangs a 3-bet target for the seats behind — off-chart hands cannot take the counterpunch."
+        }
+      },
+      "objective": {
+        "zh": "垃圾牌不进锅。",
+        "en": "Junk stays out of the pot."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 1,
+      "tags": [
+        "rfi",
+        "f",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-rfi-sb-44",
+      "kind": "rfi",
+      "position": "sb",
+      "facing": [],
+      "hand": "44",
+      "correct": "raise",
+      "acceptable": [],
+      "explanation": {
+        "zh": "SB 约 44% 的范围宽到足以容纳 44：小口袋对的核心资产是暗三条潜力，偷盲收益与翻后可玩性双线进账。",
+        "en": "SB's ~44% range is wide enough for 44: a small pair whose core asset is set potential, collecting on both blind pressure and postflop playability."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "44 在 SB 的开局表内，弃牌等于每圈白交盲注税。",
+          "en": "44 is inside SB's opening chart; folding it pays blind tax every orbit for nothing."
+        }
+      },
+      "objective": {
+        "zh": "理解结构型牌的开局价值。",
+        "en": "Value structural hands in the opening range."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 2,
+      "tags": [
+        "rfi",
+        "r",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-tt",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "TT",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "TT 对 BTN 的宽开局以价值 3-bet 为主线；平跟伪装同样收录在防守表里——两条路都在均衡内，但别把弃牌当选项。",
+        "en": "TT 3-bets BTN's wide open for value as the main line; the disguised flat-call also lives in the defending chart — both roads are in equilibrium, but folding is not one of them."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "把范围里最能打的牌弃掉，等于自愿只剩中庸部分作战。",
+          "en": "Folding the most capable part of your range volunteers to fight with only the mediocre middle."
+        }
+      },
+      "objective": {
+        "zh": "掌握 3-bet 为主、平跟为辅的双线。",
+        "en": "Run the 3-bet-first, flat-second dual line."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-a5s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A5s",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "A5s 是 3-bet 表的诈唬翼：轮子 A 阻断对手 AA/AK 的关键组合，被跟注仍有同花顺子补牌，被 4-bet 时弃牌损失最小——教科书阻断牌诈唬。",
+        "en": "A5s is the bluff wing of the 3-bet chart: the wheel ace blocks his key AA/AK combos, flush and straight backup survives a call, and folding to a 4-bet costs the minimum — textbook blocker bluff."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 的宽开局弃 A5s 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding A5s to BTN's wide open is far too tight — it dominates a large slice of that range."
+        }
+      },
+      "objective": {
+        "zh": "用阻断牌构建 3-bet 诈唬翼。",
+        "en": "Build the 3-bet bluff wing with blockers."
+      },
+      "lessonRef": "l4-04-blockers",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-jts",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "JTs",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "JTs 对 BTN 约 41% 的开局范围领先或持平大半，平跟防守把对手的弱牌留在锅里继续犯错。",
+        "en": "JTs runs ahead of or even with most of BTN's ~41% opening range; calling keeps his weaker hands in the pot to keep making mistakes."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 JTs 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding JTs hands the price straight back."
+        }
+      },
+      "objective": {
+        "zh": "用领先范围的高张平跟防守。",
+        "en": "Defend by calling with range-beating broadways."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-kqo",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "KQo",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KQo 对 BTN 约 41% 的开局范围领先或持平大半，平跟防守把对手的弱牌留在锅里继续犯错。",
+        "en": "KQo runs ahead of or even with most of BTN's ~41% opening range; calling keeps his weaker hands in the pot to keep making mistakes."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 KQo 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding KQo hands the price straight back."
+        }
+      },
+      "objective": {
+        "zh": "用领先范围的高张平跟防守。",
+        "en": "Defend by calling with range-beating broadways."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-22",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "22",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "口袋 22 防守 BTN 开局的首选是平跟：关锅价合适、暗三条潜力完整；3-bet 反而赶走愿意付钱的部分。",
+        "en": "Pocket 22 defends the BTN open by calling: the closing price is right and set potential stays intact; 3-betting only chases away the hands that pay."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 这么宽的开局弃 22，等于宣布大盲不设防。",
+          "en": "Folding 22 to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 22 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 22 pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用关锅价为小对买成套彩票。",
+        "en": "Buy set lottery tickets at the closing price."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-76s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "76s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "76s 进入大盲防守表：同花连张的全方位可玩性：同花、顺子、两对路线齐备。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "76s makes the big-blind defending chart: a suited connector with full playability — flush, straight and two-pair routes. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 这么宽的开局弃 76s，等于宣布大盲不设防。",
+          "en": "Folding 76s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 76s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 76s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-k9s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "K9s",
+      "correct": "3bet",
+      "acceptable": [
+        "call"
+      ],
+      "explanation": {
+        "zh": "K9s 站在 3-bet 表的进攻翼：同花结构带补牌、对 BTN 约 41% 的宽开局有充足弃牌权益，被跟注也不至于裸奔——价值与诈唬之间的弹性件，平跟同样收录在防守表里。",
+        "en": "K9s mans the attacking wing of the 3-bet chart: suited backup, ample fold equity against BTN's ~41% open, and never naked when called — the flex piece between value and bluff, with the flat-call also living in the defending chart."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 的宽开局弃 K9s 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding K9s to BTN's wide open is far too tight — it dominates a large slice of that range."
+        }
+      },
+      "objective": {
+        "zh": "用同花弹性件扩充 3-bet 进攻翼。",
+        "en": "Stretch the 3-bet attack with suited flex hands."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-qto",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "QTo",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "QTo 对 BTN 约 41% 的开局范围领先或持平大半，平跟防守把对手的弱牌留在锅里继续犯错。",
+        "en": "QTo runs ahead of or even with most of BTN's ~41% opening range; calling keeps his weaker hands in the pot to keep making mistakes."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 这么宽的开局弃 QTo，等于宣布大盲不设防。",
+          "en": "Folding QTo to an open this wide announces an undefended big blind."
+        }
+      },
+      "objective": {
+        "zh": "用领先范围的高张平跟防守。",
+        "en": "Defend by calling with range-beating broadways."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-j8s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "J8s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对 BTN 约 41% 的开局，J8s 的防守逻辑是价格 + 结构：同花结构提供后门与可玩性，但当下牌力有限。",
+        "en": "Against BTN's ~41% open, J8s defends on price plus structure: the suited structure offers backdoors and playability, though raw strength is modest."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 J8s 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding J8s hands the price straight back."
+        },
+        "3bet": {
+          "zh": "3-bet 把这手牌的伪装全部撕掉，还把可玩性押在翻前。",
+          "en": "A 3-bet strips the hand's disguise and stakes its playability on preflop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-a9o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A9o",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对 BTN 约 41% 的开局，A9o 的防守逻辑是价格 + 结构：既缺连接又缺同花，几乎没有翻后剧本。",
+        "en": "Against BTN's ~41% open, A9o defends on price plus structure: no connectivity, no suit — almost no postflop script."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 A9o 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding A9o hands the price straight back."
+        },
+        "3bet": {
+          "zh": "3-bet 把这手牌的伪装全部撕掉，还把可玩性押在翻前。",
+          "en": "A 3-bet strips the hand's disguise and stakes its playability on preflop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-q5s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "Q5s",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "Q5s 贴着防守线外：同样结构再高一格就进表。关锅价虽诱人，纪律弃牌长期更便宜。",
+        "en": "Q5s hugs the outside of the defending line: one notch higher and the same structure makes the chart. The closing price tempts, but the disciplined fold is cheaper long-term."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        }
+      },
+      "objective": {
+        "zh": "贴线牌守住弃牌纪律。",
+        "en": "Hold the fold line on near-miss hands."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvbtn-84o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "84o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "84o 连大盲的关锅价都救不动：既缺连接又缺同花，几乎没有翻后剧本。省下这 1.5bb。",
+        "en": "Not even the big blind's closing price rescues 84o: no connectivity, no suit — almost no postflop script. Save the 1.5bb."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        },
+        "3bet": {
+          "zh": "诈唬也讲组合学：84o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: 84o holds no blockers and no backup — once called, only prayer remains."
+        }
+      },
+      "objective": {
+        "zh": "再便宜也不防守空气。",
+        "en": "No price defends pure air."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-88",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "88",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "口袋 88 防守 UTG 开局的首选是平跟：关锅价合适、暗三条潜力完整；3-bet 反而赶走愿意付钱的部分。",
+        "en": "Pocket 88 defends the UTG open by calling: the closing price is right and set potential stays intact; 3-betting only chases away the hands that pay."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 UTG 这么宽的开局弃 88，等于宣布大盲不设防。",
+          "en": "Folding 88 to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 88 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 88 pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用关锅价为小对买成套彩票。",
+        "en": "Buy set lottery tickets at the closing price."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-76s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "76s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "76s 进入大盲防守表：同花连张的全方位可玩性：同花、顺子、两对路线齐备。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "76s makes the big-blind defending chart: a suited connector with full playability — flush, straight and two-pair routes. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 UTG 这么宽的开局弃 76s，等于宣布大盲不设防。",
+          "en": "Folding 76s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 76s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 76s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-ato",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "ATo",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "ATo 面对 UTG 开局的问题不是牌力而是「赢小输大」：两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。这正是防守表把它排除的原因。",
+        "en": "ATo's problem against the UTG open is not strength but win-small-lose-big: two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. That is exactly why the defending chart leaves it out."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "价位诱人不等于价值存在：ATo 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: ATo's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "识别「赢小输大」的被支配牌。",
+        "en": "Spot win-small-lose-big dominated hands."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-kjo",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "KJo",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KJo 面对 UTG 开局的问题不是牌力而是「赢小输大」：两张高张好看，但反向支配风险高——命中顶对常被更大踢脚压住。这正是防守表把它排除的原因。",
+        "en": "KJo's problem against the UTG open is not strength but win-small-lose-big: two pretty high cards with heavy reverse-domination risk — top pair often loses to a bigger kicker. That is exactly why the defending chart leaves it out."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "价位诱人不等于价值存在：KJo 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: KJo's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "识别「赢小输大」的被支配牌。",
+        "en": "Spot win-small-lose-big dominated hands."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-t9s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "T9s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "T9s 进入大盲防守表：同花连张的全方位可玩性：同花、顺子、两对路线齐备。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "T9s makes the big-blind defending chart: a suited connector with full playability — flush, straight and two-pair routes. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 UTG 这么宽的开局弃 T9s，等于宣布大盲不设防。",
+          "en": "Folding T9s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 T9s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with T9s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvutg-k8s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "utg",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "K8s",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "K8s 贴着防守线外：同样结构再高一格就进表。关锅价虽诱人，纪律弃牌长期更便宜。",
+        "en": "K8s hugs the outside of the defending line: one notch higher and the same structure makes the chart. The closing price tempts, but the disciplined fold is cheaper long-term."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "价位诱人不等于价值存在：K8s 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: K8s's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "贴线牌守住弃牌纪律。",
+        "en": "Hold the fold line on near-miss hands."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-77",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "77",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "口袋 77 防守 CO 开局的首选是平跟：关锅价合适、暗三条潜力完整；3-bet 反而赶走愿意付钱的部分。",
+        "en": "Pocket 77 defends the CO open by calling: the closing price is right and set potential stays intact; 3-betting only chases away the hands that pay."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 这么宽的开局弃 77，等于宣布大盲不设防。",
+          "en": "Folding 77 to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 77 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 77 pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用关锅价为小对买成套彩票。",
+        "en": "Buy set lottery tickets at the closing price."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-kts",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "KTs",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KTs 对 CO 约 26% 的开局范围领先或持平大半，平跟防守把对手的弱牌留在锅里继续犯错。",
+        "en": "KTs runs ahead of or even with most of CO's ~26% opening range; calling keeps his weaker hands in the pot to keep making mistakes."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 这么宽的开局弃 KTs，等于宣布大盲不设防。",
+          "en": "Folding KTs to an open this wide announces an undefended big blind."
+        }
+      },
+      "objective": {
+        "zh": "用领先范围的高张平跟防守。",
+        "en": "Defend by calling with range-beating broadways."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-a8s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A8s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "A8s 进入大盲防守表：同花结构提供后门与可玩性，但当下牌力有限。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "A8s makes the big-blind defending chart: the suited structure offers backdoors and playability, though raw strength is modest. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 这么宽的开局弃 A8s，等于宣布大盲不设防。",
+          "en": "Folding A8s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 A8s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with A8s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-65s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "65s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "65s 进入大盲防守表：同花连张的全方位可玩性：同花、顺子、两对路线齐备。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "65s makes the big-blind defending chart: a suited connector with full playability — flush, straight and two-pair routes. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 这么宽的开局弃 65s，等于宣布大盲不设防。",
+          "en": "Folding 65s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 65s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with 65s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-j9s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "J9s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "J9s 进入大盲防守表：同花结构提供后门与可玩性，但当下牌力有限。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "J9s makes the big-blind defending chart: the suited structure offers backdoors and playability, though raw strength is modest. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 这么宽的开局弃 J9s，等于宣布大盲不设防。",
+          "en": "Folding J9s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 J9s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with J9s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvco-q9o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "Q9o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "Q9o 连大盲的关锅价都救不动：既缺连接又缺同花，几乎没有翻后剧本。省下这 1.5bb。",
+        "en": "Not even the big blind's closing price rescues Q9o: no connectivity, no suit — almost no postflop script. Save the 1.5bb."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        },
+        "3bet": {
+          "zh": "诈唬也讲组合学：Q9o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: Q9o holds no blockers and no backup — once called, only prayer remains."
+        }
+      },
+      "objective": {
+        "zh": "再便宜也不防守空气。",
+        "en": "No price defends pure air."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-k9o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "K9o",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "K9o 进入大盲防守表：既缺连接又缺同花，几乎没有翻后剧本。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "K9o makes the big-blind defending chart: no connectivity, no suit — almost no postflop script. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 SB 这么宽的开局弃 K9o，等于宣布大盲不设防。",
+          "en": "Folding K9o to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 K9o 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with K9o pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-q8s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "Q8s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对 SB 约 44% 的开局，Q8s 的防守逻辑是价格 + 结构：同花结构提供后门与可玩性，但当下牌力有限。",
+        "en": "Against SB's ~44% open, Q8s defends on price plus structure: the suited structure offers backdoors and playability, though raw strength is modest."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 Q8s 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding Q8s hands the price straight back."
+        },
+        "3bet": {
+          "zh": "3-bet 把这手牌的伪装全部撕掉，还把可玩性押在翻前。",
+          "en": "A 3-bet strips the hand's disguise and stakes its playability on preflop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-a7o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A7o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "A7o 面对 SB 开局的问题不是牌力而是「赢小输大」：既缺连接又缺同花，几乎没有翻后剧本。这正是防守表把它排除的原因。",
+        "en": "A7o's problem against the SB open is not strength but win-small-lose-big: no connectivity, no suit — almost no postflop script. That is exactly why the defending chart leaves it out."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "价位诱人不等于价值存在：A7o 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: A7o's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "识别「赢小输大」的被支配牌。",
+        "en": "Spot win-small-lose-big dominated hands."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-t8s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "T8s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "T8s 进入大盲防守表：同花结构提供后门与可玩性，但当下牌力有限。作为关锅方只需再补 1.5bb，这类牌的隐含赔率因此成立。",
+        "en": "T8s makes the big-blind defending chart: the suited structure offers backdoors and playability, though raw strength is modest. Closing the action for just 1.5bb more is what makes its implied odds work."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 SB 这么宽的开局弃 T8s，等于宣布大盲不设防。",
+          "en": "Folding T8s to an open this wide announces an undefended big blind."
+        },
+        "3bet": {
+          "zh": "用 T8s 升级底池两头不讨好：更好的牌不走、更差的牌不跟——潜力牌要的是便宜看翻牌。",
+          "en": "Escalating with T8s pleases nobody: better hands stay, worse hands leave — potential hands want a cheap flop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-96s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "96s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对 SB 约 44% 的开局，96s 的防守逻辑是价格 + 结构：同花结构提供后门与可玩性，但当下牌力有限。",
+        "en": "Against SB's ~44% open, 96s defends on price plus structure: the suited structure offers backdoors and playability, though raw strength is modest."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 96s 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding 96s hands the price straight back."
+        },
+        "3bet": {
+          "zh": "3-bet 把这手牌的伪装全部撕掉，还把可玩性押在翻前。",
+          "en": "A 3-bet strips the hand's disguise and stakes its playability on preflop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-54s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "54s",
+      "correct": "call",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对 SB 约 44% 的开局，54s 的防守逻辑是价格 + 结构：同花连张的全方位可玩性：同花、顺子、两对路线齐备。",
+        "en": "Against SB's ~44% open, 54s defends on price plus structure: a suited connector with full playability — flush, straight and two-pair routes."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "关锅只需再补 1.5bb，弃掉 54s 是把价位白白退回去。",
+          "en": "Closing the action costs just 1.5bb more; folding 54s hands the price straight back."
+        },
+        "3bet": {
+          "zh": "3-bet 把这手牌的伪装全部撕掉，还把可玩性押在翻前。",
+          "en": "A 3-bet strips the hand's disguise and stakes its playability on preflop."
+        }
+      },
+      "objective": {
+        "zh": "用价格 + 结构防守大盲。",
+        "en": "Defend the big blind on price plus structure."
+      },
+      "lessonRef": "l2-04-facing-rfi",
+      "difficulty": 2,
+      "tags": [
+        "bb_defense",
+        "c",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-k4s",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "K4s",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "K4s 贴着防守线外：同样结构再高一格就进表。关锅价虽诱人，纪律弃牌长期更便宜。",
+        "en": "K4s hugs the outside of the defending line: one notch higher and the same structure makes the chart. The closing price tempts, but the disciplined fold is cheaper long-term."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        }
+      },
+      "objective": {
+        "zh": "贴线牌守住弃牌纪律。",
+        "en": "Hold the fold line on near-miss hands."
+      },
+      "lessonRef": "l2-02-range-shapes",
+      "difficulty": 3,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-bbvsb-73o",
+      "kind": "bb_defense",
+      "position": "bb",
+      "facing": [
+        {
+          "position": "sb",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "73o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "73o 连大盲的关锅价都救不动：既缺连接又缺同花，几乎没有翻后剧本。省下这 1.5bb。",
+        "en": "Not even the big blind's closing price rescues 73o: no connectivity, no suit — almost no postflop script. Save the 1.5bb."
+      },
+      "wrongChoices": {
+        "call": {
+          "zh": "价位诱人不等于价值存在：73o 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: 73o's postflop scripts are almost all win-small-lose-big."
+        },
+        "3bet": {
+          "zh": "诈唬也讲组合学：73o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: 73o holds no blockers and no backup — once called, only prayer remains."
+        }
+      },
+      "objective": {
+        "zh": "再便宜也不防守空气。",
+        "en": "No price defends pure air."
+      },
+      "lessonRef": "l1-06-starting-hands",
+      "difficulty": 1,
+      "tags": [
+        "bb_defense",
+        "df",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-qq",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "QQ",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对这么宽的开局范围，QQ 的压制力必须立刻变现——3-bet 为价值建锅，也让对手的中等牌当场两难。",
+        "en": "Against an open this wide, QQ's dominance must cash in now — 3-bet to build for value and put his medium hands in an instant bind."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 的宽开局弃 QQ 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding QQ to BTN's wide open is far too tight — it dominates a large slice of that range."
+        },
+        "call": {
+          "zh": "SB 没有舒适的平跟剧本：位置吃亏、还邀请后手挤压——价值牌直接 3-bet。",
+          "en": "SB owns no comfortable flatting script: bad position and an open invitation to squeezes — value hands 3-bet outright."
+        }
+      },
+      "objective": {
+        "zh": "对宽开局执行价值 3-bet。",
+        "en": "Value 3-bet the wide open."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-ako",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "AKo",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "AKo 对 BTN 约 41% 的开局是清晰的价值 3-bet：把死钱与更差牌的跟注一起收进来，同时夺回主动权。",
+        "en": "AKo is a clean value 3-bet against BTN's ~41% open: collect the dead money and worse hands' calls while taking back the initiative."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "把范围里最能打的牌弃掉，等于自愿只剩中庸部分作战。",
+          "en": "Folding the most capable part of your range volunteers to fight with only the mediocre middle."
+        },
+        "call": {
+          "zh": "SB 没有舒适的平跟剧本：位置吃亏、还邀请后手挤压——价值牌直接 3-bet。",
+          "en": "SB owns no comfortable flatting script: bad position and an open invitation to squeezes — value hands 3-bet outright."
+        }
+      },
+      "objective": {
+        "zh": "对宽开局执行价值 3-bet。",
+        "en": "Value 3-bet the wide open."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-a4s",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A4s",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "A4s 是 3-bet 表的诈唬翼：轮子 A 阻断对手 AA/AK 的关键组合，被跟注仍有同花顺子补牌，被 4-bet 时弃牌损失最小——教科书阻断牌诈唬。",
+        "en": "A4s is the bluff wing of the 3-bet chart: the wheel ace blocks his key AA/AK combos, flush and straight backup survives a call, and folding to a 4-bet costs the minimum — textbook blocker bluff."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 BTN 的宽开局弃 A4s 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding A4s to BTN's wide open is far too tight — it dominates a large slice of that range."
+        }
+      },
+      "objective": {
+        "zh": "用阻断牌构建 3-bet 诈唬翼。",
+        "en": "Build the 3-bet bluff wing with blockers."
+      },
+      "lessonRef": "l4-04-blockers",
+      "difficulty": 3,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-kqs",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "KQs",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "KQs 对 BTN 约 41% 的开局是清晰的价值 3-bet：把死钱与更差牌的跟注一起收进来，同时夺回主动权。",
+        "en": "KQs is a clean value 3-bet against BTN's ~41% open: collect the dead money and worse hands' calls while taking back the initiative."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "把范围里最能打的牌弃掉，等于自愿只剩中庸部分作战。",
+          "en": "Folding the most capable part of your range volunteers to fight with only the mediocre middle."
+        },
+        "call": {
+          "zh": "SB 没有舒适的平跟剧本：位置吃亏、还邀请后手挤压——价值牌直接 3-bet。",
+          "en": "SB owns no comfortable flatting script: bad position and an open invitation to squeezes — value hands 3-bet outright."
+        }
+      },
+      "objective": {
+        "zh": "对宽开局执行价值 3-bet。",
+        "en": "Value 3-bet the wide open."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-j7o",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "J7o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "J7o 离 SB 的 3-bet 表（约 10% ）很远：没有价值、没有阻断、没有补牌结构——连诈唬的资格都排不上。",
+        "en": "J7o sits far from SB's ~10% 3-bet chart: no value, no blockers, no backup structure — it does not even qualify as a bluff."
+      },
+      "wrongChoices": {
+        "3bet": {
+          "zh": "诈唬也讲组合学：J7o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: J7o holds no blockers and no backup — once called, only prayer remains."
+        },
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        }
+      },
+      "objective": {
+        "zh": "诈唬资格也要按组合学排队。",
+        "en": "Even bluffs queue by combinatorics."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 1,
+      "tags": [
+        "vs_rfi",
+        "tf",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-sbvbtn-q6o",
+      "kind": "vs_rfi",
+      "position": "sb",
+      "facing": [
+        {
+          "position": "btn",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "Q6o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "Q6o 离 SB 的 3-bet 表（约 10% ）很远：没有价值、没有阻断、没有补牌结构——连诈唬的资格都排不上。",
+        "en": "Q6o sits far from SB's ~10% 3-bet chart: no value, no blockers, no backup structure — it does not even qualify as a bluff."
+      },
+      "wrongChoices": {
+        "3bet": {
+          "zh": "诈唬也讲组合学：Q6o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: Q6o holds no blockers and no backup — once called, only prayer remains."
+        },
+        "call": {
+          "zh": "跛入救不了范围外的牌——问题在牌本身，不在进场方式。",
+          "en": "Limping cannot rescue an off-chart hand — the problem is the cards, not the entry method."
+        }
+      },
+      "objective": {
+        "zh": "诈唬资格也要按组合学排队。",
+        "en": "Even bluffs queue by combinatorics."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 1,
+      "tags": [
+        "vs_rfi",
+        "tf",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-btnvco-qq",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "QQ",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "QQ 对 CO 约 26% 的开局是清晰的价值 3-bet：把死钱与更差牌的跟注一起收进来，同时夺回主动权。",
+        "en": "QQ is a clean value 3-bet against CO's ~26% open: collect the dead money and worse hands' calls while taking back the initiative."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "把范围里最能打的牌弃掉，等于自愿只剩中庸部分作战。",
+          "en": "Folding the most capable part of your range volunteers to fight with only the mediocre middle."
+        },
+        "call": {
+          "zh": "BTN 没有舒适的平跟剧本：位置吃亏、还邀请后手挤压——价值牌直接 3-bet。",
+          "en": "BTN owns no comfortable flatting script: bad position and an open invitation to squeezes — value hands 3-bet outright."
+        }
+      },
+      "objective": {
+        "zh": "对宽开局执行价值 3-bet。",
+        "en": "Value 3-bet the wide open."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-btnvco-ako",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "AKo",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "面对这么宽的开局范围，AKo 的压制力必须立刻变现——3-bet 为价值建锅，也让对手的中等牌当场两难。",
+        "en": "Against an open this wide, AKo's dominance must cash in now — 3-bet to build for value and put his medium hands in an instant bind."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 的宽开局弃 AKo 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding AKo to CO's wide open is far too tight — it dominates a large slice of that range."
+        },
+        "call": {
+          "zh": "BTN 没有舒适的平跟剧本：位置吃亏、还邀请后手挤压——价值牌直接 3-bet。",
+          "en": "BTN owns no comfortable flatting script: bad position and an open invitation to squeezes — value hands 3-bet outright."
+        }
+      },
+      "objective": {
+        "zh": "对宽开局执行价值 3-bet。",
+        "en": "Value 3-bet the wide open."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 2,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-btnvco-a5s",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "A5s",
+      "correct": "3bet",
+      "acceptable": [],
+      "explanation": {
+        "zh": "A5s 是 3-bet 表的诈唬翼：轮子 A 阻断对手 AA/AK 的关键组合，被跟注仍有同花顺子补牌，被 4-bet 时弃牌损失最小——教科书阻断牌诈唬。",
+        "en": "A5s is the bluff wing of the 3-bet chart: the wheel ace blocks his key AA/AK combos, flush and straight backup survives a call, and folding to a 4-bet costs the minimum — textbook blocker bluff."
+      },
+      "wrongChoices": {
+        "fold": {
+          "zh": "面对 CO 的宽开局弃 A5s 严重过紧——这手牌压制其范围一大截。",
+          "en": "Folding A5s to CO's wide open is far too tight — it dominates a large slice of that range."
+        }
+      },
+      "objective": {
+        "zh": "用阻断牌构建 3-bet 诈唬翼。",
+        "en": "Build the 3-bet bluff wing with blockers."
+      },
+      "lessonRef": "l4-04-blockers",
+      "difficulty": 3,
+      "tags": [
+        "vs_rfi",
+        "t",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-btnvco-q8o",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "Q8o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "Q8o 离 BTN 的 3-bet 表（约 6% ）很远：没有价值、没有阻断、没有补牌结构——连诈唬的资格都排不上。",
+        "en": "Q8o sits far from BTN's ~6% 3-bet chart: no value, no blockers, no backup structure — it does not even qualify as a bluff."
+      },
+      "wrongChoices": {
+        "3bet": {
+          "zh": "诈唬也讲组合学：Q8o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: Q8o holds no blockers and no backup — once called, only prayer remains."
+        },
+        "call": {
+          "zh": "价位诱人不等于价值存在：Q8o 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: Q8o's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "诈唬资格也要按组合学排队。",
+        "en": "Even bluffs queue by combinatorics."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 1,
+      "tags": [
+        "vs_rfi",
+        "tf",
+        "chart-derived"
+      ]
+    },
+    {
+      "id": "pf-g-btnvco-j7o",
+      "kind": "vs_rfi",
+      "position": "btn",
+      "facing": [
+        {
+          "position": "co",
+          "action": "raise",
+          "sizeBB": 2.5
+        }
+      ],
+      "hand": "J7o",
+      "correct": "fold",
+      "acceptable": [],
+      "explanation": {
+        "zh": "J7o 离 BTN 的 3-bet 表（约 6% ）很远：没有价值、没有阻断、没有补牌结构——连诈唬的资格都排不上。",
+        "en": "J7o sits far from BTN's ~6% 3-bet chart: no value, no blockers, no backup structure — it does not even qualify as a bluff."
+      },
+      "wrongChoices": {
+        "3bet": {
+          "zh": "诈唬也讲组合学：J7o 既无阻断也无补牌，被跟注后只剩祈祷。",
+          "en": "Bluffs obey combinatorics too: J7o holds no blockers and no backup — once called, only prayer remains."
+        },
+        "call": {
+          "zh": "价位诱人不等于价值存在：J7o 的翻后剧本几乎全是「赢小输大」。",
+          "en": "A tempting price is not value: J7o's postflop scripts are almost all win-small-lose-big."
+        }
+      },
+      "objective": {
+        "zh": "诈唬资格也要按组合学排队。",
+        "en": "Even bluffs queue by combinatorics."
+      },
+      "lessonRef": "l2-03-threebet-basics",
+      "difficulty": 1,
+      "tags": [
+        "vs_rfi",
+        "tf",
+        "chart-derived"
+      ]
     }
   ]
 }

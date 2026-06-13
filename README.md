@@ -6,7 +6,7 @@
 - 技术栈：SwiftUI · SwiftData · Swift Charts · XCTest
 - 目标：iOS 18.0+ · Swift 6（strict concurrency = complete）· 零第三方依赖
 - 文档：`docs/PRD.md`（产品需求）· `docs/ARCHITECTURE.md`（架构与 Schema）
-- 当前进度：**M6 — 收官：设置接线 / 内容补全（30 课 · 12 范围）/ App 图标 / 商店物料 —— 14 步全部完成**
+- 当前进度：**M10 — 上架就绪：每日 12 题抽样 · iPad 阅读宽度 · 真机 QA 清单 · 提审物料终稿 —— 17 组 101 用例**
 
 ---
 
@@ -44,22 +44,22 @@ open GTOAcademy.xcodeproj
 
 ## 2. 运行与测试
 
-- **⌘R** 运行：应看到加载页 → 5-Tab 主界面。Home 显示内容版本 `1.0.0`
-  与课程 / 精编题 / 范围表计数（10 / 23 / 6），证明 JSON 管线打通。
+- **⌘R** 运行：应看到加载页 → 5-Tab 主界面。Home 显示内容版本 `1.1.0`
+  与课程 / 精编题 / 范围表计数（30 / 160 / 12），证明 JSON 管线打通。
   Learn 已上线完整课程链路：学习路径 → 课程详情 → 课末测验（答完自动记录完成态 + XP）。
-  Profile 为里程碑占位页；Drill 三训练器与 Tools 工具页均已上线。
-- **⌘U** 测试：十七组共 98 个用例 ——
-  `ContentValidationTests`（内容完整性 / 引用 / 禁用话术）、
+  Drill 三训练器、Tools 三工具与 Profile（等级 / 连续天数 / 图表 / 错题本）均为真实页面——五个 Tab 占位清零。
+- **⌘U** 测试：十七组共 101 个用例 ——
+  `ContentValidationTests`（内容完整性 / 引用 / PRD 配额 / 禁用话术）、
   `RangeParserTests`（范围记法解析 + UTG/BTN 组合数）、
   `ModelCodingTests`（紧凑编码往返 / 归一化 / 169 格完整性）、
   `ProgressServiceTests`（完成态 / XP 幂等 / 流水写入）、
   `CheckpointQuizViewModelTests`（测验状态机）、
   `HandEvaluatorTests`（7 张评牌）、`PlayerClassifierTests`（分类规则 ↔ 内容一致）、
-  `ScenarioEngineTests`（无尽出题与范围表事实）、`DrillScoringEngineTests`（判分 + XP）、
+  `ScenarioEngineTests`（无尽出题 / 每日抽样 / 范围表事实）、`DrillScoringEngineTests`（判分 + XP）、
   `DrillProgressServiceTests`（流水 / 错题快照）、`DrillSessionViewModelTests`（会话状态机）、
   `RangeLibraryTests`（范围表组合数 / 位置单调性）、`HandMatrixTests`（13×13 矩阵几何）、
   `StatCalculatorViewModelTests`（VPIP / PFR / AF 计算）、`PlayerTypeToolViewModelTests`（输入 → 分类联动）、
-  `ProgressStoreTests`、`SettingsStoreTests`（设置单例 / 主题映射 / 触感总闸）（等级门槛 / 连续天数 / 每日奖励 / SRS 调度）。
+  `ProgressStoreTests`（等级门槛 / 连续天数 / 每日奖励 / SRS 调度）、`SettingsStoreTests`（设置单例 / 主题映射 / 触感总闸）。
 - 内容改动后可在仓库根额外运行 `python3 tools/validate_content.py` 做离线校验。
 
 ---
@@ -72,10 +72,10 @@ open GTOAcademy.xcodeproj
 | `GTOAcademy/Models/Core/` | 扑克领域：Card · HandClass(169) · HoleCards · Board · HandRank · Position · 动作 |
 | `GTOAcademy/Models/Training/` | 内容侧：Lesson · Scenario×3 · Range · PlayerStats · 各 Config · LocalizedText |
 | `GTOAcademy/Models/Persistence/` | SwiftData：UserProgress · DrillRecord · MistakeReviewItem · AppSettings |
-| `GTOAcademy/Services/` | 纯逻辑（当前：RangeParser；M3 起加入引擎与分类器） |
+| `GTOAcademy/Services/` | 纯逻辑：RangeParser · HandEvaluator · ScenarioEngine · DrillScoringEngine · PlayerClassifier 等 |
 | `GTOAcademy/Repositories/` | ContentLoader（manifest 驱动）+ 三个只读查询仓库 |
 | `GTOAcademy/DesignSystem/` | Theme 色板 · Typo 字体 · Spacing/Radius · Haptics · Motion |
-| `GTOAcademy/Views/` | 页面（M1 为 Home 数据页 + 占位页） |
+| `GTOAcademy/Views/` | 页面：五 Tab 全量 + 设置页（占位清零） |
 | `GTOAcademy/Content/` | 全部内容 JSON（manifest · lessons · scenarios · ranges · config） |
 | `GTOAcademyTests/` | 单元测试 |
 | `docs/` | PRD 与架构文档 |
@@ -94,7 +94,7 @@ Views 不直接解码 JSON、不直接做扑克运算。
   1 个 `quizRef`。测验题写进同文件 `questions`，`choiceExplanations` 必须与 `choices` 等长。
 - **加翻前题**：`scenarios/preflop.json`。`correct`/`acceptable` 取
   `fold | call | raise | 3bet`；`wrongChoices` 的键 = 选项字符串，**不得**包含
-  correct/acceptable；`lessonRef` 必须是真实课程 id。
+  correct/acceptable；`lessonRef` 必须是真实课程 id。**批量扩充优先用 `python3 tools/generate_preflop.py`**（范围表同源推导答案；幂等，只重建 `pf-g-*` 生成题，手写题不动；改过范围表后必须重跑并 ⌘U）。
 - **加翻后题**：`scenarios/postflop.json`。`wrongChoices` 键格式 = 动作+尺寸：
   `check`、`bet33`、`bet75`、`raise100`（与 `PostflopChoice.key` 对应）。
   `board` 用紧凑牌码数组：`["Kd","7s","2c"]`。
@@ -156,24 +156,45 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - CI 修复 2：修正 2 个文件共 3 处误用 rawValue 写法的 case 引用（`.calling_station` / `.passive_fish` → `.callingStation` / `.passiveFish`）。枚举本体自 M1 即含此两型（驼峰 case 名 + snake_case rawValue），无需也不可增补 case——强行增补会触发 rawValue 重复的编译错误。
 - CI 修复 3：两个 @MainActor 测试类（RangeLibraryTests / PlayerTypeToolViewModelTests）移除 `setUpWithError` 与隐式解包存储属性，改为测试体内 `loadLibrary()` / `loadConfig()`——`setUpWithError` 的 override 继承父类的 nonisolated 隔离，无法对 @MainActor 属性赋值。非 @MainActor 的 PlayerClassifierTests / DrillScoringEngineTests 属性与类同隔离，保留原写法。
 
+### M7 新增（v1.1 第一棒）
+
+- 翻后精编 5 → **45**（翻牌 31 · 转牌 7 · 河牌 7，达标 PRD AC-E1）：c-bet 家族 / 3-Bet 底池 / 大盲防守 / IP 跟注位 / 转牌双重开火与刹车 / 河牌薄价值与弃牌纪律；底池数字与行动叙事按家族常量同源推算。
+- 玩家类型题 6 → **25**（达标 PRD AC-D2，六型 4/4/4/4/4/5）：生成时在 python 内复刻 `classifier.json` 先到先得规则逐题自检，CI 上由 `PlayerClassifierTests` 反向背书；含规则顺位边界题与小样本教学题。
+- 错题复习题面补上**完整行动历史**（翻后题逐街叙事，与训练器同源渲染），已知缺口表对应行清零。
+- 校验器钉死内容配额（翻后 45 = 31/7/7、类型 ≥25、street 与公共牌张数一致）；`ContentValidationTests` 新增 `testScenarioQuotasMeetPRD`，用例 98 → **99**；内容版本 `1.0.0` → **`1.1.0`**。
+
+### M8 新增（v1.1 第二棒）
+
+- 翻前精编 12 → **90**（PRD §215 满编 160 = 翻前 90 · 翻后 45 · 类型 25）：新增常驻工具 `tools/generate_preflop.py`——答案从 12 张范围表机械推导（与 Tools 矩阵、无尽模式判定永远同源），运行时与校验器固化的组合数逐表对账防解析漂移；解释按 20 个「家族 × 判定类」模板渲染（确定性变体），覆盖 RFI 五位置、BB 四对位防守（vs BTN 三选项制）、SB/BTN 的 3-Bet-or-Fold。幂等重跑只重建 `pf-g-*`，手写 12 题保留。
+- 校验器新增翻前配额（≥90）；`testScenarioQuotasMeetPRD` 补翻前断言（用例数仍 17 组 99）。
+- TestFlight 发布管线：`.github/workflows/release-testflight.yml`（手动触发两段式：Ubuntu 内容校验 → macOS 云端 `xcodebuild` 自动签名 archive 并直传 App Store Connect，构建号 = 工作流 run number 单调递增）+ `Docs/TestFlight.md` 中文配置手册（App 记录 / API Key / 五个 Secrets / 排障表）。
+
+### M9 新增（体验打磨）
+
+- **每日 12 题精编会话**：三训练器的精编模式改接 `ScenarioEngine.dailyPreflop/Postflop/PlayerType()`——同一天结果稳定（中断重进同套题）、跨天确定性轮换（年月日 → splitmix64 种子 → 同参 LCG），抽样后保持难度升序曲线；池子不足自动全量。`ScenarioEngineTests` +2（同日稳定 / 跨天轮换），合计 **17 组 101 用例**。
+- **iPad 阅读宽度**：新增 `readableWidth()`（680pt 居中列，DesignSystem/Layout.swift），统一挂在 9 个内容页的滚动容器（Home / 学习路径 / 课程详情 / 测验 / Drill 首页 / 三训练器 / 错题复习）；Tools 的 13×13 矩阵**有意保持全宽**。iPhone 上无感知。
+- **L10n → xcstrings 迁移有意推迟至 v1.2**：提审前冻结字符串管线是标准做法；现有 LocalizedText 单点已完整覆盖双语，迁移属内部改造、零用户可见收益。
+
+### M10 新增（上架冲刺）
+
+- `Docs/QA-Checklist.md`：真机走查清单——TestFlight 装机后逐项打勾，覆盖启动、五 Tab 全链路、每日抽样、SRS 晋级降级、设置与系统集成（深浅色 / 动态字体 / 减弱动态 / iPad 旋转）、进度持久化。
+- `Docs/AppStore.md` 升至 **v1.1 终稿**：描述补 160 满编与每日抽样、5 张截图配定稿双语文案 + 无 Mac 真机截屏流程、What's New（1.1.0）、Connect 提审八步走、检查清单改挂 CI 101 用例与 QA 清单。
+
 ## 没有 Mac？在云端编译与测试（GitHub Actions）
 
 仓库已内置 `.github/workflows/ci.yml`，推送到 GitHub 后无需任何本地 macOS：
 
 1. 在 GitHub 新建仓库，把本目录整个推上去（Windows 用 Git for Windows 即可）。
 2. 打开仓库 **Actions** 标签——每次 push / PR 自动运行，也可点 **Run workflow** 手动触发。
-3. 流水线两段：Ubuntu 上秒级跑 `tools/validate_content.py`（内容先把关，省 macOS 分钟数）；通过后 macOS 云跑机执行 `xcodegen generate` + `xcodebuild test`（自动挑选可用 iPhone 模拟器，免签名，跑满 17 组 98 用例）。失败会把 `TestResults.xcresult` 作为 artifact 上传，可在 Windows 下载留存。
+3. 流水线两段：Ubuntu 上秒级跑 `tools/validate_content.py`（内容先把关，省 macOS 分钟数）；通过后 macOS 云跑机执行 `xcodegen generate` + `xcodebuild test`（自动挑选可用 iPhone 模拟器，免签名，跑满 17 组 101 用例）。失败会把 `TestResults.xcresult` 作为 artifact 上传，可在 Windows 下载留存。
 4. Windows 本地随时可自助校验内容：`python tools\validate_content.py`（注意 Windows 下命令是 `python`）。
 
-公开仓库的 Actions 免费；私有仓库注意 macOS 分钟按更高倍率计费。后续要发 TestFlight，可在此工作流上追加 fastlane 签名与上传。
+公开仓库的 Actions 免费；私有仓库注意 macOS 分钟按更高倍率计费。发 TestFlight 用仓库内置的 `release-testflight.yml`（手动触发：内容校验 → 云端自动签名 → 直传 App Store Connect），配置步骤见 `Docs/TestFlight.md`。
 
 ## 6. 已知缺口（按计划推进）
 
 | 缺口 | 处理 |
 | --- | --- |
 | 代码在本环境未经真实 Xcode 编译，可能需一轮小修 | 把 build 报错贴回来，或交 Claude Code 自动修到全绿 |
-| App 图标为空占位 | M6 视觉打磨阶段交付 |
-| 复习题面为紧凑信息版（无完整行动历史） | v1.1 增强 |
-| UI 框架文案走 `L10n` 内联双语 | M6 迁移到 Localizable.xcstrings |
-| 精编场景 23 / 45（PRD AC-E1，翻牌街目标 ≥30） | v1.1 内容扩充 |
-| L10n 迁移 Localizable.xcstrings（UI 串已全经 LocalizedText 单点） | v1.1 |
+| TestFlight 管线未实跑（待 Apple 账号侧 Secrets 配置） | 按 `Docs/TestFlight.md` 五步配置后手动触发 |
+| Localizable.xcstrings 迁移 | 有意推迟至 v1.2：提审前冻结字符串管线（LocalizedText 单点已覆盖双语） |

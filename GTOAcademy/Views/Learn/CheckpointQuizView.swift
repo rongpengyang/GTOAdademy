@@ -71,6 +71,7 @@ struct CheckpointQuizView: View {
                 }
             }
             .padding(Spacing.s16)
+            .readableWidth()
         }
         .background(Theme.inkBackground)
         .safeAreaInset(edge: .bottom) {

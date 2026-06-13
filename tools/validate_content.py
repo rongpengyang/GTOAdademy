@@ -129,9 +129,12 @@ for s in pf["scenarios"]:
     if s["kind"] != "rfi" and not s["facing"]: errors.append(f"{s['id']}: 缺 facing")
     if not (1 <= s["difficulty"] <= 3): errors.append(f"{s['id']}: difficulty 越界")
 
+if len(pf["scenarios"]) < 90: errors.append(f"翻前配额：{len(pf['scenarios'])} < 90（PRD §215）")
+
 def choice_key(c): return c["action"] + (str(c["sizePct"]) if c.get("sizePct") is not None else "")
 po = json.load(open(f"scenarios/{manifest['scenarioFiles']['postflop']}.json"))
 CARDS = set(r + s for r in RANKS for s in "shdc")
+SMAP = {"flop": 3, "turn": 4, "river": 5}
 for s in po["scenarios"]:
     all_ids.append(s["id"])
     board = s["board"]
@@ -142,6 +145,8 @@ for s in po["scenarios"]:
         errors.append(f"{s['id']}: 非法 heroHand {hh}")
     if hh[:2] in board or hh[2:] in board:
         errors.append(f"{s['id']}: heroHand 与公共牌冲突")
+    if SMAP.get(s.get("street")) != len(board):
+        errors.append(f"{s['id']}: street 与公共牌张数不一致")
     ck = choice_key(s["correct"])
     wrong = s.get("wrongChoices", {})
     if ck in wrong: errors.append(f"{s['id']}: wrongChoices 含正确答案 {ck}")
@@ -153,6 +158,14 @@ for s in po["scenarios"]:
     for h in s["history"]: collect(h)
     for v in wrong.values(): collect(v)
 
+_flop = sum(1 for s in po["scenarios"] if len(s["board"]) == 3)
+_turn = sum(1 for s in po["scenarios"] if len(s["board"]) == 4)
+_river = sum(1 for s in po["scenarios"] if len(s["board"]) == 5)
+if _flop < 30: errors.append(f"翻后配额：翻牌 {_flop} < 30（AC-E1）")
+if _turn < 7: errors.append(f"翻后配额：转牌 {_turn} < 7（AC-E1）")
+if _river < 7: errors.append(f"翻后配额：河牌 {_river} < 7（AC-E1）")
+if len(po["scenarios"]) < 45: errors.append(f"翻后配额：总数 {len(po['scenarios'])} < 45（AC-E1）")
+
 VALID_TYPES = {"nit", "tag", "lag", "maniac", "calling_station", "passive_fish"}
 pt = json.load(open(f"scenarios/{manifest['scenarioFiles']['playerType']}.json"))
 for s in pt["scenarios"]:
@@ -160,6 +173,8 @@ for s in pt["scenarios"]:
     if s["correct"] not in VALID_TYPES: errors.append(f"{s['id']}: 非法类型 {s['correct']}")
     if s["stats"]["hands"] <= 0: errors.append(f"{s['id']}: hands 非正")
     lt_ok(s["explanation"], s["id"]); collect(s["explanation"]); collect(s["objective"])
+
+if len(pt["scenarios"]) < 25: errors.append(f"类型题配额：{len(pt['scenarios'])} < 25（AC-D2）")
 
 windows = {"rfi-utg-100bb": (12, 16, 182),
            "rfi-hj-100bb": (17, 23, 266),

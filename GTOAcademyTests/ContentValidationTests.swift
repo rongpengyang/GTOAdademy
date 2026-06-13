@@ -138,6 +138,20 @@ final class ContentValidationTests: XCTestCase {
         }
     }
 
+    /// PRD 内容配额钉死：翻后 ≥45（翻牌 ≥30、转/河各 ≥7，AC-E1）、类型 ≥25（AC-D2）。
+    func testScenarioQuotasMeetPRD() throws {
+        let library = try loadLibrary()
+        let flop = library.postflop.filter { $0.board.count == 3 }.count
+        let turn = library.postflop.filter { $0.board.count == 4 }.count
+        let river = library.postflop.filter { $0.board.count == 5 }.count
+        XCTAssertGreaterThanOrEqual(flop, 30, "翻牌街精编不足（AC-E1）")
+        XCTAssertGreaterThanOrEqual(turn, 7, "转牌街精编不足（AC-E1）")
+        XCTAssertGreaterThanOrEqual(river, 7, "河牌街精编不足（AC-E1）")
+        XCTAssertGreaterThanOrEqual(library.postflop.count, 45, "翻后总量不足（AC-E1）")
+        XCTAssertGreaterThanOrEqual(library.preflop.count, 90, "翻前精编不足（PRD §215）")
+        XCTAssertGreaterThanOrEqual(library.playerType.count, 25, "类型题不足（AC-D2）")
+    }
+
     func testRangePercentSanity() throws {
         let library = try loadLibrary()
         let utg = try XCTUnwrap(library.ranges.first { $0.id == "rfi-utg-100bb" })
