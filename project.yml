@@ -1,37 +1,53 @@
 # GTO Academy — XcodeGen 工程定义
 # 用法: brew install xcodegen && xcodegen generate && open GTOAcademy.xcodeproj
 #
-# "Multiple commands produce / duplicate output file"（Xcode 26 本地，CI Xcode 16 不报）：
-# 根因是 createIntermediateGroups: true 在新版 Xcode 构建系统下，为包含资源的中间分组
-# 重复登记 copy-resource 命令。修复 = 关闭该选项（默认 false）。全树已核验无同名资源。
+# 关于 "Multiple commands produce / duplicate output file"（Xcode 26 本地，CI Xcode 16 不报）：
+# 当 XcodeGen 用单一 source 树 + 扩展名自动归类时，某些文件会被新版 Xcode 构建系统
+# 同时安排「copy」与「process/generate」两条命令，产出同名输出而冲突
+# （最典型：PrivacyInfo.xcprivacy 在 Xcode 16+ 会被自动处理，又被 XcodeGen 加入 Copy Bundle Resources）。
+# 本配置显式分离三个 build phase、逐类点名资源，关闭一切自动归类与 plist 合成歧义，
+# 保证每个产物文件只有唯一一条构建命令。
 name: GTOAcademy
 options:
   bundleIdPrefix: com.yourcompany # TODO: 替换为你的反向域名
   deploymentTarget:
     iOS: "18.0"
-  # createIntermediateGroups 不设置（默认 false）：避免子目录资源被重复登记。
+  generateEmptyDirectories: false
 
 settings:
   base:
     SWIFT_VERSION: "6.0"
     SWIFT_STRICT_CONCURRENCY: complete
     IPHONEOS_DEPLOYMENT_TARGET: "18.0"
-    GENERATE_INFOPLIST_FILE: YES
     CURRENT_PROJECT_VERSION: "1"
     MARKETING_VERSION: "1.1.0"
     ENABLE_USER_SCRIPT_SANDBOXING: YES
-    # DEVELOPMENT_TEAM: "ABCDE12345" # 在 Xcode Signing 面板选择，或取消注释填 Team ID
 
 targets:
   GTOAcademy:
     type: application
     platform: iOS
-    # 单一 source 树：.swift 编译，.xcassets 资产编译，.json/.xcprivacy 资源拷贝。
-    # 全树无同名资源（已离线核验），同一 resources phase 内不会重复输出。
     sources:
+      # ① Swift 源码：只编译。buildPhase: sources 锁死，excludes 把全部资源目录排除，
+      #    避免 XcodeGen 对资源文件做任何「自动归类到 resources」的二次登记。
       - path: GTOAcademy
+        buildPhase: sources
+        includes:
+          - "**/*.swift"
+      # ② 资产目录：actool 处理一次。
+      - path: GTOAcademy/Resources/Assets.xcassets
+        buildPhase: resources
+      # ③ 隐私清单：显式只做一次 copy（关键——杜绝与 Xcode 自动处理重复）。
+      - path: GTOAcademy/Resources/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      # ④ 内容 JSON：folder reference 整目录拷贝一次，保留子目录结构。
+      - path: GTOAcademy/Content
+        type: folder
+        buildPhase: resources
+    # Info.plist 由构建系统生成一次；不出现在任何 sources，不会被 copy。
     settings:
       base:
+        GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.gtoacademy # TODO: 替换
         TARGETED_DEVICE_FAMILY: "1,2" # iPhone + iPad
         INFOPLIST_KEY_CFBundleDisplayName: "GTO Academy"
@@ -46,10 +62,14 @@ targets:
     platform: iOS
     sources:
       - path: GTOAcademyTests
+        buildPhase: sources
+        includes:
+          - "**/*.swift"
     dependencies:
       - target: GTOAcademy
     settings:
       base:
+        GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.gtoacademy.tests
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/GTOAcademy.app/GTOAcademy"
         BUNDLE_LOADER: "$(TEST_HOST)"

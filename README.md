@@ -175,28 +175,29 @@ Views 不直接解码 JSON、不直接做扑克运算。
 - **iPad 阅读宽度**：新增 `readableWidth()`（680pt 居中列，DesignSystem/Layout.swift），统一挂在 9 个内容页的滚动容器（Home / 学习路径 / 课程详情 / 测验 / Drill 首页 / 三训练器 / 错题复习）；Tools 的 13×13 矩阵**有意保持全宽**。iPhone 上无感知。
 - **L10n → xcstrings 迁移有意推迟至 v1.2**：提审前冻结字符串管线是标准做法；现有 LocalizedText 单点已完整覆盖双语，迁移属内部改造、零用户可见收益。
 
-### 构建排障：Multiple commands produce / duplicate output（已修复）
+### 构建排障：Multiple commands produce / duplicate output
 
-**现象**：GitHub Actions（Xcode 16）全绿，但本地 Xcode 26 打开报 `Multiple commands produce … duplicate output file`，清 DerivedData + 重新 `xcodegen generate` 仍在。
+**现象**：CI（Xcode 16）全绿，本地 Xcode 26 报 `Multiple commands produce … duplicate output file`，清 DerivedData + 重新 `xcodegen generate` 仍在。
 
-**根因**：`options.createIntermediateGroups: true` 在 Xcode 26 的新构建系统下，会为包含资源的中间分组（`Content/config`、`Content/scenarios` …）**重复登记 copy-resource 命令**——旧构建系统（Xcode 16）静默合并，新构建系统报冲突。这正是 CI 绿、本地红的根源（工具链版本差异，非缓存差异）。
+**机理**：该错误恒指**某一个产物文件被两条构建命令产出**（一条 copy、一条 process/generate）。本工程磁盘上无任何重复文件（已逐一核验：63 swift / 26 json / 1 xcprivacy / 1 png，无手写 Info.plist、单一 .xcassets），所以冲突来自**构建命令登记**而非文件本身。最可能：`PrivacyInfo.xcprivacy` 在 Xcode 16+ 被构建系统自动处理，又被 XcodeGen 默认加进 Copy Bundle Resources → 同名输出两条命令。
 
-**修复**（已写入 `project.yml`）：移除 `createIntermediateGroups`（回落默认 `false`），保持单一 source 树 `path: GTOAcademy` 让 XcodeGen 按扩展名自动归类。全树已离线核验**零同名资源**（仅 `.xcassets` 内部各自的 `Contents.json`，由资产编译器独占处理，不进 copy 阶段），单一 resources phase 内不可能再产生重复输出。
+**修复**（已写入 `project.yml`）：显式分离三个 build phase、资源逐类点名、关闭扩展名自动归类——
+- Swift 源码 `buildPhase: sources` + `includes: ["**/*.swift"]`，只编译；
+- `Assets.xcassets`、`PrivacyInfo.xcprivacy`、`Content`（folder）各自单独声明进 resources，每个产物只有唯一一条命令；
+- `Info.plist` 仅由 `GENERATE_INFOPLIST_FILE` 生成，不出现在任何 sources，不会被 copy。
 
 **云端 Mac 重建**：
 ```bash
 rm -rf GTOAcademy.xcodeproj ~/Library/Developer/Xcode/DerivedData/*
 xcodegen generate && open GTOAcademy.xcodeproj
 ```
-⌘R 直接 Run。
 
-**若仍复现（定位用，一行命令打印真凶）**：在生成后的工程上跑——
+**⚠️ 若仍复现——请把真凶文件名发我，一步定位**：错误整行形如
+`Multiple commands produce '…/GTOAcademy.app/<文件名>'`。把 `<文件名>`（以及它下面列的两条 "has copy command / has process command" 路径）贴回来。这一个文件名能直接锁定是哪条命令重复、改哪一行——比继续盲改 project.yml 快得多。或运行下面命令导出全部构建命令、自查重复输出：
 ```bash
-xcodebuild -project GTOAcademy.xcodeproj -scheme GTOAcademy \
-  -showBuildSettings >/dev/null 2>build_diag.txt; \
-grep -n "duplicate\|Multiple commands" build_diag.txt
+xcodebuild -project GTOAcademy.xcodeproj -scheme GTOAcademy -showBuildSettings >/dev/null 2>&1
+xcodebuild -project GTOAcademy.xcodeproj -scheme GTOAcademy -dry-run 2>&1 | grep -i "duplicate\|multiple command"
 ```
-或在 Xcode 报错行点开三角，把 "duplicate output file:" 后面那条**完整路径**贴回来，即可精确定位是哪个文件被登记两次。
 
 ### M10 新增（上架冲刺）
 
